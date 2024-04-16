@@ -1,7 +1,11 @@
+using Microsoft.Data.SqlClient;
+using System.Data;
+
 namespace TemizlikTeknikServisGuncel
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -17,11 +21,11 @@ namespace TemizlikTeknikServisGuncel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Admin" && textBox2.Text == "12345")
+            if (textBox1.Text == "1" && textBox2.Text == "1")
             {
-                
                 Otomasyon otomasyon = new Otomasyon();
                 otomasyon.Show();
+                
             }
         }
     }

@@ -116,7 +116,7 @@
             // button6
             // 
             button6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button6.Location = new Point(706, 106);
+            button6.Location = new Point(706, 116);
             button6.Name = "button6";
             button6.Size = new Size(140, 53);
             button6.TabIndex = 11;
@@ -136,13 +136,14 @@
             // 
             // button8
             // 
+            button8.BackColor = SystemColors.ButtonShadow;
             button8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             button8.Location = new Point(193, 361);
             button8.Name = "button8";
             button8.Size = new Size(135, 53);
             button8.TabIndex = 9;
             button8.Text = "İzin Türleri";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
@@ -208,7 +209,7 @@
             // button15
             // 
             button15.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button15.Location = new Point(541, 106);
+            button15.Location = new Point(541, 116);
             button15.Name = "button15";
             button15.Size = new Size(137, 53);
             button15.TabIndex = 12;
@@ -259,18 +260,21 @@
             // 
             // button16
             // 
+            button16.BackColor = SystemColors.ActiveBorder;
             button16.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button16.ForeColor = SystemColors.ActiveCaptionText;
             button16.Location = new Point(12, 282);
             button16.Name = "button16";
             button16.Size = new Size(146, 53);
             button16.TabIndex = 18;
             button16.Text = "Ürün Türleri";
-            button16.UseVisualStyleBackColor = true;
+            button16.UseVisualStyleBackColor = false;
+            button16.Click += button16_Click;
             // 
             // button17
             // 
             button17.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button17.Location = new Point(882, 106);
+            button17.Location = new Point(882, 116);
             button17.Name = "button17";
             button17.Size = new Size(142, 53);
             button17.TabIndex = 19;
@@ -307,7 +311,7 @@
             label3.BorderStyle = BorderStyle.FixedSingle;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(382, 63);
+            label3.Location = new Point(374, 63);
             label3.Name = "label3";
             label3.Size = new Size(107, 23);
             label3.TabIndex = 22;

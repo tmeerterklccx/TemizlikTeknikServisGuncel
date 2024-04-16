@@ -56,5 +56,12 @@ namespace TemizlikTeknikServisGuncel
             pozisyonlar.Show();
             this.Close();
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            UrunTurleri urunTurleri = new UrunTurleri();
+            urunTurleri.Show();
+            this.Close();
+        }
     }
 }
