@@ -193,6 +193,7 @@
             Controls.Add(menuStrip1);
             Name = "IzinGuncelle";
             Text = "IzinGuncelle";
+            Load += IzinGuncelle_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

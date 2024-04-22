@@ -42,7 +42,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(222, 265);
+            button1.Location = new Point(150, 228);
             button1.Name = "button1";
             button1.Size = new Size(296, 53);
             button1.TabIndex = 118;
@@ -78,7 +78,7 @@
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(208, 177);
+            label7.Location = new Point(130, 154);
             label7.Name = "label7";
             label7.Size = new Size(105, 23);
             label7.TabIndex = 109;
@@ -90,7 +90,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(302, 39);
+            label2.Location = new Point(224, 60);
             label2.Name = "label2";
             label2.Size = new Size(144, 30);
             label2.TabIndex = 101;
@@ -102,7 +102,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, otomasyonaGitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(758, 24);
+            menuStrip1.Size = new Size(599, 24);
             menuStrip1.TabIndex = 104;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -110,7 +110,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(330, 179);
+            textBox1.Location = new Point(252, 156);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(206, 24);
             textBox1.TabIndex = 119;
@@ -121,7 +121,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(758, 467);
+            ClientSize = new Size(599, 390);
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(label7);

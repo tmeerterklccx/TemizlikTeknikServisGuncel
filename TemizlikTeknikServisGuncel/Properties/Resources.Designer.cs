@@ -59,5 +59,15 @@ namespace TemizlikTeknikServisGuncel.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap back_image {
+            get {
+                object obj = ResourceManager.GetObject("back-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

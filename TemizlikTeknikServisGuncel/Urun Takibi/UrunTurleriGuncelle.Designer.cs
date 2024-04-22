@@ -44,7 +44,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(225, 318);
+            button1.Location = new Point(191, 292);
             button1.Name = "button1";
             button1.Size = new Size(296, 53);
             button1.TabIndex = 123;
@@ -70,11 +70,12 @@
             otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
             otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
+            otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(357, 244);
+            textBox1.Location = new Point(217, 216);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(319, 24);
             textBox1.TabIndex = 124;
@@ -86,7 +87,7 @@
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(235, 244);
+            label7.Location = new Point(95, 216);
             label7.Name = "label7";
             label7.Size = new Size(79, 23);
             label7.TabIndex = 122;
@@ -97,7 +98,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(302, 105);
+            label2.Location = new Point(162, 77);
             label2.Name = "label2";
             label2.Size = new Size(164, 30);
             label2.TabIndex = 120;
@@ -108,7 +109,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, otomasyonaGitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(591, 24);
             menuStrip1.TabIndex = 121;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -116,7 +117,7 @@
             // 
             textBox2.Enabled = false;
             textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(357, 176);
+            textBox2.Location = new Point(217, 148);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(319, 24);
             textBox2.TabIndex = 126;
@@ -127,7 +128,7 @@
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(235, 174);
+            label1.Location = new Point(95, 146);
             label1.Name = "label1";
             label1.Size = new Size(68, 23);
             label1.TabIndex = 125;
@@ -138,7 +139,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(591, 426);
             Controls.Add(textBox2);
             Controls.Add(label1);
             Controls.Add(button1);

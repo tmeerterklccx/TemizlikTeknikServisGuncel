@@ -135,7 +135,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(355, 33);
+            label2.Location = new Point(336, 33);
             label2.Name = "label2";
             label2.Size = new Size(199, 30);
             label2.TabIndex = 20;
@@ -144,12 +144,13 @@
             // dgvMarkalar
             // 
             dgvMarkalar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMarkalar.Location = new Point(128, 76);
+            dgvMarkalar.GridColor = SystemColors.Menu;
+            dgvMarkalar.Location = new Point(115, 76);
             dgvMarkalar.MultiSelect = false;
             dgvMarkalar.Name = "dgvMarkalar";
             dgvMarkalar.RowTemplate.Height = 25;
             dgvMarkalar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMarkalar.Size = new Size(592, 274);
+            dgvMarkalar.Size = new Size(633, 274);
             dgvMarkalar.TabIndex = 19;
             // 
             // menuStrip1

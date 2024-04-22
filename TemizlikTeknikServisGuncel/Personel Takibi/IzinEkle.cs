@@ -14,25 +14,29 @@ namespace TemizlikTeknikServisGuncel
     public partial class IzinEkle : Form
     {
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
-        public void komutCalistir(string sorgu)
+        SqlCommand TurCMD = new SqlCommand();
+        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+        public void KomutCalistir(string sorgu)
         {
-            if (sorgu != null)
+            try
             {
-                try
+                SqlConnection.Open();
+                TurCMD.CommandText = sorgu;
+                TurCMD.Connection = SqlConnection;
+                TurCMD.ExecuteNonQuery();
+                MessageBox.Show("Başarıyla Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                if (TurCMD.Parameters.Count > 0)
                 {
-                    SqlConnection.Open();
-                    SqlCommand komutCalistir = new SqlCommand(sorgu, SqlConnection);
-                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(komutCalistir);
+                    TurCMD.Parameters.Clear();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    SqlConnection.Close();
-                }
-
+                SqlConnection.Close();
             }
         }
         public IzinEkle()
@@ -48,6 +52,11 @@ namespace TemizlikTeknikServisGuncel
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IzinEkle_Load(object sender, EventArgs e)
         {
 
         }

@@ -37,13 +37,13 @@
             button1 = new Button();
             button3 = new Button();
             label2 = new Label();
-            dgvMarkalar = new DataGridView();
+            dgvTurler = new DataGridView();
             menuStrip1 = new MenuStrip();
             programToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvMarkalar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTurler).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(205, 24);
             textBox2.TabIndex = 40;
+            textBox2.TextChanged += textBox1_TextChanged;
             // 
             // textBox1
             // 
@@ -74,6 +75,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(205, 24);
             textBox1.TabIndex = 39;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button5
             // 
@@ -117,6 +119,7 @@
             button1.TabIndex = 35;
             button1.Text = "TÜR ARA";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -140,16 +143,17 @@
             label2.TabIndex = 33;
             label2.Text = "ÜRÜN TÜRÜ YÖNETİMİ";
             // 
-            // dgvMarkalar
+            // dgvTurler
             // 
-            dgvMarkalar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMarkalar.Location = new Point(119, 71);
-            dgvMarkalar.MultiSelect = false;
-            dgvMarkalar.Name = "dgvMarkalar";
-            dgvMarkalar.RowTemplate.Height = 25;
-            dgvMarkalar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMarkalar.Size = new Size(592, 274);
-            dgvMarkalar.TabIndex = 32;
+            dgvTurler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTurler.Location = new Point(119, 71);
+            dgvTurler.MultiSelect = false;
+            dgvTurler.Name = "dgvTurler";
+            dgvTurler.RowTemplate.Height = 25;
+            dgvTurler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTurler.Size = new Size(592, 274);
+            dgvTurler.TabIndex = 32;
+            dgvTurler.SelectionChanged += dgvTurler_SelectionChanged;
             // 
             // menuStrip1
             // 
@@ -178,6 +182,7 @@
             otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
             otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
+            otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
             // label1
             // 
@@ -206,13 +211,13 @@
             Controls.Add(button1);
             Controls.Add(button3);
             Controls.Add(label2);
-            Controls.Add(dgvMarkalar);
+            Controls.Add(dgvTurler);
             Controls.Add(menuStrip1);
             Controls.Add(label1);
             Name = "UrunTurleri";
             Text = "UrunTurleri";
             Load += UrunTurleri_Load_1;
-            ((System.ComponentModel.ISupportInitialize)dgvMarkalar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTurler).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -230,7 +235,7 @@
         private Button button1;
         private Button button3;
         private Label label2;
-        private DataGridView dgvMarkalar;
+        private DataGridView dgvTurler;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem programToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;

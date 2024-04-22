@@ -245,6 +245,7 @@
             Controls.Add(menuStrip1);
             Name = "PersonelGuncelle";
             Text = "PersonelGuncelle";
+            Load += PersonelGuncelle_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

@@ -209,6 +209,7 @@
             Controls.Add(menuStrip1);
             Name = "Personeller";
             Text = "Personeller";
+            Load += Personeller_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

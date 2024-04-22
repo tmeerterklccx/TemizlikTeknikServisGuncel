@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,55 @@ namespace TemizlikTeknikServisGuncel
 {
     public partial class Bakimlar : Form
     {
+        public Bakimlar afrm;
+        SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
+        SqlCommand TurCMD = new SqlCommand();
+        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+        public void KomutCalistir(string sorgu)
+        {
+            try
+            {
+                SqlConnection.Open();
+                TurCMD.CommandText = sorgu;
+                TurCMD.Connection = SqlConnection;
+                TurCMD.ExecuteNonQuery();
+                MessageBox.Show("Başarıyla Silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                if (TurCMD.Parameters.Count > 0)
+                {
+                    TurCMD.Parameters.Clear();
+                }
+                SqlConnection.Close();
+            }
+        }
+
+        private void VeriGetir()
+        {
+            string sorgu = "Select * from Markalar";
+            Komutlar komutlar = new Komutlar();
+            //dgvUrunler.DataSource = komutlar.VeriDoldur(sorgu);
+        }
+        public DataTable VeriDoldur(string sorgu)
+        {
+            DataTable tablo = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sorgu, SqlConnection);
+            sqlDataAdapter.Fill(tablo);
+            return tablo;
+        }
         public Bakimlar()
         {
             InitializeComponent();
+        }
+
+        private void Bakimlar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

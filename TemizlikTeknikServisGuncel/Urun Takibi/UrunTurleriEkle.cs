@@ -83,6 +83,13 @@ namespace TemizlikTeknikServisGuncel
         {
             button1.Enabled = false;
         }
+
+        private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Otomasyon otomasyon = new Otomasyon();
+            otomasyon.Show();
+            this.Close();
+        }
     }
 }
 

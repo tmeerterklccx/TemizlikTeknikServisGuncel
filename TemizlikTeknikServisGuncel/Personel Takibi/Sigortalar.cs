@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TemizlikTeknikServisGuncel.Musteri_Takibi
+namespace TemizlikTeknikServisGuncel.Sigorta_Takibi
 {
-    public partial class MusteriEkle : Form
+    public partial class Sigortalar : Form
     {
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
         SqlCommand TurCMD = new SqlCommand();
@@ -24,7 +24,7 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
                 TurCMD.CommandText = sorgu;
                 TurCMD.Connection = SqlConnection;
                 TurCMD.ExecuteNonQuery();
-                MessageBox.Show("Başarıyla Eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Başarıyla Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -39,12 +39,12 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
                 SqlConnection.Close();
             }
         }
-        public MusteriEkle()
+        public Sigortalar()
         {
             InitializeComponent();
         }
 
-        private void MusteriEkle_Load(object sender, EventArgs e)
+        private void Sigortalar_Load(object sender, EventArgs e)
         {
 
         }

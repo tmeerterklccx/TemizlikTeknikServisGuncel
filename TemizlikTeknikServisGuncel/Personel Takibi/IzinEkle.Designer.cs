@@ -192,6 +192,7 @@
             Controls.Add(menuStrip1);
             Name = "IzinEkle";
             Text = "IzinEkle";
+            Load += IzinEkle_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

@@ -269,6 +269,7 @@
             Controls.Add(menuStrip1);
             Name = "PersonelEkle";
             Text = "PersonelEkle";
+            Load += PersonelEkle_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

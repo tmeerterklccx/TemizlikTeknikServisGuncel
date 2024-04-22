@@ -17,6 +17,7 @@ namespace TemizlikTeknikServisGuncel
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
         SqlCommand TurCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+
         public void KomutCalistir(string sorgu)
         {
             try
@@ -63,38 +64,38 @@ namespace TemizlikTeknikServisGuncel
         }
         private void BaslikGoster()
         {
-            dgvMarkalar.Columns[0].HeaderText = "Tur ID";
-            dgvMarkalar.Columns[0].Width = 200;
-            dgvMarkalar.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dgvMarkalar.Columns[1].HeaderText = "Tur ADI";
-            dgvMarkalar.Columns[1].Width = 350;
-            dgvMarkalar.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvTurler.Columns[0].HeaderText = "Tur ID";
+            dgvTurler.Columns[0].Width = 200;
+            dgvTurler.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvTurler.Columns[1].HeaderText = "Tur ADI";
+            dgvTurler.Columns[1].Width = 350;
+            dgvTurler.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
         }
         private void VeriGetir()
         {
             Komutlar komutlar = new Komutlar();
             string sorgu = "Select * From Urun_Turleri";
-            dgvMarkalar.DataSource = komutlar.VeriDoldur(sorgu);
+            dgvTurler.DataSource = komutlar.VeriDoldur(sorgu);
         }
 
         private void UrunTurleri_Load_1(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button5.Enabled = false;
             VeriGetir();
-            //BaslikGoster();
+            BaslikGoster();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Komutlar komutlar = new Komutlar();
-            string sorgu = "Select * From Urun_Turleri";
-            dgvMarkalar.DataSource = komutlar.VeriDoldur(sorgu);
+            VeriGetir();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                string deger = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
+                string deger = dgvTurler.CurrentRow.Cells[0].Value.ToString();
                 int id = Convert.ToInt32(deger);
                 string sorgu = "Delete from Urun_Turleri where Tur_ID =@ID";
                 TurCMD.Parameters.AddWithValue("@ID", id);
@@ -114,8 +115,57 @@ namespace TemizlikTeknikServisGuncel
         {
             UrunTurleriGuncelle turGuncelle = new UrunTurleriGuncelle();
             turGuncelle.afrm = this;
-            turGuncelle.textBox2.Text = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
+            turGuncelle.textBox2.Text = dgvTurler.CurrentRow.Cells[0].Value.ToString();
             turGuncelle.ShowDialog();
+        }
+
+        private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Otomasyon otomasyon = new Otomasyon();
+            otomasyon.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" || textBox2.Text != "")
+            {
+                button1.Enabled = true;
+                TurCMD.CommandText = "SELECT Tur_ID, Tur_Adi FROM Urun_Turleri WHERE Tur_ID = @turID OR Tur_Adi = @turAdi";
+                TurCMD.Connection = SqlConnection;
+                TurCMD.Connection.Open();
+                TurCMD.Parameters.Clear();
+                TurCMD.Parameters.AddWithValue("@turID", textBox1.Text);
+                TurCMD.Parameters.AddWithValue("@turAdi", textBox2.Text);
+                SqlDataReader reader = TurCMD.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+                dgvTurler.DataSource = dataTable;
+                TurCMD.Connection.Close();
+            }
+            else
+            {
+                button1.Enabled = false;
+            }
+
+        }
+
+        private void dgvTurler_SelectionChanged(object sender, EventArgs e)
+        {
+            button5.Enabled = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) || !string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                button1.Enabled = false;
+            }
         }
     }
 }

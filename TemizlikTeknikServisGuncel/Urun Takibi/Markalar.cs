@@ -114,7 +114,38 @@ namespace TemizlikTeknikServisGuncel
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text != "" || textBox2.Text != "")
+            {
+                button1.Enabled = true;
+                MarkaCMD.CommandText = "SELECT * FROM Markalar WHERE Marka_ID = @markaID OR Marka_Ad = @markaAD";
+                MarkaCMD.Connection = SqlConnection;
+                MarkaCMD.Connection.Open();
+                MarkaCMD.Parameters.Clear();
+                MarkaCMD.Parameters.AddWithValue("@markaID", textBox1.Text);
+                MarkaCMD.Parameters.AddWithValue("@markaAD", textBox2.Text);
+                SqlDataReader reader = MarkaCMD.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+                dgvMarkalar.DataSource = dataTable;
+                MarkaCMD.Connection.Close();
+            }
+            else
+            {
+                button1.Enabled = false;
+            }
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) || !string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                button1.Enabled = false;
+            }
         }
     }
 }

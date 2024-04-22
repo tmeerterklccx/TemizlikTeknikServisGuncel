@@ -209,6 +209,7 @@
             Controls.Add(textBox2);
             Name = "Izinler";
             Text = "Izinler";
+            Load += Izinler_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

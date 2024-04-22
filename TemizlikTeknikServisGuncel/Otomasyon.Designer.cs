@@ -28,200 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
             menuStrip1 = new MenuStrip();
             programToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             uyelikToolStripMenuItem = new ToolStripMenuItem();
             oturumuKapatToolStripMenuItem = new ToolStripMenuItem();
             kayıtOluşturToolStripMenuItem = new ToolStripMenuItem();
-            button16 = new Button();
-            button17 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            ıconButton1 = new FontAwesome.Sharp.IconButton();
+            ıconButton2 = new FontAwesome.Sharp.IconButton();
+            ıconButton3 = new FontAwesome.Sharp.IconButton();
+            ıconButton4 = new FontAwesome.Sharp.IconButton();
+            ıconButton5 = new FontAwesome.Sharp.IconButton();
+            ıconButton6 = new FontAwesome.Sharp.IconButton();
+            ıconButton7 = new FontAwesome.Sharp.IconButton();
+            ıconButton8 = new FontAwesome.Sharp.IconButton();
+            groupBox1 = new GroupBox();
             label5 = new Label();
             label6 = new Label();
+            label7 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            ıconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            label1 = new Label();
+            label8 = new Label();
+            lblTC = new Label();
             menuStrip1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(12, 116);
-            button1.Name = "button1";
-            button1.Size = new Size(146, 53);
-            button1.TabIndex = 2;
-            button1.Text = "Ürünler";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button2.Location = new Point(365, 198);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 53);
-            button2.TabIndex = 3;
-            button2.Text = "Bakımlar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button3.Location = new Point(193, 116);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 53);
-            button3.TabIndex = 4;
-            button3.Text = "Personeller";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button4.Location = new Point(706, 198);
-            button4.Name = "button4";
-            button4.Size = new Size(140, 53);
-            button4.TabIndex = 5;
-            button4.Text = "Geri Bildirim";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button5.Location = new Point(193, 282);
-            button5.Name = "button5";
-            button5.Size = new Size(135, 53);
-            button5.TabIndex = 6;
-            button5.Text = "İzinler";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // button6
-            // 
-            button6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button6.Location = new Point(706, 116);
-            button6.Name = "button6";
-            button6.Size = new Size(140, 53);
-            button6.TabIndex = 11;
-            button6.Text = "Müşteriler";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button7.Location = new Point(12, 198);
-            button7.Name = "button7";
-            button7.Size = new Size(146, 53);
-            button7.TabIndex = 10;
-            button7.Text = "Markalar";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
-            // button8
-            // 
-            button8.BackColor = SystemColors.ButtonShadow;
-            button8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button8.Location = new Point(193, 361);
-            button8.Name = "button8";
-            button8.Size = new Size(135, 53);
-            button8.TabIndex = 9;
-            button8.Text = "İzin Türleri";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            button9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button9.Location = new Point(541, 198);
-            button9.Name = "button9";
-            button9.Size = new Size(135, 53);
-            button9.TabIndex = 8;
-            button9.Text = "İadeler";
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            button10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button10.Location = new Point(361, 282);
-            button10.Name = "button10";
-            button10.Size = new Size(139, 53);
-            button10.TabIndex = 7;
-            button10.Text = "Garanti Takibi";
-            button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            button11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button11.Location = new Point(882, 282);
-            button11.Name = "button11";
-            button11.Size = new Size(142, 53);
-            button11.TabIndex = 16;
-            button11.Text = "Sigorta Türleri";
-            button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            button12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button12.Location = new Point(882, 198);
-            button12.Name = "button12";
-            button12.Size = new Size(142, 53);
-            button12.TabIndex = 15;
-            button12.Text = "Sigorta Şirketleri";
-            button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            button13.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button13.Location = new Point(361, 116);
-            button13.Name = "button13";
-            button13.Size = new Size(139, 53);
-            button13.TabIndex = 14;
-            button13.Text = "Servisler";
-            button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            button14.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button14.Location = new Point(193, 198);
-            button14.Name = "button14";
-            button14.Size = new Size(135, 53);
-            button14.TabIndex = 13;
-            button14.Text = "Personel Pozisyonları";
-            button14.UseVisualStyleBackColor = true;
-            button14.Click += button14_Click;
-            // 
-            // button15
-            // 
-            button15.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button15.Location = new Point(541, 116);
-            button15.Name = "button15";
-            button15.Size = new Size(137, 53);
-            button15.TabIndex = 12;
-            button15.Text = "Satışlar";
-            button15.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
             menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, uyelikToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1036, 24);
+            menuStrip1.Size = new Size(1019, 24);
             menuStrip1.TabIndex = 17;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -258,170 +99,304 @@
             kayıtOluşturToolStripMenuItem.Size = new Size(156, 22);
             kayıtOluşturToolStripMenuItem.Text = "Kayıt Oluştur";
             // 
-            // button16
+            // ıconButton1
             // 
-            button16.BackColor = SystemColors.ActiveBorder;
-            button16.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button16.ForeColor = SystemColors.ActiveCaptionText;
-            button16.Location = new Point(12, 282);
-            button16.Name = "button16";
-            button16.Size = new Size(146, 53);
-            button16.TabIndex = 18;
-            button16.Text = "Ürün Türleri";
-            button16.UseVisualStyleBackColor = false;
-            button16.Click += button16_Click;
+            ıconButton1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+            ıconButton1.IconColor = Color.Black;
+            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton1.Location = new Point(15, 133);
+            ıconButton1.Name = "ıconButton1";
+            ıconButton1.Size = new Size(236, 60);
+            ıconButton1.TabIndex = 25;
+            ıconButton1.Text = "ÜRÜNLER";
+            ıconButton1.UseVisualStyleBackColor = true;
+            ıconButton1.Click += ıconButton1_Click;
             // 
-            // button17
+            // ıconButton2
             // 
-            button17.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button17.Location = new Point(882, 116);
-            button17.Name = "button17";
-            button17.Size = new Size(142, 53);
-            button17.TabIndex = 19;
-            button17.Text = "Sigortalar";
-            button17.UseVisualStyleBackColor = true;
+            ıconButton2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton2.IconChar = FontAwesome.Sharp.IconChar.Laravel;
+            ıconButton2.IconColor = Color.Black;
+            ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton2.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton2.Location = new Point(266, 133);
+            ıconButton2.Name = "ıconButton2";
+            ıconButton2.Size = new Size(236, 60);
+            ıconButton2.TabIndex = 26;
+            ıconButton2.Text = "ÜRÜN TÜRLERİ";
+            ıconButton2.UseVisualStyleBackColor = true;
+            ıconButton2.Click += ıconButton2_Click;
             // 
-            // label1
+            // ıconButton3
             // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(33, 63);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 23);
-            label1.TabIndex = 20;
-            label1.Text = "Ürün Takibi";
+            ıconButton3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton3.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            ıconButton3.IconColor = Color.Black;
+            ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton3.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton3.Location = new Point(266, 199);
+            ıconButton3.Name = "ıconButton3";
+            ıconButton3.Size = new Size(236, 60);
+            ıconButton3.TabIndex = 27;
+            ıconButton3.Text = "BAKIMLAR";
+            ıconButton3.UseVisualStyleBackColor = true;
+            ıconButton3.Click += ıconButton3_Click;
             // 
-            // label2
+            // ıconButton4
             // 
-            label2.AutoSize = true;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(202, 65);
-            label2.Name = "label2";
-            label2.Size = new Size(128, 23);
-            label2.TabIndex = 21;
-            label2.Text = "Personel Takibi";
+            ıconButton4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton4.IconChar = FontAwesome.Sharp.IconChar.PeopleCarryBox;
+            ıconButton4.IconColor = Color.Black;
+            ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton4.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton4.Location = new Point(15, 331);
+            ıconButton4.Name = "ıconButton4";
+            ıconButton4.Size = new Size(236, 60);
+            ıconButton4.TabIndex = 28;
+            ıconButton4.Text = "PERSONELLER";
+            ıconButton4.UseVisualStyleBackColor = true;
+            ıconButton4.Click += ıconButton4_Click;
             // 
-            // label3
+            // ıconButton5
             // 
-            label3.AutoSize = true;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(374, 63);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 23);
-            label3.TabIndex = 22;
-            label3.Text = "Teknik Takip";
+            ıconButton5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton5.IconChar = FontAwesome.Sharp.IconChar.LaptopHouse;
+            ıconButton5.IconColor = Color.Black;
+            ıconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton5.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton5.Location = new Point(266, 265);
+            ıconButton5.Name = "ıconButton5";
+            ıconButton5.Size = new Size(236, 60);
+            ıconButton5.TabIndex = 29;
+            ıconButton5.Text = "İZİNLER";
+            ıconButton5.UseVisualStyleBackColor = true;
+            ıconButton5.Click += ıconButton5_Click;
             // 
-            // label4
+            // ıconButton6
             // 
-            label4.AutoSize = true;
-            label4.BorderStyle = BorderStyle.FixedSingle;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(556, 63);
-            label4.Name = "label4";
-            label4.Size = new Size(98, 23);
-            label4.TabIndex = 23;
-            label4.Text = "Satış Takibi";
+            ıconButton6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton6.IconChar = FontAwesome.Sharp.IconChar.Keyboard;
+            ıconButton6.IconColor = Color.Black;
+            ıconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton6.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton6.Location = new Point(15, 199);
+            ıconButton6.Name = "ıconButton6";
+            ıconButton6.Size = new Size(236, 60);
+            ıconButton6.TabIndex = 30;
+            ıconButton6.Text = "MARKALAR";
+            ıconButton6.UseVisualStyleBackColor = true;
+            ıconButton6.Click += ıconButton6_Click;
+            // 
+            // ıconButton7
+            // 
+            ıconButton7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton7.IconChar = FontAwesome.Sharp.IconChar.Meta;
+            ıconButton7.IconColor = Color.Black;
+            ıconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton7.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton7.Location = new Point(266, 331);
+            ıconButton7.Name = "ıconButton7";
+            ıconButton7.Size = new Size(236, 60);
+            ıconButton7.TabIndex = 31;
+            ıconButton7.Text = "SİGORTALAR";
+            ıconButton7.UseVisualStyleBackColor = true;
+            ıconButton7.Click += ıconButton7_Click;
+            // 
+            // ıconButton8
+            // 
+            ıconButton8.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ıconButton8.IconChar = FontAwesome.Sharp.IconChar.PersonRays;
+            ıconButton8.IconColor = Color.Black;
+            ıconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton8.ImageAlign = ContentAlignment.MiddleLeft;
+            ıconButton8.Location = new Point(15, 265);
+            ıconButton8.Name = "ıconButton8";
+            ıconButton8.Size = new Size(236, 60);
+            ıconButton8.TabIndex = 32;
+            ıconButton8.Text = "MÜŞTERİLER";
+            ıconButton8.UseVisualStyleBackColor = true;
+            ıconButton8.Click += ıconButton8_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = SystemColors.ButtonHighlight;
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Location = new Point(517, 61);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(490, 395);
+            groupBox1.TabIndex = 33;
+            groupBox1.TabStop = false;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.BorderStyle = BorderStyle.FixedSingle;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(715, 63);
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
+            label5.Location = new Point(365, 212);
             label5.Name = "label5";
-            label5.Size = new Size(120, 23);
-            label5.TabIndex = 24;
-            label5.Text = "Müşteri Takibi";
+            label5.Size = new Size(84, 17);
+            label5.TabIndex = 40;
+            label5.Text = "İSTATİSTİK 1";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.BorderStyle = BorderStyle.FixedSingle;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(893, 63);
+            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(191, 212);
             label6.Name = "label6";
-            label6.Size = new Size(117, 23);
-            label6.TabIndex = 25;
-            label6.Text = "Sigorta Takibi";
+            label6.Size = new Size(84, 17);
+            label6.TabIndex = 39;
+            label6.Text = "İSTATİSTİK 1";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(20, 212);
+            label7.Name = "label7";
+            label7.Size = new Size(84, 17);
+            label7.TabIndex = 38;
+            label7.Text = "İSTATİSTİK 1";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
+            label4.Location = new Point(365, 31);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 17);
+            label4.TabIndex = 37;
+            label4.Text = "İSTATİSTİK 1";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(191, 31);
+            label3.Name = "label3";
+            label3.Size = new Size(84, 17);
+            label3.TabIndex = 36;
+            label3.Text = "İSTATİSTİK 1";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(20, 31);
+            label2.Name = "label2";
+            label2.Size = new Size(84, 17);
+            label2.TabIndex = 35;
+            label2.Text = "İSTATİSTİK 1";
+            // 
+            // ıconMenuItem1
+            // 
+            ıconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
+            ıconMenuItem1.IconColor = Color.Black;
+            ıconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconMenuItem1.Name = "ıconMenuItem1";
+            ıconMenuItem1.Size = new Size(32, 19);
+            ıconMenuItem1.Text = "ıconMenuItem1";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(74, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(319, 30);
+            label1.TabIndex = 34;
+            label1.Text = "TEKNİK SERVİS OTOMASYONU";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ButtonHighlight;
+            label8.Location = new Point(15, 409);
+            label8.Name = "label8";
+            label8.Size = new Size(267, 30);
+            label8.TabIndex = 35;
+            label8.Text = "GİRİŞ YAPAN PERSONEL :";
+            // 
+            // lblTC
+            // 
+            lblTC.AutoSize = true;
+            lblTC.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTC.ForeColor = SystemColors.ButtonHighlight;
+            lblTC.Location = new Point(297, 409);
+            lblTC.Name = "lblTC";
+            lblTC.Size = new Size(0, 30);
+            lblTC.TabIndex = 36;
             // 
             // Otomasyon
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1036, 456);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            BackColor = Color.Black;
+            ClientSize = new Size(1019, 468);
+            Controls.Add(lblTC);
+            Controls.Add(label8);
             Controls.Add(label1);
-            Controls.Add(button17);
-            Controls.Add(button16);
-            Controls.Add(button11);
-            Controls.Add(button12);
-            Controls.Add(button13);
-            Controls.Add(button14);
-            Controls.Add(button15);
-            Controls.Add(button6);
-            Controls.Add(button7);
-            Controls.Add(button8);
-            Controls.Add(button9);
-            Controls.Add(button10);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(groupBox1);
+            Controls.Add(ıconButton8);
+            Controls.Add(ıconButton7);
+            Controls.Add(ıconButton6);
+            Controls.Add(ıconButton5);
+            Controls.Add(ıconButton4);
+            Controls.Add(ıconButton3);
+            Controls.Add(ıconButton2);
+            Controls.Add(ıconButton1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Otomasyon";
-            Text = "Otomasyon";
+            Text = "OTOMASYON";
+            Load += Otomasyon_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button button15;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem programToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem uyelikToolStripMenuItem;
         private ToolStripMenuItem oturumuKapatToolStripMenuItem;
         private ToolStripMenuItem kayıtOluşturToolStripMenuItem;
-        private Button button16;
-        private Button button17;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private FontAwesome.Sharp.IconButton ıconButton1;
+        private FontAwesome.Sharp.IconButton ıconButton2;
+        private FontAwesome.Sharp.IconButton ıconButton3;
+        private FontAwesome.Sharp.IconButton ıconButton4;
+        private FontAwesome.Sharp.IconButton ıconButton5;
+        private FontAwesome.Sharp.IconButton ıconButton6;
+        private FontAwesome.Sharp.IconButton ıconButton7;
+        private FontAwesome.Sharp.IconButton ıconButton8;
+        private GroupBox groupBox1;
         private Label label5;
         private Label label6;
+        private Label label7;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private FontAwesome.Sharp.IconMenuItem ıconMenuItem1;
+        private Label label1;
+        private Label label8;
+        public Label lblTC;
     }
 }

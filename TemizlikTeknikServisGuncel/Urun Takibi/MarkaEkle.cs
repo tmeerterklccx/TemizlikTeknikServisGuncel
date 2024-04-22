@@ -56,13 +56,13 @@ namespace TemizlikTeknikServisGuncel
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-                string sorgu = "Insert Into Markalar (Marka_Ad) values (@MarkaAd)";
-                MarkaCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-                KomutCalistir(sorgu);
-                Markalar markalar = new Markalar();
-                markalar.Show();
-                this.Close();
+
+            string sorgu = "Insert Into Markalar (Marka_Ad) values (@MarkaAd)";
+            MarkaCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
+            KomutCalistir(sorgu);
+            Markalar markalar = new Markalar();
+            markalar.Show();
+            this.Close();
 
         }
 

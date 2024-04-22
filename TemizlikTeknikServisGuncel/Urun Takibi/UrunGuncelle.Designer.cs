@@ -31,31 +31,29 @@
             TurCB = new ComboBox();
             markaCB = new ComboBox();
             label1 = new Label();
-            textBox1 = new TextBox();
-            richTextBox1 = new RichTextBox();
+            txtYil = new TextBox();
+            txtBilgi = new RichTextBox();
             button1 = new Button();
             label10 = new Label();
             label11 = new Label();
-            textBox10 = new TextBox();
+            txtFiyat = new TextBox();
             label8 = new Label();
             label9 = new Label();
-            textBox7 = new TextBox();
+            txtStok = new TextBox();
             programToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
-            textBox8 = new TextBox();
+            txtKdv = new TextBox();
             label6 = new Label();
             label7 = new Label();
             label4 = new Label();
-            label5 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtAlisFiyati = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            txtUrunAd = new TextBox();
             label2 = new Label();
             menuStrip1 = new MenuStrip();
             label12 = new Label();
-            textBox5 = new TextBox();
+            txtID = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,28 +81,28 @@
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(431, 352);
+            label1.Location = new Point(442, 347);
             label1.Name = "label1";
             label1.Size = new Size(104, 23);
             label1.TabIndex = 121;
             label1.Text = "ÜRETİM YILI";
             // 
-            // textBox1
+            // txtYil
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(583, 351);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 24);
-            textBox1.TabIndex = 120;
+            txtYil.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtYil.Location = new Point(583, 346);
+            txtYil.Name = "txtYil";
+            txtYil.Size = new Size(147, 24);
+            txtYil.TabIndex = 120;
             // 
-            // richTextBox1
+            // txtBilgi
             // 
-            richTextBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            richTextBox1.Location = new Point(152, 373);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(264, 88);
-            richTextBox1.TabIndex = 119;
-            richTextBox1.Text = "";
+            txtBilgi.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtBilgi.Location = new Point(152, 373);
+            txtBilgi.Name = "txtBilgi";
+            txtBilgi.Size = new Size(264, 88);
+            txtBilgi.TabIndex = 119;
+            txtBilgi.Text = "";
             // 
             // button1
             // 
@@ -141,13 +139,13 @@
             label11.TabIndex = 116;
             label11.Text = "FİYAT:";
             // 
-            // textBox10
+            // txtFiyat
             // 
-            textBox10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox10.Location = new Point(168, 316);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(147, 24);
-            textBox10.TabIndex = 115;
+            txtFiyat.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtFiyat.Location = new Point(168, 316);
+            txtFiyat.Name = "txtFiyat";
+            txtFiyat.Size = new Size(147, 24);
+            txtFiyat.TabIndex = 115;
             // 
             // label8
             // 
@@ -155,7 +153,7 @@
             label8.BorderStyle = BorderStyle.FixedSingle;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = SystemColors.ControlLightLight;
-            label8.Location = new Point(480, 295);
+            label8.Location = new Point(491, 290);
             label8.Name = "label8";
             label8.Size = new Size(55, 23);
             label8.TabIndex = 114;
@@ -167,19 +165,19 @@
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = SystemColors.ControlLightLight;
-            label9.Location = new Point(431, 239);
+            label9.Location = new Point(442, 234);
             label9.Name = "label9";
             label9.Size = new Size(104, 23);
             label9.TabIndex = 113;
             label9.Text = "KDV ORANI:";
             // 
-            // textBox7
+            // txtStok
             // 
-            textBox7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox7.Location = new Point(583, 297);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(147, 24);
-            textBox7.TabIndex = 112;
+            txtStok.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtStok.Location = new Point(583, 292);
+            txtStok.Name = "txtStok";
+            txtStok.Size = new Size(147, 24);
+            txtStok.TabIndex = 112;
             // 
             // programToolStripMenuItem
             // 
@@ -201,13 +199,13 @@
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
             otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
-            // textBox8
+            // txtKdv
             // 
-            textBox8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox8.Location = new Point(583, 238);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(147, 24);
-            textBox8.TabIndex = 111;
+            txtKdv.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtKdv.Location = new Point(583, 233);
+            txtKdv.Name = "txtKdv";
+            txtKdv.Size = new Size(147, 24);
+            txtKdv.TabIndex = 111;
             // 
             // label6
             // 
@@ -239,39 +237,19 @@
             label4.BorderStyle = BorderStyle.FixedSingle;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(431, 177);
+            label4.Location = new Point(447, 172);
             label4.Name = "label4";
             label4.Size = new Size(99, 23);
             label4.TabIndex = 108;
             label4.Text = "ALIŞ FİYATI:";
             // 
-            // label5
+            // txtAlisFiyati
             // 
-            label5.AutoSize = true;
-            label5.BorderStyle = BorderStyle.FixedSingle;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(344, 118);
-            label5.Name = "label5";
-            label5.Size = new Size(191, 23);
-            label5.TabIndex = 107;
-            label5.Text = "GARANTİ SÜRESİ (Gün):";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox3.Location = new Point(583, 176);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(147, 24);
-            textBox3.TabIndex = 106;
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox4.Location = new Point(583, 117);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(147, 24);
-            textBox4.TabIndex = 105;
+            txtAlisFiyati.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtAlisFiyati.Location = new Point(583, 171);
+            txtAlisFiyati.Name = "txtAlisFiyati";
+            txtAlisFiyati.Size = new Size(147, 24);
+            txtAlisFiyati.TabIndex = 106;
             // 
             // label3
             // 
@@ -285,13 +263,13 @@
             label3.TabIndex = 103;
             label3.Text = "ÜRÜN ADI:";
             // 
-            // textBox2
+            // txtUrunAd
             // 
-            textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(166, 127);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(147, 24);
-            textBox2.TabIndex = 102;
+            txtUrunAd.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtUrunAd.Location = new Point(166, 127);
+            txtUrunAd.Name = "txtUrunAd";
+            txtUrunAd.Size = new Size(147, 24);
+            txtUrunAd.TabIndex = 102;
             // 
             // label2
             // 
@@ -319,20 +297,20 @@
             label12.BorderStyle = BorderStyle.FixedSingle;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label12.ForeColor = SystemColors.ControlLightLight;
-            label12.Location = new Point(47, 77);
+            label12.Location = new Point(462, 128);
             label12.Name = "label12";
             label12.Size = new Size(84, 23);
             label12.TabIndex = 125;
             label12.Text = "ÜRÜN ID:";
             // 
-            // textBox5
+            // txtID
             // 
-            textBox5.Enabled = false;
-            textBox5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox5.Location = new Point(168, 76);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(93, 24);
-            textBox5.TabIndex = 124;
+            txtID.Enabled = false;
+            txtID.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtID.Location = new Point(583, 127);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(93, 24);
+            txtID.TabIndex = 124;
             // 
             // UrunGuncelle
             // 
@@ -341,28 +319,26 @@
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(763, 472);
             Controls.Add(label12);
-            Controls.Add(textBox5);
+            Controls.Add(txtID);
             Controls.Add(TurCB);
             Controls.Add(markaCB);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(richTextBox1);
+            Controls.Add(txtYil);
+            Controls.Add(txtBilgi);
             Controls.Add(button1);
             Controls.Add(label10);
             Controls.Add(label11);
-            Controls.Add(textBox10);
+            Controls.Add(txtFiyat);
             Controls.Add(label8);
             Controls.Add(label9);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
+            Controls.Add(txtStok);
+            Controls.Add(txtKdv);
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(label4);
-            Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
+            Controls.Add(txtAlisFiyati);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtUrunAd);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Name = "UrunGuncelle";
@@ -379,30 +355,28 @@
         private ComboBox TurCB;
         private ComboBox markaCB;
         private Label label1;
-        private TextBox textBox1;
-        private RichTextBox richTextBox1;
+        private TextBox txtYil;
+        private RichTextBox txtBilgi;
         private Button button1;
         private Label label10;
         private Label label11;
-        private TextBox textBox10;
+        private TextBox txtFiyat;
         private Label label8;
         private Label label9;
-        private TextBox textBox7;
+        private TextBox txtStok;
         private ToolStripMenuItem programToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
-        private TextBox textBox8;
+        private TextBox txtKdv;
         private Label label6;
         private Label label7;
         private Label label4;
-        private Label label5;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtAlisFiyati;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox txtUrunAd;
         private Label label2;
         private MenuStrip menuStrip1;
         private Label label12;
-        public TextBox textBox5;
+        public TextBox txtID;
     }
 }

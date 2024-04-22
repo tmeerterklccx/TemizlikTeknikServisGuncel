@@ -61,8 +61,8 @@ namespace TemizlikTeknikServisGuncel
         {
 
             UrunGuncelle urunGuncelle = new UrunGuncelle();
-            //urunGuncelle.afrm = this;
-            urunGuncelle.textBox5.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
+            urunGuncelle.afrm = this;
+            //urunGuncelle.txtID.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
             urunGuncelle.ShowDialog();
 
         }
@@ -87,6 +87,49 @@ namespace TemizlikTeknikServisGuncel
                 UrunCMD.Parameters.AddWithValue("@ID", id);
                 KomutCalistir(sorgu);
                 VeriGetir();
+            }
+        }
+
+        private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Otomasyon otomasyon = new Otomasyon();
+            otomasyon.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" || textBox2.Text != "")
+            {
+                button1.Enabled = true;
+                UrunCMD.CommandText = "SELECT * FROM Urunler WHERE Urun_ID = @urunID OR Urun_Ad = @urunAd";
+                UrunCMD.Connection = SqlConnection;
+                UrunCMD.Connection.Open();
+                UrunCMD.Parameters.Clear();
+                UrunCMD.Parameters.AddWithValue("@urunID", textBox1.Text);
+                UrunCMD.Parameters.AddWithValue("@urunAd", textBox2.Text);
+                SqlDataReader reader = UrunCMD.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+                dgvUrunler.DataSource = dataTable;
+                UrunCMD.Connection.Close();
+            }
+            else
+            {
+                button1.Enabled = false;
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) || !string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                button1.Enabled = false;
             }
         }
     }
