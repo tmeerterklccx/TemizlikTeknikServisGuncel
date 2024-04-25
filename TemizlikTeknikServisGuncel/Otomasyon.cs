@@ -61,7 +61,7 @@ namespace TemizlikTeknikServisGuncel
         {
             Bakimlar bakimlar = new Bakimlar();
             bakimlar.Show();
-            this.Close();
+
         }
 
         private void ıconButton8_Click(object sender, EventArgs e)

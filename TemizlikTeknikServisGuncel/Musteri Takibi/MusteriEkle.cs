@@ -13,6 +13,7 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 {
     public partial class MusteriEkle : Form
     {
+        public Musteriler afrm;
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
         SqlCommand TurCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();

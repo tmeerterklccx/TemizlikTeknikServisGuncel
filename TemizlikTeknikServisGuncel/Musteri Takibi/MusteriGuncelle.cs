@@ -14,6 +14,7 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
     public partial class MusteriGuncelle : Form
     {
+        public Musteriler afrm;
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
         SqlCommand TurCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
@@ -46,6 +47,11 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
         }
 
         private void MusteriGuncelle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
