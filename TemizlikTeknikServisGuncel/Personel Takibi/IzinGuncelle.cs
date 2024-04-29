@@ -13,6 +13,7 @@ namespace TemizlikTeknikServisGuncel
 {
     public partial class IzinGuncelle : Form
     {
+        public Izinler afrm;
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
         SqlCommand TurCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
@@ -24,7 +25,7 @@ namespace TemizlikTeknikServisGuncel
                 TurCMD.CommandText = sorgu;
                 TurCMD.Connection = SqlConnection;
                 TurCMD.ExecuteNonQuery();
-                MessageBox.Show("Başarıyla Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Başarıyla Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -53,7 +54,15 @@ namespace TemizlikTeknikServisGuncel
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string sorgu = "UPDATE Izinler SET Izin_Baslangic = @baslangic, Izin_Bitis = @bitis, Tur = @tur WHERE Izin_ID = @izinid";
+            TurCMD.Parameters.AddWithValue("@izinid", id.Text);
+            TurCMD.Parameters.AddWithValue("@baslangic", baslangic.Text);
+            TurCMD.Parameters.AddWithValue("@bitis", bitis.Text);
+            TurCMD.Parameters.AddWithValue("@tur", izinTur.Text);
+            KomutCalistir(sorgu);
+            Izinler izinler = new Izinler();
+            izinler.Show();
+            this.Close();
         }
 
         private void IzinGuncelle_Load(object sender, EventArgs e)

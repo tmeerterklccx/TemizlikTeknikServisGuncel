@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace TemizlikTeknikServisGuncel
@@ -15,16 +16,16 @@ namespace TemizlikTeknikServisGuncel
     {
         public Bakimlar afrm;
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
-        SqlCommand TurCMD = new SqlCommand();
+        SqlCommand bakimCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
         public void KomutCalistir(string sorgu)
         {
             try
             {
                 SqlConnection.Open();
-                TurCMD.CommandText = sorgu;
-                TurCMD.Connection = SqlConnection;
-                TurCMD.ExecuteNonQuery();
+                bakimCMD.CommandText = sorgu;
+                bakimCMD.Connection = SqlConnection;
+                bakimCMD.ExecuteNonQuery();
                 MessageBox.Show("Başarıyla Kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -33,9 +34,9 @@ namespace TemizlikTeknikServisGuncel
             }
             finally
             {
-                if (TurCMD.Parameters.Count > 0)
+                if (bakimCMD.Parameters.Count > 0)
                 {
-                    TurCMD.Parameters.Clear();
+                    bakimCMD.Parameters.Clear();
                 }
                 SqlConnection.Close();
             }
@@ -47,7 +48,42 @@ namespace TemizlikTeknikServisGuncel
 
         private void BakimEkle_Load(object sender, EventArgs e)
         {
+            string sorgu = "SELECT Urun_Ad FROM Urunler ";
+            SqlConnection.Open();
+            bakimCMD.Connection= SqlConnection;
+            bakimCMD.Parameters.Clear();
+            bakimCMD.CommandText= sorgu;
+            SqlDataReader sqlDataReader = bakimCMD.ExecuteReader();
+            if (sqlDataReader.Read())
+            {
+                List<string> urunAdListesi = new List<string>();
+                string urunAdi = sqlDataReader["Urun_Ad"].ToString();
+                if (urunAdi != null)
+                {
+                    urunAdListesi.Add(urunAdi);
+                }
+                
+                foreach (var item in urunAdListesi)
+                {
+                    urunCBox.Items.Add(item);
+                }
+            }
+            else
+            {
+                MessageBox.Show("HATA");
+            }
+            
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string sorgu = "Insert Into Izinler values (@PersonelTC,@Baslangic,@Bitis,@Tur,@Statu)";
+            //bakimCMD.Parameters.AddWithValue("@Ad", textBox1.Text);
+            KomutCalistir(sorgu);
+            UrunTurleri urunTurleri = new UrunTurleri();
+            urunTurleri.Show();
+            this.Close();
         }
     }
 }

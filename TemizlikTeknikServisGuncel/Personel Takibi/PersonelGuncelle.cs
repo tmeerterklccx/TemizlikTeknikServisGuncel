@@ -13,6 +13,7 @@ namespace TemizlikTeknikServisGuncel
 {
     public partial class PersonelGuncelle : Form
     {
+        public Personeller afrm;
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
         SqlCommand TurCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();

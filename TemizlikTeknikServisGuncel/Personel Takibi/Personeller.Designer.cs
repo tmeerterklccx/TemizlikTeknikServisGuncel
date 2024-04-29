@@ -88,6 +88,7 @@
             button5.TabIndex = 25;
             button5.Text = "PERSONEL SİL";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -120,6 +121,7 @@
             button1.TabIndex = 22;
             button1.Text = "PERSONEL ARA";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 

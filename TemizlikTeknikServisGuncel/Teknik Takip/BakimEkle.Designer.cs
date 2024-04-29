@@ -28,46 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            richTextBox1 = new RichTextBox();
             button1 = new Button();
             label10 = new Label();
-            label11 = new Label();
-            textBox10 = new TextBox();
             programToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
-            label6 = new Label();
-            label7 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            label3 = new Label();
-            textBox2 = new TextBox();
             label2 = new Label();
             menuStrip1 = new MenuStrip();
-            textBox1 = new TextBox();
+            tarihPicker = new DateTimePicker();
+            tutarTBox = new TextBox();
+            urunCBox = new ComboBox();
+            label11 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label3 = new Label();
+            tcTextBox = new TextBox();
+            bilgiTBox = new RichTextBox();
+            bakimTuruCBox = new TextBox();
+            personelTcTBox = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(161, 181);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(145, 29);
-            comboBox1.TabIndex = 122;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            richTextBox1.Location = new Point(550, 221);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(233, 140);
-            richTextBox1.TabIndex = 119;
-            richTextBox1.Text = "";
             // 
             // button1
             // 
@@ -78,6 +60,7 @@
             button1.TabIndex = 118;
             button1.Text = "BAKIMI KAYDET";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label10
             // 
@@ -90,26 +73,6 @@
             label10.Size = new Size(124, 23);
             label10.TabIndex = 117;
             label10.Text = "BAKIM BİLGİSİ:";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BorderStyle = BorderStyle.FixedSingle;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(23, 305);
-            label11.Name = "label11";
-            label11.Size = new Size(118, 23);
-            label11.TabIndex = 116;
-            label11.Text = "BAKIM TARİHİ";
-            // 
-            // textBox10
-            // 
-            textBox10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox10.Location = new Point(163, 304);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(147, 24);
-            textBox10.TabIndex = 115;
             // 
             // programToolStripMenuItem
             // 
@@ -129,30 +92,6 @@
             otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
             otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BorderStyle = BorderStyle.FixedSingle;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(15, 240);
-            label6.Name = "label6";
-            label6.Size = new Size(126, 23);
-            label6.TabIndex = 110;
-            label6.Text = "BAKIM TUTARI:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(78, 181);
-            label7.Name = "label7";
-            label7.Size = new Size(63, 23);
-            label7.TabIndex = 109;
-            label7.Text = "ÜRÜN:";
             // 
             // label4
             // 
@@ -178,42 +117,6 @@
             label5.TabIndex = 107;
             label5.Text = "PERSONEL TC:";
             // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox3.Location = new Point(578, 164);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(147, 24);
-            textBox3.TabIndex = 106;
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox4.Location = new Point(578, 105);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(147, 24);
-            textBox4.TabIndex = 105;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(34, 115);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 23);
-            label3.TabIndex = 103;
-            label3.Text = "MÜŞTERİ TC:";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(161, 115);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(147, 24);
-            textBox2.TabIndex = 102;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -234,13 +137,110 @@
             menuStrip1.TabIndex = 104;
             menuStrip1.Text = "menuStrip1";
             // 
-            // textBox1
+            // tarihPicker
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(161, 242);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 24);
-            textBox1.TabIndex = 124;
+            tarihPicker.Location = new Point(155, 297);
+            tarihPicker.Name = "tarihPicker";
+            tarihPicker.Size = new Size(200, 23);
+            tarihPicker.TabIndex = 154;
+            // 
+            // tutarTBox
+            // 
+            tutarTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            tutarTBox.Location = new Point(155, 235);
+            tutarTBox.Name = "tutarTBox";
+            tutarTBox.Size = new Size(147, 24);
+            tutarTBox.TabIndex = 153;
+            // 
+            // urunCBox
+            // 
+            urunCBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            urunCBox.FormattingEnabled = true;
+            urunCBox.Location = new Point(155, 174);
+            urunCBox.Name = "urunCBox";
+            urunCBox.Size = new Size(145, 29);
+            urunCBox.TabIndex = 152;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BorderStyle = BorderStyle.FixedSingle;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.ControlLightLight;
+            label11.Location = new Point(17, 298);
+            label11.Name = "label11";
+            label11.Size = new Size(118, 23);
+            label11.TabIndex = 151;
+            label11.Text = "BAKIM TARİHİ";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BorderStyle = BorderStyle.FixedSingle;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlLightLight;
+            label6.Location = new Point(9, 233);
+            label6.Name = "label6";
+            label6.Size = new Size(126, 23);
+            label6.TabIndex = 150;
+            label6.Text = "BAKIM TUTARI:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BorderStyle = BorderStyle.FixedSingle;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ControlLightLight;
+            label7.Location = new Point(72, 174);
+            label7.Name = "label7";
+            label7.Size = new Size(63, 23);
+            label7.TabIndex = 149;
+            label7.Text = "ÜRÜN:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BorderStyle = BorderStyle.FixedSingle;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(28, 108);
+            label3.Name = "label3";
+            label3.Size = new Size(107, 23);
+            label3.TabIndex = 148;
+            label3.Text = "MÜŞTERİ TC:";
+            // 
+            // tcTextBox
+            // 
+            tcTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            tcTextBox.Location = new Point(155, 108);
+            tcTextBox.Name = "tcTextBox";
+            tcTextBox.Size = new Size(147, 24);
+            tcTextBox.TabIndex = 147;
+            // 
+            // bilgiTBox
+            // 
+            bilgiTBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            bilgiTBox.Location = new Point(555, 224);
+            bilgiTBox.Name = "bilgiTBox";
+            bilgiTBox.Size = new Size(233, 97);
+            bilgiTBox.TabIndex = 157;
+            bilgiTBox.Text = "";
+            // 
+            // bakimTuruCBox
+            // 
+            bakimTuruCBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            bakimTuruCBox.Location = new Point(583, 167);
+            bakimTuruCBox.Name = "bakimTuruCBox";
+            bakimTuruCBox.Size = new Size(174, 24);
+            bakimTuruCBox.TabIndex = 156;
+            // 
+            // personelTcTBox
+            // 
+            personelTcTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            personelTcTBox.Location = new Point(583, 108);
+            personelTcTBox.Name = "personelTcTBox";
+            personelTcTBox.Size = new Size(174, 24);
+            personelTcTBox.TabIndex = 155;
             // 
             // BakimEkle
             // 
@@ -248,21 +248,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 466);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
-            Controls.Add(richTextBox1);
-            Controls.Add(button1);
-            Controls.Add(label10);
+            Controls.Add(bilgiTBox);
+            Controls.Add(bakimTuruCBox);
+            Controls.Add(personelTcTBox);
+            Controls.Add(tarihPicker);
+            Controls.Add(tutarTBox);
+            Controls.Add(urunCBox);
             Controls.Add(label11);
-            Controls.Add(textBox10);
             Controls.Add(label6);
             Controls.Add(label7);
+            Controls.Add(label3);
+            Controls.Add(tcTextBox);
+            Controls.Add(button1);
+            Controls.Add(label10);
             Controls.Add(label4);
             Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Name = "BakimEkle";
@@ -275,25 +275,25 @@
         }
 
         #endregion
-        private ComboBox comboBox1;
-        private RichTextBox richTextBox1;
         private Button button1;
         private Label label10;
-        private Label label11;
-        private TextBox textBox10;
         private ToolStripMenuItem programToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
-        private Label label6;
-        private Label label7;
         private Label label4;
         private Label label5;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Label label3;
-        private TextBox textBox2;
         private Label label2;
         private MenuStrip menuStrip1;
-        private TextBox textBox1;
+        public DateTimePicker tarihPicker;
+        public TextBox tutarTBox;
+        public ComboBox urunCBox;
+        private Label label11;
+        private Label label6;
+        private Label label7;
+        private Label label3;
+        public TextBox tcTextBox;
+        public RichTextBox bilgiTBox;
+        public TextBox bakimTuruCBox;
+        public TextBox personelTcTBox;
     }
 }

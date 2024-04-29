@@ -49,6 +49,9 @@ namespace TemizlikTeknikServisGuncel
                         Otomasyon otomasyon = new Otomasyon();
                         otomasyon.afrm = this;
                         otomasyon.lblTC.Text = ad + " " +"("+ (tc)+")";
+                        otomasyon.ýconButton4.Visible = true;
+                        otomasyon.ýconButton5.Visible = true;
+                        otomasyon.label22.Text = "(ADMÝN)";
                         otomasyon.ShowDialog();
                         this.Close();
                     }
@@ -56,7 +59,16 @@ namespace TemizlikTeknikServisGuncel
                     {
                         Otomasyon otomasyon = new Otomasyon();
                         otomasyon.afrm = this;
+                        otomasyon.ýconButton4.Visible = false;
+                        otomasyon.ýconButton5.Visible = false;
+                        otomasyon.label20.Visible = false;
+                        otomasyon.label19.Visible = false;
+                        otomasyon.maxizin.Visible = false;
+                        otomasyon.toplammarka.Visible = false;
+                        otomasyon.label3.Visible = false;
+                        otomasyon.label4.Visible = false;
                         otomasyon.lblTC.Text = ad + " " + "(" + (tc) + ")";
+                        otomasyon.label22.Text = "(PERSONEL)";
                         otomasyon.ShowDialog();
                         this.Close();
                     }

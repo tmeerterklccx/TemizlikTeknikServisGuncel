@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TemizlikTeknikServisGuncel.Musteri_Takibi;
 
 namespace TemizlikTeknikServisGuncel
 {
@@ -43,7 +44,7 @@ namespace TemizlikTeknikServisGuncel
 
         private void VeriGetir()
         {
-            string sorgu = "Select * from Bakimlar WHERE Statu=True";
+            string sorgu = "Select * from Bakimlar WHERE Statu=1";
             Komutlar komutlar = new Komutlar();
             dataGridView1.DataSource = komutlar.VeriDoldur(sorgu);
         }
@@ -81,7 +82,43 @@ namespace TemizlikTeknikServisGuncel
         {
             BakimGuncelle bakimGuncelle = new BakimGuncelle();
             bakimGuncelle.afrm = this;
-            bakimGuncelle.textBox5.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            bakimGuncelle.idTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            bakimGuncelle.tcTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            try
+            {
+                string sorgu = "SELECT * FROM Urunler WHERE UrunID = @UrunID";
+                SqlConnection.Open();
+                bakimCMD.Parameters.Clear();
+                bakimCMD.Parameters.AddWithValue("@UrunID", dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                SqlDataReader sqlDataReader = bakimCMD.ExecuteReader();
+                if (sqlDataReader.Read())
+                {
+                    string urunAdi = sqlDataReader["Urun_Ad"].ToString();
+                    bakimGuncelle.urunCBox.Text = urunAdi;
+                }
+                else
+                {
+                    bakimGuncelle.urunCBox.Text = "404";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            bakimGuncelle.personelTcTBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            bakimGuncelle.bilgiTBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            bakimGuncelle.tutarTBox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            bakimGuncelle.tarihPicker.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            bakimGuncelle.bakimTuruCBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            if (dataGridView1.CurrentRow.Cells[8].Value.ToString() == "True")
+            {
+                bakimGuncelle.statuCBox.Text = "Aktif";
+            }
+            else if (dataGridView1.CurrentRow.Cells[8].Value.ToString() == "False")
+            {
+                bakimGuncelle.statuCBox.Text = "Pasif";
+            }
             bakimGuncelle.ShowDialog();
             this.Close();
 

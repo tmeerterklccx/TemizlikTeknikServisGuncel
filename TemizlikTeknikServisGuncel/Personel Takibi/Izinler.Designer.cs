@@ -78,6 +78,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(147, 26);
             textBox1.TabIndex = 39;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button5
             // 
@@ -88,6 +89,7 @@
             button5.TabIndex = 38;
             button5.Text = "İZİN SİL";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -120,6 +122,7 @@
             button1.TabIndex = 35;
             button1.Text = "İZİN ARA";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -149,8 +152,10 @@
             dataGridView1.Location = new Point(11, 76);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(851, 268);
             dataGridView1.TabIndex = 32;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // menuStrip1
             // 
@@ -188,6 +193,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(147, 26);
             textBox2.TabIndex = 43;
+            textBox2.TextChanged += textBox1_TextChanged;
             // 
             // Izinler
             // 

@@ -28,32 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            soyadTextBox = new TextBox();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             programToolStripMenuItem = new ToolStripMenuItem();
-            richTextBox1 = new RichTextBox();
+            adresTextBox = new RichTextBox();
             button1 = new Button();
             label10 = new Label();
             label11 = new Label();
-            textBox10 = new TextBox();
+            telTextBox = new TextBox();
             label6 = new Label();
             label7 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
+            tcTextBox = new TextBox();
             label2 = new Label();
             menuStrip1 = new MenuStrip();
-            textBox3 = new TextBox();
+            adTextBox = new TextBox();
+            label1 = new Label();
+            eMailTextBox = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // soyadTextBox
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(161, 249);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 24);
-            textBox1.TabIndex = 141;
+            soyadTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            soyadTextBox.Location = new Point(155, 234);
+            soyadTextBox.Name = "soyadTextBox";
+            soyadTextBox.Size = new Size(147, 24);
+            soyadTextBox.TabIndex = 141;
             // 
             // otomasyonaGitToolStripMenuItem
             // 
@@ -74,14 +76,14 @@
             programToolStripMenuItem.Size = new Size(65, 20);
             programToolStripMenuItem.Text = "&Program";
             // 
-            // richTextBox1
+            // adresTextBox
             // 
-            richTextBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            richTextBox1.Location = new Point(495, 133);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(233, 140);
-            richTextBox1.TabIndex = 139;
-            richTextBox1.Text = "";
+            adresTextBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            adresTextBox.Location = new Point(495, 133);
+            adresTextBox.Name = "adresTextBox";
+            adresTextBox.Size = new Size(233, 140);
+            adresTextBox.TabIndex = 139;
+            adresTextBox.Text = "";
             // 
             // button1
             // 
@@ -92,6 +94,7 @@
             button1.TabIndex = 138;
             button1.Text = "MÜŞTERİ KAYDET";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label10
             // 
@@ -111,19 +114,19 @@
             label11.BorderStyle = BorderStyle.FixedSingle;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(29, 312);
+            label11.Location = new Point(23, 297);
             label11.Name = "label11";
             label11.Size = new Size(88, 23);
             label11.TabIndex = 136;
             label11.Text = "TELEFON :";
             // 
-            // textBox10
+            // telTextBox
             // 
-            textBox10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox10.Location = new Point(163, 311);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(147, 24);
-            textBox10.TabIndex = 135;
+            telTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            telTextBox.Location = new Point(157, 296);
+            telTextBox.Name = "telTextBox";
+            telTextBox.Size = new Size(147, 24);
+            telTextBox.TabIndex = 135;
             // 
             // label6
             // 
@@ -131,7 +134,7 @@
             label6.BorderStyle = BorderStyle.FixedSingle;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(48, 247);
+            label6.Location = new Point(42, 232);
             label6.Name = "label6";
             label6.Size = new Size(69, 23);
             label6.TabIndex = 134;
@@ -143,7 +146,7 @@
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(78, 188);
+            label7.Location = new Point(72, 173);
             label7.Name = "label7";
             label7.Size = new Size(39, 23);
             label7.TabIndex = 133;
@@ -155,19 +158,19 @@
             label3.BorderStyle = BorderStyle.FixedSingle;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(34, 122);
+            label3.Location = new Point(28, 107);
             label3.Name = "label3";
             label3.Size = new Size(107, 23);
             label3.TabIndex = 127;
             label3.Text = "MÜŞTERİ TC:";
             // 
-            // textBox2
+            // tcTextBox
             // 
-            textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(161, 122);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(147, 24);
-            textBox2.TabIndex = 126;
+            tcTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            tcTextBox.Location = new Point(155, 107);
+            tcTextBox.Name = "tcTextBox";
+            tcTextBox.Size = new Size(147, 24);
+            tcTextBox.TabIndex = 126;
             // 
             // label2
             // 
@@ -189,13 +192,33 @@
             menuStrip1.TabIndex = 128;
             menuStrip1.Text = "menuStrip1";
             // 
-            // textBox3
+            // adTextBox
             // 
-            textBox3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox3.Location = new Point(161, 190);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(147, 24);
-            textBox3.TabIndex = 142;
+            adTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            adTextBox.Location = new Point(155, 175);
+            adTextBox.Name = "adTextBox";
+            adTextBox.Size = new Size(147, 24);
+            adTextBox.TabIndex = 142;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(42, 346);
+            label1.Name = "label1";
+            label1.Size = new Size(63, 23);
+            label1.TabIndex = 144;
+            label1.Text = "E Mail:";
+            // 
+            // eMailTextBox
+            // 
+            eMailTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            eMailTextBox.Location = new Point(157, 345);
+            eMailTextBox.Name = "eMailTextBox";
+            eMailTextBox.Size = new Size(147, 24);
+            eMailTextBox.TabIndex = 143;
             // 
             // MusteriEkle
             // 
@@ -203,17 +226,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(758, 391);
-            Controls.Add(textBox3);
-            Controls.Add(textBox1);
-            Controls.Add(richTextBox1);
+            Controls.Add(label1);
+            Controls.Add(eMailTextBox);
+            Controls.Add(adTextBox);
+            Controls.Add(soyadTextBox);
+            Controls.Add(adresTextBox);
             Controls.Add(button1);
             Controls.Add(label10);
             Controls.Add(label11);
-            Controls.Add(textBox10);
+            Controls.Add(telTextBox);
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(tcTextBox);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Name = "MusteriEkle";
@@ -227,21 +252,23 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox soyadTextBox;
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem programToolStripMenuItem;
-        private RichTextBox richTextBox1;
+        private RichTextBox adresTextBox;
         private Button button1;
         private Label label10;
         private Label label11;
-        private TextBox textBox10;
+        private TextBox telTextBox;
         private Label label6;
         private Label label7;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox tcTextBox;
         private Label label2;
         private MenuStrip menuStrip1;
-        private TextBox textBox3;
+        private TextBox adTextBox;
+        private Label label1;
+        private TextBox eMailTextBox;
     }
 }

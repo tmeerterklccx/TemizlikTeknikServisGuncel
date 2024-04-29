@@ -35,13 +35,13 @@
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             programToolStripMenuItem = new ToolStripMenuItem();
-            comboBox1 = new ComboBox();
             label1 = new Label();
             button1 = new Button();
             menuStrip1 = new MenuStrip();
-            monthCalendar1 = new MonthCalendar();
-            monthCalendar2 = new MonthCalendar();
             label5 = new Label();
+            textBox1 = new TextBox();
+            baslangic = new TextBox();
+            bitis = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -108,15 +108,6 @@
             programToolStripMenuItem.Size = new Size(65, 20);
             programToolStripMenuItem.Text = "&Program";
             // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(568, 105);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(145, 29);
-            comboBox1.TabIndex = 139;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -132,7 +123,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(537, 380);
+            button1.Location = new Point(508, 248);
             button1.Name = "button1";
             button1.Size = new Size(282, 53);
             button1.TabIndex = 136;
@@ -149,18 +140,6 @@
             menuStrip1.TabIndex = 127;
             menuStrip1.Text = "menuStrip1";
             // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(150, 178);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 141;
-            // 
-            // monthCalendar2
-            // 
-            monthCalendar2.Location = new Point(568, 178);
-            monthCalendar2.Name = "monthCalendar2";
-            monthCalendar2.TabIndex = 143;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -173,20 +152,44 @@
             label5.TabIndex = 142;
             label5.Text = "BİTİS:";
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            textBox1.Location = new Point(568, 110);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(154, 24);
+            textBox1.TabIndex = 144;
+            // 
+            // baslangic
+            // 
+            baslangic.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            baslangic.Location = new Point(166, 180);
+            baslangic.Name = "baslangic";
+            baslangic.Size = new Size(147, 24);
+            baslangic.TabIndex = 145;
+            // 
+            // bitis
+            // 
+            bitis.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            bitis.Location = new Point(568, 177);
+            bitis.Name = "bitis";
+            bitis.Size = new Size(154, 24);
+            bitis.TabIndex = 146;
+            // 
             // IzinEkle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(844, 463);
-            Controls.Add(monthCalendar2);
+            ClientSize = new Size(844, 342);
+            Controls.Add(bitis);
+            Controls.Add(baslangic);
+            Controls.Add(textBox1);
             Controls.Add(label5);
-            Controls.Add(monthCalendar1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(textBox2);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(menuStrip1);
@@ -207,12 +210,12 @@
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem programToolStripMenuItem;
-        private ComboBox comboBox1;
         private Label label1;
         private Button button1;
         private MenuStrip menuStrip1;
-        private MonthCalendar monthCalendar1;
-        private MonthCalendar monthCalendar2;
         private Label label5;
+        private TextBox textBox1;
+        private TextBox baslangic;
+        private TextBox bitis;
     }
 }

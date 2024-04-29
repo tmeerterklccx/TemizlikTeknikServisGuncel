@@ -60,13 +60,26 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
         {
             MusteriGuncelle musteriGuncelle = new MusteriGuncelle();
             musteriGuncelle.afrm = this;
-            musteriGuncelle.textBox2.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
+            musteriGuncelle.tcTextBox.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
+            musteriGuncelle.adTextBox.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
+            musteriGuncelle.soyadTextBox.Text = dgvMusteriler.CurrentRow.Cells[2].Value.ToString();
+            musteriGuncelle.telTextBox.Text = dgvMusteriler.CurrentRow.Cells[3].Value.ToString();
+            musteriGuncelle.eMailTextBox.Text = dgvMusteriler.CurrentRow.Cells[4].Value.ToString();
+            musteriGuncelle.adresTextBox.Text = dgvMusteriler.CurrentRow.Cells[5].Value.ToString();
+            if(dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "True")
+            {
+                musteriGuncelle.cmbStatu.Text = "Aktif";
+            }
+            else if(dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "False")
+            {
+                musteriGuncelle.cmbStatu.Text = "Pasif";
+            }
             musteriGuncelle.ShowDialog();
             this.Close();
         }
         private void VeriGetir()
         {
-            string sorgu = "Select * from Musteriler WHERE Statu=True";
+            string sorgu = "SELECT * FROM Musteriler WHERE Statu = 1";
             Komutlar komutlar = new Komutlar();
             dgvMusteriler.DataSource = komutlar.VeriDoldur(sorgu);
         }

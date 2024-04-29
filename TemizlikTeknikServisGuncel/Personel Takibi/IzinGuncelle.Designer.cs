@@ -30,18 +30,20 @@
         {
             label4 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
+            tcPersonel = new TextBox();
             label2 = new Label();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             programToolStripMenuItem = new ToolStripMenuItem();
-            monthCalendar2 = new MonthCalendar();
             label5 = new Label();
-            monthCalendar1 = new MonthCalendar();
-            comboBox1 = new ComboBox();
             label1 = new Label();
             button1 = new Button();
             menuStrip1 = new MenuStrip();
+            izinTur = new TextBox();
+            label6 = new Label();
+            id = new TextBox();
+            bitis = new TextBox();
+            baslangic = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,14 +71,14 @@
             label3.TabIndex = 146;
             label3.Text = "PERSONEL TC:";
             // 
-            // textBox2
+            // tcPersonel
             // 
-            textBox2.Enabled = false;
-            textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(175, 125);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(147, 24);
-            textBox2.TabIndex = 145;
+            tcPersonel.Enabled = false;
+            tcPersonel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            tcPersonel.Location = new Point(175, 125);
+            tcPersonel.Name = "tcPersonel";
+            tcPersonel.Size = new Size(147, 24);
+            tcPersonel.TabIndex = 145;
             // 
             // label2
             // 
@@ -109,12 +111,6 @@
             programToolStripMenuItem.Size = new Size(65, 20);
             programToolStripMenuItem.Text = "&Program";
             // 
-            // monthCalendar2
-            // 
-            monthCalendar2.Location = new Point(577, 187);
-            monthCalendar2.Name = "monthCalendar2";
-            monthCalendar2.TabIndex = 154;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -127,28 +123,13 @@
             label5.TabIndex = 153;
             label5.Text = "BİTİS:";
             // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(159, 187);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 152;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(577, 114);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(145, 29);
-            comboBox1.TabIndex = 151;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(23, 187);
+            label1.Location = new Point(37, 187);
             label1.Name = "label1";
             label1.Size = new Size(104, 23);
             label1.TabIndex = 150;
@@ -157,7 +138,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(529, 382);
+            button1.Location = new Point(530, 261);
             button1.Name = "button1";
             button1.Size = new Size(282, 53);
             button1.TabIndex = 149;
@@ -174,20 +155,67 @@
             menuStrip1.TabIndex = 147;
             menuStrip1.Text = "menuStrip1";
             // 
+            // izinTur
+            // 
+            izinTur.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            izinTur.Location = new Point(577, 119);
+            izinTur.Name = "izinTur";
+            izinTur.Size = new Size(147, 24);
+            izinTur.TabIndex = 155;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BorderStyle = BorderStyle.FixedSingle;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlLightLight;
+            label6.Location = new Point(71, 261);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 23);
+            label6.TabIndex = 157;
+            label6.Text = "İZİN ID:";
+            // 
+            // id
+            // 
+            id.Enabled = false;
+            id.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            id.Location = new Point(175, 260);
+            id.Name = "id";
+            id.Size = new Size(147, 24);
+            id.TabIndex = 156;
+            // 
+            // bitis
+            // 
+            bitis.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            bitis.Location = new Point(577, 187);
+            bitis.Name = "bitis";
+            bitis.Size = new Size(154, 24);
+            bitis.TabIndex = 159;
+            // 
+            // baslangic
+            // 
+            baslangic.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            baslangic.Location = new Point(175, 189);
+            baslangic.Name = "baslangic";
+            baslangic.Size = new Size(147, 24);
+            baslangic.TabIndex = 160;
+            // 
             // IzinGuncelle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(834, 459);
+            ClientSize = new Size(834, 344);
+            Controls.Add(baslangic);
+            Controls.Add(bitis);
+            Controls.Add(label6);
+            Controls.Add(id);
+            Controls.Add(izinTur);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(tcPersonel);
             Controls.Add(label2);
-            Controls.Add(monthCalendar2);
             Controls.Add(label5);
-            Controls.Add(monthCalendar1);
-            Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(menuStrip1);
@@ -204,17 +232,19 @@
 
         private Label label4;
         private Label label3;
-        private TextBox textBox2;
         private Label label2;
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem programToolStripMenuItem;
-        private MonthCalendar monthCalendar2;
         private Label label5;
-        private MonthCalendar monthCalendar1;
-        private ComboBox comboBox1;
         private Label label1;
         private Button button1;
         private MenuStrip menuStrip1;
+        public TextBox tcPersonel;
+        public TextBox izinTur;
+        private Label label6;
+        public TextBox id;
+        public TextBox bitis;
+        public TextBox baslangic;
     }
 }
