@@ -318,6 +318,7 @@
             button10.TabIndex = 66;
             button10.Text = "SİL";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // groupBox1
             // 

@@ -68,8 +68,11 @@ namespace TemizlikTeknikServisGuncel
             string sorgu = "Update Bakimlar set Statu = @STATU WHERE Bakim_ID = @id";
             bakimCMD.Parameters.AddWithValue("@STATU", false);
             bakimCMD.Parameters.AddWithValue("@id", textBox1.Text);
-            KomutCalistir(sorgu);
-            VeriGetir();
+            if (MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                KomutCalistir(sorgu);
+                VeriGetir();
+            }
         }
 
         private void dataGridView1_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
@@ -174,6 +177,11 @@ namespace TemizlikTeknikServisGuncel
             {
                 button1.Enabled = false;
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

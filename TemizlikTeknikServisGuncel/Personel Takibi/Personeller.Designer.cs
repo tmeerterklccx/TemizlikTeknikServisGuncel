@@ -173,8 +173,9 @@
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
+            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
             // otomasyonaGitToolStripMenuItem
             // 

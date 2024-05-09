@@ -65,5 +65,10 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             urunTurleri.Show();
             this.Close();
         }
+
+        private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

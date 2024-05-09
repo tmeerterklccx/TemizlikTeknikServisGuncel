@@ -66,11 +66,11 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             musteriGuncelle.telTextBox.Text = dgvMusteriler.CurrentRow.Cells[3].Value.ToString();
             musteriGuncelle.eMailTextBox.Text = dgvMusteriler.CurrentRow.Cells[4].Value.ToString();
             musteriGuncelle.adresTextBox.Text = dgvMusteriler.CurrentRow.Cells[5].Value.ToString();
-            if(dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "True")
+            if (dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "True")
             {
                 musteriGuncelle.cmbStatu.Text = "Aktif";
             }
-            else if(dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "False")
+            else if (dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "False")
             {
                 musteriGuncelle.cmbStatu.Text = "Pasif";
             }
@@ -100,8 +100,12 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             string sorgu = "Update Musteriler set Statu = @STATU WHERE Musteri_TC = @tc";
             musteriCMD.Parameters.AddWithValue("@STATU", false);
             musteriCMD.Parameters.AddWithValue("@tc", textBox1.Text);
-            KomutCalistir(sorgu);
-            VeriGetir();
+            if(MessageBox.Show("Silmek istediğinize emin misiniz?","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                KomutCalistir(sorgu);
+                VeriGetir();
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -137,6 +141,27 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             {
                 button1.Enabled = false;
             }
+        }
+
+        private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void programToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMusteriler_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
+            textBox2.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

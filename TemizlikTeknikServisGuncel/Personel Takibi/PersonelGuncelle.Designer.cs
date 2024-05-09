@@ -52,6 +52,8 @@
             rolTBox = new TextBox();
             sifreTBox = new TextBox();
             label10 = new Label();
+            label11 = new Label();
+            textBox2 = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -137,8 +139,9 @@
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
+            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
             // programToolStripMenuItem
             // 
@@ -288,12 +291,35 @@
             label10.TabIndex = 147;
             label10.Text = "ŞİFRESİ:";
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BorderStyle = BorderStyle.FixedSingle;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.ControlLightLight;
+            label11.Location = new Point(48, 421);
+            label11.Name = "label11";
+            label11.Size = new Size(33, 23);
+            label11.TabIndex = 149;
+            label11.Text = "ID:";
+            // 
+            // textBox2
+            // 
+            textBox2.Enabled = false;
+            textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            textBox2.Location = new Point(170, 423);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(147, 24);
+            textBox2.TabIndex = 148;
+            // 
             // PersonelGuncelle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(772, 470);
+            Controls.Add(label11);
+            Controls.Add(textBox2);
             Controls.Add(label10);
             Controls.Add(sifreTBox);
             Controls.Add(rolTBox);
@@ -351,5 +377,7 @@
         public TextBox rolTBox;
         public TextBox sifreTBox;
         private Label label10;
+        private Label label11;
+        public TextBox textBox2;
     }
 }

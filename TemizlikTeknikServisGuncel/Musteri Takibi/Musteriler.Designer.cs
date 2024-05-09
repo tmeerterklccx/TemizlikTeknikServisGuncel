@@ -155,6 +155,7 @@
             dgvMusteriler.Size = new Size(686, 274);
             dgvMusteriler.TabIndex = 32;
             dgvMusteriler.CellStateChanged += dgvMusteriler_CellStateChanged;
+            dgvMusteriler.Click += dgvMusteriler_Click;
             // 
             // menuStrip1
             // 
@@ -171,18 +172,21 @@
             programToolStripMenuItem.Name = "programToolStripMenuItem";
             programToolStripMenuItem.Size = new Size(65, 20);
             programToolStripMenuItem.Text = "&Program";
+            programToolStripMenuItem.Click += programToolStripMenuItem_Click;
             // 
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
             çıkışYapToolStripMenuItem.Size = new Size(121, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
             // otomasyonaGitToolStripMenuItem
             // 
             otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
             otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
+            otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
             // label1
             // 

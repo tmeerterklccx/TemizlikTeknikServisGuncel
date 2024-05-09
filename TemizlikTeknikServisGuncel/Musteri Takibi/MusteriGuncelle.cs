@@ -55,24 +55,29 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void button1_Click(object sender, EventArgs e)
         {
-                string sorgu = "UPDATE Musteriler SET Musteri_TC = @TC, Ad = @Ad, Soyad = @Soyad, Telefon = @Telefon, EMail = @EMail, Adres = @Adres, Statu = @Statu WHERE Musteri_TC = @TC";
+            string sorgu = "UPDATE Musteriler SET Musteri_TC = @TC, Ad = @Ad, Soyad = @Soyad, Telefon = @Telefon, EMail = @EMail, Adres = @Adres, Statu = @Statu WHERE Musteri_TC = @TC";
 
-                musteriCMD.Parameters.AddWithValue("@TC", tcTextBox.Text);
-                musteriCMD.Parameters.AddWithValue("@Ad", adTextBox.Text);
-                musteriCMD.Parameters.AddWithValue("@Soyad", soyadTextBox.Text);
-                musteriCMD.Parameters.AddWithValue("@Telefon", telTextBox.Text);
-                musteriCMD.Parameters.AddWithValue("@EMail", eMailTextBox.Text);
-                musteriCMD.Parameters.AddWithValue("@Adres", adresTextBox.Text);
-                if (cmbStatu.Text == "Aktif")
-                {
-                    musteriCMD.Parameters.AddWithValue("@Statu", 1);
-                }
-                else if (cmbStatu.Text == "Pasif")
-                {
-                    musteriCMD.Parameters.AddWithValue("@Statu", 0);
-                }
-                KomutCalistir(sorgu);
-                
+            musteriCMD.Parameters.AddWithValue("@TC", tcTextBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Ad", adTextBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Soyad", soyadTextBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Telefon", telTextBox.Text);
+            musteriCMD.Parameters.AddWithValue("@EMail", eMailTextBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Adres", adresTextBox.Text);
+            if (cmbStatu.Text == "Aktif")
+            {
+                musteriCMD.Parameters.AddWithValue("@Statu", 1);
+            }
+            else if (cmbStatu.Text == "Pasif")
+            {
+                musteriCMD.Parameters.AddWithValue("@Statu", 0);
+            }
+            KomutCalistir(sorgu);
+
+        }
+
+        private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

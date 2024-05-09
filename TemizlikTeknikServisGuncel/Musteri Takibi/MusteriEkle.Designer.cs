@@ -54,7 +54,7 @@
             soyadTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             soyadTextBox.Location = new Point(155, 234);
             soyadTextBox.Name = "soyadTextBox";
-            soyadTextBox.Size = new Size(147, 24);
+            soyadTextBox.Size = new Size(171, 24);
             soyadTextBox.TabIndex = 141;
             // 
             // otomasyonaGitToolStripMenuItem
@@ -62,6 +62,7 @@
             otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
             otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
+            otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
             // çıkışYapToolStripMenuItem
             // 
@@ -79,7 +80,7 @@
             // adresTextBox
             // 
             adresTextBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            adresTextBox.Location = new Point(495, 133);
+            adresTextBox.Location = new Point(495, 107);
             adresTextBox.Name = "adresTextBox";
             adresTextBox.Size = new Size(233, 140);
             adresTextBox.TabIndex = 139;
@@ -88,9 +89,9 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(446, 296);
+            button1.Location = new Point(456, 296);
             button1.Name = "button1";
-            button1.Size = new Size(282, 53);
+            button1.Size = new Size(305, 58);
             button1.TabIndex = 138;
             button1.Text = "MÜŞTERİ KAYDET";
             button1.UseVisualStyleBackColor = true;
@@ -102,7 +103,7 @@
             label10.BorderStyle = BorderStyle.FixedSingle;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = SystemColors.ControlLightLight;
-            label10.Location = new Point(352, 186);
+            label10.Location = new Point(365, 173);
             label10.Name = "label10";
             label10.Size = new Size(67, 23);
             label10.TabIndex = 137;
@@ -125,7 +126,7 @@
             telTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             telTextBox.Location = new Point(157, 296);
             telTextBox.Name = "telTextBox";
-            telTextBox.Size = new Size(147, 24);
+            telTextBox.Size = new Size(171, 24);
             telTextBox.TabIndex = 135;
             // 
             // label6
@@ -169,7 +170,7 @@
             tcTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             tcTextBox.Location = new Point(155, 107);
             tcTextBox.Name = "tcTextBox";
-            tcTextBox.Size = new Size(147, 24);
+            tcTextBox.Size = new Size(171, 24);
             tcTextBox.TabIndex = 126;
             // 
             // label2
@@ -188,7 +189,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, otomasyonaGitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(758, 24);
+            menuStrip1.Size = new Size(796, 24);
             menuStrip1.TabIndex = 128;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -197,7 +198,7 @@
             adTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             adTextBox.Location = new Point(155, 175);
             adTextBox.Name = "adTextBox";
-            adTextBox.Size = new Size(147, 24);
+            adTextBox.Size = new Size(171, 24);
             adTextBox.TabIndex = 142;
             // 
             // label1
@@ -217,7 +218,7 @@
             eMailTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             eMailTextBox.Location = new Point(157, 345);
             eMailTextBox.Name = "eMailTextBox";
-            eMailTextBox.Size = new Size(147, 24);
+            eMailTextBox.Size = new Size(171, 24);
             eMailTextBox.TabIndex = 143;
             // 
             // MusteriEkle
@@ -225,7 +226,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(758, 391);
+            ClientSize = new Size(796, 429);
             Controls.Add(label1);
             Controls.Add(eMailTextBox);
             Controls.Add(adTextBox);

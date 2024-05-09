@@ -33,7 +33,6 @@
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             uyelikToolStripMenuItem = new ToolStripMenuItem();
             oturumuKapatToolStripMenuItem = new ToolStripMenuItem();
-            kayıtOluşturToolStripMenuItem = new ToolStripMenuItem();
             ıconButton1 = new FontAwesome.Sharp.IconButton();
             ıconButton2 = new FontAwesome.Sharp.IconButton();
             ıconButton3 = new FontAwesome.Sharp.IconButton();
@@ -94,7 +93,7 @@
             // 
             // uyelikToolStripMenuItem
             // 
-            uyelikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { oturumuKapatToolStripMenuItem, kayıtOluşturToolStripMenuItem });
+            uyelikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { oturumuKapatToolStripMenuItem });
             uyelikToolStripMenuItem.Name = "uyelikToolStripMenuItem";
             uyelikToolStripMenuItem.Size = new Size(51, 20);
             uyelikToolStripMenuItem.Text = "&Uyelik";
@@ -105,12 +104,7 @@
             oturumuKapatToolStripMenuItem.Name = "oturumuKapatToolStripMenuItem";
             oturumuKapatToolStripMenuItem.Size = new Size(156, 22);
             oturumuKapatToolStripMenuItem.Text = "Oturumu Kapat";
-            // 
-            // kayıtOluşturToolStripMenuItem
-            // 
-            kayıtOluşturToolStripMenuItem.Name = "kayıtOluşturToolStripMenuItem";
-            kayıtOluşturToolStripMenuItem.Size = new Size(156, 22);
-            kayıtOluşturToolStripMenuItem.Text = "Kayıt Oluştur";
+            oturumuKapatToolStripMenuItem.Click += oturumuKapatToolStripMenuItem_Click;
             // 
             // ıconButton1
             // 
@@ -219,7 +213,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = SystemColors.MenuHighlight;
+            groupBox1.BackColor = SystemColors.InactiveCaptionText;
             groupBox1.Controls.Add(label21);
             groupBox1.Controls.Add(label20);
             groupBox1.Controls.Add(label19);
@@ -545,7 +539,6 @@
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem uyelikToolStripMenuItem;
         private ToolStripMenuItem oturumuKapatToolStripMenuItem;
-        private ToolStripMenuItem kayıtOluşturToolStripMenuItem;
         private FontAwesome.Sharp.IconButton ıconButton1;
         private FontAwesome.Sharp.IconButton ıconButton2;
         private FontAwesome.Sharp.IconButton ıconButton3;

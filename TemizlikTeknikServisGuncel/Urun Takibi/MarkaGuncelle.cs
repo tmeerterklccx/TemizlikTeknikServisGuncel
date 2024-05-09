@@ -83,8 +83,13 @@ namespace TemizlikTeknikServisGuncel
         private void otomasyonaGitToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Otomasyon otomasyon = new Otomasyon();
-            otomasyon.Show();   
+            otomasyon.Show();
             this.Close();
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

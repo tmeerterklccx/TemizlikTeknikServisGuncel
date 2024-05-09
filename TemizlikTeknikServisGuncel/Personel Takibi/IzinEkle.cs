@@ -69,5 +69,13 @@ namespace TemizlikTeknikServisGuncel
         {
 
         }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

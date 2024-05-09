@@ -56,6 +56,7 @@
             otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
             otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
+            otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
             // çıkışYapToolStripMenuItem
             // 
@@ -127,7 +128,7 @@
             cmbStatu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             cmbStatu.FormattingEnabled = true;
             cmbStatu.Items.AddRange(new object[] { "Aktif", "Pasif" });
-            cmbStatu.Location = new Point(517, 155);
+            cmbStatu.Location = new Point(517, 118);
             cmbStatu.Name = "cmbStatu";
             cmbStatu.Size = new Size(233, 29);
             cmbStatu.TabIndex = 156;
@@ -138,7 +139,7 @@
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(380, 161);
+            label1.Location = new Point(380, 124);
             label1.Name = "label1";
             label1.Size = new Size(64, 23);
             label1.TabIndex = 155;

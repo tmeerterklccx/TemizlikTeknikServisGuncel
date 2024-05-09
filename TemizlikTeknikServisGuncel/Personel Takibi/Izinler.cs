@@ -137,13 +137,24 @@ namespace TemizlikTeknikServisGuncel
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             izinCMD.Parameters.AddWithValue("@id", textBox1.Text);
-            KomutCalistir(sorgu);
-            VeriGetir();
+            if (MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                KomutCalistir(sorgu);
+                VeriGetir();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
