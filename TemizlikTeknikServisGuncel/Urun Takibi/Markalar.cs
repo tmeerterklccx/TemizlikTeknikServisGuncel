@@ -46,7 +46,7 @@ namespace TemizlikTeknikServisGuncel
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ekle_Click(object sender, EventArgs e)
         {
             MarkaEkle markaEkle = new MarkaEkle();
             markaEkle.afrm = this;
@@ -54,11 +54,12 @@ namespace TemizlikTeknikServisGuncel
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void guncelle_Click(object sender, EventArgs e)
         {
             MarkaGuncelle markaGuncelle = new MarkaGuncelle();
             markaGuncelle.afrm = this;
-            markaGuncelle.textBox2.Text = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
+            markaGuncelle.markaIDTBox.Text = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
+            markaGuncelle.markaAdTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
             markaGuncelle.ShowDialog();
 
             this.Close();
@@ -80,9 +81,10 @@ namespace TemizlikTeknikServisGuncel
             dgvMarkalar.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void listele_Click(object sender, EventArgs e)
         {
             VeriGetir();
+
         }
         private void VeriGetir()
         {
@@ -93,18 +95,22 @@ namespace TemizlikTeknikServisGuncel
 
         private void Markalar_Load(object sender, EventArgs e)
         {
+            guncelleBTN.Enabled = false;
+            silBTN.Enabled = false;
+            araBTN.Enabled = false;
             VeriGetir();
             BaslikGoster();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void sil_Click(object sender, EventArgs e)
         {
+
+            string deger = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
+            int id = Convert.ToInt32(deger);
+            string sorgu = "Delete from Markalar where Marka_ID =@MarkaID";
+            MarkaCMD.Parameters.AddWithValue("@MarkaID", id);
             if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                string deger = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
-                int id = Convert.ToInt32(deger);
-                string sorgu = "Delete from Markalar where Marka_ID =@MarkaID";
-                MarkaCMD.Parameters.AddWithValue("@MarkaID", id);
                 KomutCalistir(sorgu);
                 VeriGetir();
             }
@@ -112,17 +118,17 @@ namespace TemizlikTeknikServisGuncel
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ara_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" || textBox2.Text != "")
+            if (IDTBox.Text != "" || TCTBox.Text != "")
             {
-                button1.Enabled = true;
+                araBTN.Enabled = true;
                 MarkaCMD.CommandText = "SELECT * FROM Markalar WHERE Marka_ID = @markaID OR Marka_Ad = @markaAD";
                 MarkaCMD.Connection = SqlConnection;
                 MarkaCMD.Connection.Open();
                 MarkaCMD.Parameters.Clear();
-                MarkaCMD.Parameters.AddWithValue("@markaID", textBox1.Text);
-                MarkaCMD.Parameters.AddWithValue("@markaAD", textBox2.Text);
+                MarkaCMD.Parameters.AddWithValue("@markaID", IDTBox.Text);
+                MarkaCMD.Parameters.AddWithValue("@markaAD", TCTBox.Text);
                 SqlDataReader reader = MarkaCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
@@ -131,21 +137,43 @@ namespace TemizlikTeknikServisGuncel
             }
             else
             {
-                button1.Enabled = false;
+                araBTN.Enabled = false;
             }
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBox1.Text) || !string.IsNullOrWhiteSpace(textBox2.Text))
+            if (!string.IsNullOrWhiteSpace(IDTBox.Text) || !string.IsNullOrWhiteSpace(TCTBox.Text))
             {
-                button1.Enabled = true;
+                guncelleBTN.Enabled = true;
+                silBTN.Enabled = true;
+                araBTN.Enabled = true;
             }
             else
             {
-                button1.Enabled = false;
+                guncelleBTN.Enabled = false;
+                silBTN.Enabled = false;
+                araBTN.Enabled = false;
             }
         }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+
+
+        private void dgvMarkalar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDTBox.Text = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
+            TCTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
+        }
+
+
     }
 }

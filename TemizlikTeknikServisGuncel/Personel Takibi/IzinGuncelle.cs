@@ -55,10 +55,10 @@ namespace TemizlikTeknikServisGuncel
         private void button1_Click(object sender, EventArgs e)
         {
             string sorgu = "UPDATE Izinler SET Izin_Baslangic = @baslangic, Izin_Bitis = @bitis, Tur = @tur WHERE Izin_ID = @izinid";
-            TurCMD.Parameters.AddWithValue("@izinid", id.Text);
-            TurCMD.Parameters.AddWithValue("@baslangic", baslangic.Text);
-            TurCMD.Parameters.AddWithValue("@bitis", bitis.Text);
-            TurCMD.Parameters.AddWithValue("@tur", izinTur.Text);
+            TurCMD.Parameters.AddWithValue("@izinid", IDTBox.Text);
+            TurCMD.Parameters.AddWithValue("@baslangic", BasTBox.Text);
+            TurCMD.Parameters.AddWithValue("@bitis", bitisTBOx.Text);
+            TurCMD.Parameters.AddWithValue("@tur", turTBox.Text);
             KomutCalistir(sorgu);
             Izinler izinler = new Izinler();
             izinler.Show();

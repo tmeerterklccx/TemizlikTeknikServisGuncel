@@ -54,21 +54,25 @@ namespace TemizlikTeknikServisGuncel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string sorgu = "Insert Into Urunler values (@MarkaAd)";
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
-            UrunCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
+            string sorgu = "Insert Into Urunler values (@Ad,@Bilgi,@MarkaID,@Tur_ID,@Yil)";
+            UrunCMD.Parameters.AddWithValue("@Ad", urunAdiTBox.Text);
+            UrunCMD.Parameters.AddWithValue("@Bilgi", bilgiTBox.Text);
+            UrunCMD.Parameters.AddWithValue("@Marka_ID", markaCBox.SelectedIndex);
+            UrunCMD.Parameters.AddWithValue("@Tur_ID", turCBox.SelectedIndex);
+            UrunCMD.Parameters.AddWithValue("@Yil", yilTBox.Text);
+
             KomutCalistir(sorgu);
             Urunler urunler = new Urunler();
             urunler.Show();
             this.Close();
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

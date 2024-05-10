@@ -46,33 +46,34 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void Musteriler_Load(object sender, EventArgs e)
         {
+            button4.Enabled = false;
             VeriGetir();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ekle_Click(object sender, EventArgs e)
         {
             MusteriEkle musteriEkle = new MusteriEkle();
             musteriEkle.Show();
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void guncelle_Click(object sender, EventArgs e)
         {
             MusteriGuncelle musteriGuncelle = new MusteriGuncelle();
             musteriGuncelle.afrm = this;
-            musteriGuncelle.tcTextBox.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
-            musteriGuncelle.adTextBox.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
-            musteriGuncelle.soyadTextBox.Text = dgvMusteriler.CurrentRow.Cells[2].Value.ToString();
-            musteriGuncelle.telTextBox.Text = dgvMusteriler.CurrentRow.Cells[3].Value.ToString();
-            musteriGuncelle.eMailTextBox.Text = dgvMusteriler.CurrentRow.Cells[4].Value.ToString();
+            musteriGuncelle.tcTBox.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
+            musteriGuncelle.adTBox.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
+            musteriGuncelle.soyadTBox.Text = dgvMusteriler.CurrentRow.Cells[2].Value.ToString();
+            musteriGuncelle.telTBox.Text = dgvMusteriler.CurrentRow.Cells[3].Value.ToString();
+            musteriGuncelle.ePostATBox.Text = dgvMusteriler.CurrentRow.Cells[4].Value.ToString();
             musteriGuncelle.adresTextBox.Text = dgvMusteriler.CurrentRow.Cells[5].Value.ToString();
             if (dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "True")
             {
-                musteriGuncelle.cmbStatu.Text = "Aktif";
+                musteriGuncelle.statuCBox.Text = "Aktif";
             }
             else if (dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "False")
             {
-                musteriGuncelle.cmbStatu.Text = "Pasif";
+                musteriGuncelle.statuCBox.Text = "Pasif";
             }
             musteriGuncelle.ShowDialog();
             this.Close();
@@ -84,41 +85,37 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             dgvMusteriler.DataSource = komutlar.VeriDoldur(sorgu);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void listele_Click(object sender, EventArgs e)
         {
             VeriGetir();
         }
 
-        private void dgvMusteriler_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
-        {
-            textBox1.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
-            textBox2.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
-        }
 
-        private void button5_Click(object sender, EventArgs e)
+
+        private void sil_Click(object sender, EventArgs e)
         {
             string sorgu = "Update Musteriler set Statu = @STATU WHERE Musteri_TC = @tc";
             musteriCMD.Parameters.AddWithValue("@STATU", false);
-            musteriCMD.Parameters.AddWithValue("@tc", textBox1.Text);
-            if(MessageBox.Show("Silmek istediğinize emin misiniz?","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            musteriCMD.Parameters.AddWithValue("@tc", tcTBox.Text);
+            if (MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 KomutCalistir(sorgu);
                 VeriGetir();
             }
-            
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ara_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" || textBox2.Text != "")
+            if (tcTBox.Text != "" || adTBox.Text != "")
             {
                 button1.Enabled = true;
                 musteriCMD.CommandText = "SELECT * FROM Musteriler WHERE Musteri_TC = @tc OR Ad = @ad";
                 musteriCMD.Connection = SqlConnection;
                 musteriCMD.Connection.Open();
                 musteriCMD.Parameters.Clear();
-                musteriCMD.Parameters.AddWithValue("@tc", textBox1.Text);
-                musteriCMD.Parameters.AddWithValue("@ad", textBox2.Text);
+                musteriCMD.Parameters.AddWithValue("@tc", tcTBox.Text);
+                musteriCMD.Parameters.AddWithValue("@ad", adTBox.Text);
                 SqlDataReader reader = musteriCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
@@ -133,7 +130,7 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBox1.Text) || !string.IsNullOrWhiteSpace(textBox2.Text))
+            if (!string.IsNullOrWhiteSpace(tcTBox.Text) || !string.IsNullOrWhiteSpace(adTBox.Text))
             {
                 button1.Enabled = true;
             }
@@ -145,7 +142,9 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Otomasyon otomasyon = new Otomasyon();
+            otomasyon.Show();
+            this.Close();
         }
 
         private void programToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,13 +154,24 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void dgvMusteriler_Click(object sender, EventArgs e)
         {
-            textBox1.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
-            textBox2.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
+
+        }
+
+
+
+        private void dgvMusteriler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tcTBox.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
+            adTBox.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
+            button4.Enabled = true;
         }
     }
 }

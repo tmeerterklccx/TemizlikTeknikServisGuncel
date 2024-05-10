@@ -56,16 +56,12 @@ namespace TemizlikTeknikServisGuncel
         private void button1_Click(object sender, EventArgs e)
         {
             string sorgu = "Update Urunler set Urun_Ad,Urun_Bilgi,Marka_ID,Urun_Tur_ID,Uretim_Yili,Urun_Satis_Fiyati,Garanti_Suresi_Day,Urun_Alis_Fiyati,Urun_KDV_Orani,Urun_Stok = @UrunAd,@UrunBilgi,@MarkaID,@UrunTurID,@UretimYili,@UrunSatisFiyati,@GarantiSuresi,@UrunAlisFiyati,@UrunKDVOrani,@UrunStok WHERE Urun_ID = @UrunID";
-            UrunCMD.Parameters.AddWithValue("@UrunID", txtID.Text);
-            UrunCMD.Parameters.AddWithValue("@UrunAd", txtUrunAd.Text);
-            UrunCMD.Parameters.AddWithValue("@UrunBilgi", txtBilgi.Text);
-            UrunCMD.Parameters.AddWithValue("@Marka_ID", markaCB.SelectedIndex);
-            UrunCMD.Parameters.AddWithValue("@Urun_Tur_ID", TurCB.SelectedIndex);
-            UrunCMD.Parameters.AddWithValue("@Uretim_Yili", txtYil.Text);
-            UrunCMD.Parameters.AddWithValue("@Urun_Satis_Fiyati", txtFiyat.Text);
-            UrunCMD.Parameters.AddWithValue("@Urun_Alis_Fiyati", txtAlisFiyati.Text);
-            UrunCMD.Parameters.AddWithValue("@Urun_KDV_Orani", txtKdv.Text);
-            UrunCMD.Parameters.AddWithValue("@Urun_Stok", txtStok.Text);
+            UrunCMD.Parameters.AddWithValue("@UrunID", IDTBox.Text);
+            UrunCMD.Parameters.AddWithValue("@UrunAd", urunAdiTBox.Text);
+            UrunCMD.Parameters.AddWithValue("@UrunBilgi", bilgiTBox.Text);
+            UrunCMD.Parameters.AddWithValue("@Marka_ID", markaCBox.SelectedIndex);
+            UrunCMD.Parameters.AddWithValue("@Urun_Tur_ID", turCBox.SelectedIndex);
+            UrunCMD.Parameters.AddWithValue("@Uretim_Yili", yilTBox.Text);
             KomutCalistir(sorgu);
             Urunler urunler = new Urunler();
             urunler.Show();
@@ -89,16 +85,16 @@ namespace TemizlikTeknikServisGuncel
                 SqlDataReader reader = UrunCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
-                markaCB.Items.Clear();
+                markaCBox.Items.Clear();
 
                 foreach (DataRow row in dataTable.Rows)
                 {
                     string markaAd = row["Marka_Ad"].ToString();
-                    markaCB.Items.Add(markaAd);
+                    markaCBox.Items.Add(markaAd);
                 }
-                if (markaCB.Items.Count > 0)
+                if (markaCBox.Items.Count > 0)
                 {
-                    markaCB.SelectedIndex = 0;
+                    markaCBox.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
@@ -124,16 +120,16 @@ namespace TemizlikTeknikServisGuncel
                 SqlDataReader reader = UrunCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
-                TurCB.Items.Clear();
+                turCBox.Items.Clear();
 
                 foreach (DataRow row in dataTable.Rows)
                 {
                     string markaAd = row["Tur_Adi"].ToString();
-                    TurCB.Items.Add(markaAd);
+                    turCBox.Items.Add(markaAd);
                 }
-                if (TurCB.Items.Count > 0)
+                if (turCBox.Items.Count > 0)
                 {
-                    TurCB.SelectedIndex = 0;
+                    turCBox.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
@@ -146,6 +142,14 @@ namespace TemizlikTeknikServisGuncel
             }
 
 
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

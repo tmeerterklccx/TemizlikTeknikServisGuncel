@@ -46,10 +46,13 @@ namespace TemizlikTeknikServisGuncel
 
         private void Urunler_Load(object sender, EventArgs e)
         {
+            araBTN.Enabled = false;
+            silBTN.Enabled = false;
+            guncellBTN.Enabled = false;
             VeriGetir();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ekle_Click(object sender, EventArgs e)
         {
             this.Close();
             UrunKaydet urunKaydet = new UrunKaydet();
@@ -57,12 +60,17 @@ namespace TemizlikTeknikServisGuncel
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void guncelle_Click(object sender, EventArgs e)
         {
 
             UrunGuncelle urunGuncelle = new UrunGuncelle();
             urunGuncelle.afrm = this;
-            //urunGuncelle.txtID.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
+            urunGuncelle.IDTBox.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
+            urunGuncelle.urunAdiTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
+            urunGuncelle.bilgiTBox.Text = dgvUrunler.CurrentRow.Cells[2].Value.ToString();
+            urunGuncelle.markaCBox.SelectedText = dgvUrunler.CurrentRow.Cells[3].Value.ToString();
+            urunGuncelle.turCBox.SelectedText = dgvUrunler.CurrentRow.Cells[4].Value.ToString();
+            urunGuncelle.yilTBox.Text = dgvUrunler.CurrentRow.Cells[5].Value.ToString();
             urunGuncelle.ShowDialog();
 
         }
@@ -72,22 +80,22 @@ namespace TemizlikTeknikServisGuncel
             Komutlar komutlar = new Komutlar();
             dgvUrunler.DataSource = komutlar.VeriDoldur(sorgu);
         }
-        private void button3_Click(object sender, EventArgs e)
+        private void listele_Click(object sender, EventArgs e)
         {
             VeriGetir();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void sil_Click(object sender, EventArgs e)
         {
+
+            string sorgu = "Delete from Urunler where Urun_ID =@ID";
+            UrunCMD.Parameters.AddWithValue("@ID", IDTBox.Text);
             if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                string deger = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
-                int id = Convert.ToInt32(deger);
-                string sorgu = "Delete from Urunler where Urun_ID =@ID";
-                UrunCMD.Parameters.AddWithValue("@ID", id);
                 KomutCalistir(sorgu);
                 VeriGetir();
             }
+
         }
 
         private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,17 +105,17 @@ namespace TemizlikTeknikServisGuncel
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ara_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" || textBox2.Text != "")
+            if (IDTBox.Text != "" || TCTBox.Text != "")
             {
-                button1.Enabled = true;
+                araBTN.Enabled = true;
                 UrunCMD.CommandText = "SELECT * FROM Urunler WHERE Urun_ID = @urunID OR Urun_Ad = @urunAd";
                 UrunCMD.Connection = SqlConnection;
                 UrunCMD.Connection.Open();
                 UrunCMD.Parameters.Clear();
-                UrunCMD.Parameters.AddWithValue("@urunID", textBox1.Text);
-                UrunCMD.Parameters.AddWithValue("@urunAd", textBox2.Text);
+                UrunCMD.Parameters.AddWithValue("@urunID", IDTBox.Text);
+                UrunCMD.Parameters.AddWithValue("@urunAd", TCTBox.Text);
                 SqlDataReader reader = UrunCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
@@ -116,21 +124,42 @@ namespace TemizlikTeknikServisGuncel
             }
             else
             {
-                button1.Enabled = false;
+                araBTN.Enabled = false;
             }
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBox1.Text) || !string.IsNullOrWhiteSpace(textBox2.Text))
+            if (!string.IsNullOrWhiteSpace(IDTBox.Text) || !string.IsNullOrWhiteSpace(TCTBox.Text))
             {
-                button1.Enabled = true;
+                araBTN.Enabled = true;
+                silBTN.Enabled = true;
+                guncellBTN.Enabled = true;
             }
             else
             {
-                button1.Enabled = false;
+                araBTN.Enabled = false;
+                silBTN.Enabled = false;
+                guncellBTN.Enabled = false;
             }
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+
+
+        private void dgvUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDTBox.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
+            TCTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
+            silBTN.Enabled = true;
         }
     }
 }

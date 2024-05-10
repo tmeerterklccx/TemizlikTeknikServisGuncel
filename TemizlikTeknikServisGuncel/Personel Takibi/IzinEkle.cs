@@ -54,10 +54,10 @@ namespace TemizlikTeknikServisGuncel
         private void button1_Click(object sender, EventArgs e)
         {
             string sorgu = "Insert Into Izinler values (@PersonelTC,@Baslangic,@Bitis,@Tur,@Statu)";
-            izinCMD.Parameters.AddWithValue("@PersonelTC", textBox2.Text);
-            izinCMD.Parameters.AddWithValue("@Baslangic", baslangic.Text);
-            izinCMD.Parameters.AddWithValue("@Bitis", bitis.Text);
-            izinCMD.Parameters.AddWithValue("@Tur", textBox1.Text);
+            izinCMD.Parameters.AddWithValue("@PersonelTC", tcBox.Text);
+            izinCMD.Parameters.AddWithValue("@Baslangic", BaslangicTBox.Text);
+            izinCMD.Parameters.AddWithValue("@Bitis", BitisTBox.Text);
+            izinCMD.Parameters.AddWithValue("@Tur", TurTBox.Text);
             izinCMD.Parameters.AddWithValue("@Statu", true);
             KomutCalistir(sorgu);
             Izinler izinler = new Izinler();
@@ -76,6 +76,11 @@ namespace TemizlikTeknikServisGuncel
             {
                 Application.Exit();
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

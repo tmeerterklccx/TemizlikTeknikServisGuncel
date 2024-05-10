@@ -28,130 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label3 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            button5 = new Button();
-            button4 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            button3 = new Button();
-            label2 = new Label();
-            dgvMarkalar = new DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            listeleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
+            TCTBox = new TextBox();
+            IDTBox = new TextBox();
             menuStrip1 = new MenuStrip();
             programToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvMarkalar).BeginInit();
+            dgvMarkalar = new MetroFramework.Controls.MetroGrid();
+            araBTN = new MaterialSkin.Controls.MaterialRaisedButton();
+            silBTN = new MaterialSkin.Controls.MaterialRaisedButton();
+            guncelleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
+            ekleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            label2 = new Label();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMarkalar).BeginInit();
             SuspendLayout();
             // 
-            // label3
+            // listeleBTN
             // 
-            label3.AutoSize = true;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(42, 372);
-            label3.Name = "label3";
-            label3.Size = new Size(94, 23);
-            label3.TabIndex = 29;
-            label3.Text = "MARKA ID:";
+            listeleBTN.Depth = 0;
+            listeleBTN.Location = new Point(12, 444);
+            listeleBTN.MouseState = MaterialSkin.MouseState.HOVER;
+            listeleBTN.Name = "listeleBTN";
+            listeleBTN.Primary = true;
+            listeleBTN.Size = new Size(502, 39);
+            listeleBTN.TabIndex = 120;
+            listeleBTN.Text = "LİSTEYİ GETİR";
+            listeleBTN.UseVisualStyleBackColor = true;
+            listeleBTN.Click += listele_Click;
             // 
-            // textBox2
+            // TCTBox
             // 
-            textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(167, 427);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(212, 24);
-            textBox2.TabIndex = 27;
+            TCTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            TCTBox.Location = new Point(110, 402);
+            TCTBox.Name = "TCTBox";
+            TCTBox.Size = new Size(154, 24);
+            TCTBox.TabIndex = 112;
+            TCTBox.TextChanged += textBox1_TextChanged;
             // 
-            // textBox1
+            // IDTBox
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(167, 368);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(212, 24);
-            textBox1.TabIndex = 26;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button5.Location = new Point(707, 356);
-            button5.Name = "button5";
-            button5.Size = new Size(135, 53);
-            button5.TabIndex = 25;
-            button5.Text = "MARKA SİL";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // button4
-            // 
-            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button4.Location = new Point(626, 415);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 53);
-            button4.TabIndex = 24;
-            button4.Text = "MARKA GÜNCELLE";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button2.Location = new Point(474, 415);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 53);
-            button2.TabIndex = 23;
-            button2.Text = "MARKA EKLE";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(553, 356);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 53);
-            button1.TabIndex = 22;
-            button1.Text = "MARKA ARA";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button3.Location = new Point(400, 356);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 53);
-            button3.TabIndex = 21;
-            button3.Text = "LİSTEYİ GETİR";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(336, 33);
-            label2.Name = "label2";
-            label2.Size = new Size(199, 30);
-            label2.TabIndex = 20;
-            label2.Text = "MARKA YÖNETİMİ";
-            // 
-            // dgvMarkalar
-            // 
-            dgvMarkalar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMarkalar.GridColor = SystemColors.Menu;
-            dgvMarkalar.Location = new Point(115, 76);
-            dgvMarkalar.MultiSelect = false;
-            dgvMarkalar.Name = "dgvMarkalar";
-            dgvMarkalar.RowTemplate.Height = 25;
-            dgvMarkalar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMarkalar.Size = new Size(633, 274);
-            dgvMarkalar.TabIndex = 19;
+            IDTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            IDTBox.Location = new Point(110, 343);
+            IDTBox.Name = "IDTBox";
+            IDTBox.Size = new Size(154, 24);
+            IDTBox.TabIndex = 111;
+            IDTBox.TextChanged += textBox1_TextChanged;
             // 
             // menuStrip1
             // 
@@ -159,7 +87,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(852, 24);
-            menuStrip1.TabIndex = 30;
+            menuStrip1.TabIndex = 113;
             menuStrip1.Text = "menuStrip1";
             // 
             // programToolStripMenuItem
@@ -174,6 +102,7 @@
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
             çıkışYapToolStripMenuItem.Size = new Size(121, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
             // otomasyonaGitToolStripMenuItem
             // 
@@ -182,62 +111,189 @@
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
             otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
-            // label1
+            // dgvMarkalar
             // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(42, 428);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 23);
-            label1.TabIndex = 31;
-            label1.Text = "MARKA AD:";
+            dgvMarkalar.AllowUserToAddRows = false;
+            dgvMarkalar.AllowUserToDeleteRows = false;
+            dgvMarkalar.AllowUserToResizeRows = false;
+            dgvMarkalar.BackgroundColor = Color.FromArgb(255, 255, 255);
+            dgvMarkalar.BorderStyle = BorderStyle.None;
+            dgvMarkalar.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvMarkalar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvMarkalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvMarkalar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvMarkalar.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvMarkalar.EnableHeadersVisualStyles = false;
+            dgvMarkalar.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dgvMarkalar.GridColor = Color.FromArgb(255, 255, 255);
+            dgvMarkalar.Location = new Point(19, 80);
+            dgvMarkalar.Name = "dgvMarkalar";
+            dgvMarkalar.ReadOnly = true;
+            dgvMarkalar.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvMarkalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvMarkalar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvMarkalar.RowTemplate.Height = 25;
+            dgvMarkalar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMarkalar.Size = new Size(802, 241);
+            dgvMarkalar.TabIndex = 114;
+            dgvMarkalar.CellClick += dgvMarkalar_CellClick;
+            // 
+            // araBTN
+            // 
+            araBTN.Depth = 0;
+            araBTN.Location = new Point(287, 349);
+            araBTN.MouseState = MaterialSkin.MouseState.HOVER;
+            araBTN.Name = "araBTN";
+            araBTN.Primary = true;
+            araBTN.Size = new Size(227, 71);
+            araBTN.TabIndex = 121;
+            araBTN.Text = "MARKA ARA";
+            araBTN.UseVisualStyleBackColor = true;
+            araBTN.Click += ara_Click;
+            // 
+            // silBTN
+            // 
+            silBTN.Depth = 0;
+            silBTN.Location = new Point(531, 432);
+            silBTN.MouseState = MaterialSkin.MouseState.HOVER;
+            silBTN.Name = "silBTN";
+            silBTN.Primary = true;
+            silBTN.Size = new Size(292, 39);
+            silBTN.TabIndex = 119;
+            silBTN.Text = "MARKA SİL";
+            silBTN.UseVisualStyleBackColor = true;
+            silBTN.Click += sil_Click;
+            // 
+            // guncelleBTN
+            // 
+            guncelleBTN.Depth = 0;
+            guncelleBTN.Location = new Point(531, 342);
+            guncelleBTN.MouseState = MaterialSkin.MouseState.HOVER;
+            guncelleBTN.Name = "guncelleBTN";
+            guncelleBTN.Primary = true;
+            guncelleBTN.Size = new Size(290, 39);
+            guncelleBTN.TabIndex = 118;
+            guncelleBTN.Text = "MARKA GÜNCELLE";
+            guncelleBTN.UseVisualStyleBackColor = true;
+            guncelleBTN.Click += guncelle_Click;
+            // 
+            // ekleBTN
+            // 
+            ekleBTN.Depth = 0;
+            ekleBTN.Location = new Point(531, 387);
+            ekleBTN.MouseState = MaterialSkin.MouseState.HOVER;
+            ekleBTN.Name = "ekleBTN";
+            ekleBTN.Primary = true;
+            ekleBTN.Size = new Size(290, 39);
+            ekleBTN.TabIndex = 117;
+            ekleBTN.Text = "MARKA EKLE";
+            ekleBTN.UseVisualStyleBackColor = true;
+            ekleBTN.Click += ekle_Click;
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            materialLabel2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialLabel2.Location = new Point(19, 408);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(32, 19);
+            materialLabel2.TabIndex = 116;
+            materialLabel2.Text = "TC:";
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Font = new Font("Roboto", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            materialLabel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialLabel1.Location = new Point(20, 349);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(27, 19);
+            materialLabel1.TabIndex = 115;
+            materialLabel1.Text = "ID:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.ButtonHighlight;
+            label2.BorderStyle = BorderStyle.FixedSingle;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkCyan;
+            label2.Location = new Point(325, 34);
+            label2.Name = "label2";
+            label2.Size = new Size(201, 32);
+            label2.TabIndex = 110;
+            label2.Text = "MARKA YÖNETİMİ";
             // 
             // Markalar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(852, 480);
-            Controls.Add(label1);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(button3);
-            Controls.Add(label2);
-            Controls.Add(dgvMarkalar);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(852, 490);
+            Controls.Add(listeleBTN);
+            Controls.Add(TCTBox);
+            Controls.Add(IDTBox);
             Controls.Add(menuStrip1);
+            Controls.Add(dgvMarkalar);
+            Controls.Add(araBTN);
+            Controls.Add(silBTN);
+            Controls.Add(guncelleBTN);
+            Controls.Add(ekleBTN);
+            Controls.Add(materialLabel2);
+            Controls.Add(materialLabel1);
+            Controls.Add(label2);
             Name = "Markalar";
             Text = "Markalar";
             Load += Markalar_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvMarkalar).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMarkalar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button5;
-        private Button button4;
-        private Button button2;
-        private Button button1;
-        private Button button3;
-        private Label label2;
-        private DataGridView dgvMarkalar;
+        private MaterialSkin.Controls.MaterialRaisedButton listeleBTN;
+        private TextBox TCTBox;
+        private TextBox IDTBox;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem programToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
-        private Label label1;
+        private MetroFramework.Controls.MetroGrid dgvMarkalar;
+        private MaterialSkin.Controls.MaterialRaisedButton araBTN;
+        private MaterialSkin.Controls.MaterialRaisedButton silBTN;
+        private MaterialSkin.Controls.MaterialRaisedButton guncelleBTN;
+        private MaterialSkin.Controls.MaterialRaisedButton ekleBTN;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private Label label2;
     }
 }

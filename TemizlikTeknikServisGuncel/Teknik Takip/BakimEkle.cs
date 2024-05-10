@@ -50,9 +50,9 @@ namespace TemizlikTeknikServisGuncel
         {
             string sorgu = "SELECT Urun_Ad FROM Urunler ";
             SqlConnection.Open();
-            bakimCMD.Connection= SqlConnection;
+            bakimCMD.Connection = SqlConnection;
             bakimCMD.Parameters.Clear();
-            bakimCMD.CommandText= sorgu;
+            bakimCMD.CommandText = sorgu;
             SqlDataReader sqlDataReader = bakimCMD.ExecuteReader();
             if (sqlDataReader.Read())
             {
@@ -62,7 +62,7 @@ namespace TemizlikTeknikServisGuncel
                 {
                     urunAdListesi.Add(urunAdi);
                 }
-                
+
                 foreach (var item in urunAdListesi)
                 {
                     urunCBox.Items.Add(item);
@@ -72,8 +72,8 @@ namespace TemizlikTeknikServisGuncel
             {
                 MessageBox.Show("HATA");
             }
-            
-            
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,9 +81,24 @@ namespace TemizlikTeknikServisGuncel
             string sorgu = "Insert Into Izinler values (@PersonelTC,@Baslangic,@Bitis,@Tur,@Statu)";
             //bakimCMD.Parameters.AddWithValue("@Ad", textBox1.Text);
             KomutCalistir(sorgu);
-            UrunTurleri urunTurleri = new UrunTurleri();
-            urunTurleri.Show();
+            Bakimlar bakimlar = new Bakimlar();
+            bakimlar.Show();
             this.Close();
+        }
+
+        private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Otomasyon otomasyon = new Otomasyon();
+            otomasyon.Show();
+            this.Close();
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

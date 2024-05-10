@@ -58,7 +58,7 @@ namespace TemizlikTeknikServisGuncel
         {
 
             string sorgu = "Insert Into Markalar (Marka_Ad) values (@MarkaAd)";
-            MarkaCMD.Parameters.AddWithValue("@MarkaAd", textBox1.Text);
+            MarkaCMD.Parameters.AddWithValue("@MarkaAd", markaAdTBox.Text);
             KomutCalistir(sorgu);
             Markalar markalar = new Markalar();
             markalar.Show();
@@ -68,18 +68,18 @@ namespace TemizlikTeknikServisGuncel
 
         private void MarkaEkle_Load(object sender, EventArgs e)
         {
-            button1.Enabled = false;
+            ekleBTN.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (markaAdTBox.Text == "")
             {
-                button1.Enabled = false;
+                ekleBTN.Enabled = false;
             }
             else
             {
-                button1.Enabled = true;
+                ekleBTN.Enabled = true;
             }
         }
 
@@ -90,6 +90,10 @@ namespace TemizlikTeknikServisGuncel
 
         private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)

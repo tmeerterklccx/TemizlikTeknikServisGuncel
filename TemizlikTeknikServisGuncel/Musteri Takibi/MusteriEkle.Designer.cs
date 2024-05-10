@@ -28,47 +28,191 @@
         /// </summary>
         private void InitializeComponent()
         {
-            soyadTextBox = new TextBox();
-            otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
-            çıkışYapToolStripMenuItem = new ToolStripMenuItem();
-            programToolStripMenuItem = new ToolStripMenuItem();
+            materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            telTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            ePostATBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            tcTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            soyadTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            ekleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
+            metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            adTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            metroLabel5 = new MetroFramework.Controls.MetroLabel();
             adresTextBox = new RichTextBox();
-            button1 = new Button();
-            label10 = new Label();
-            label11 = new Label();
-            telTextBox = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            label3 = new Label();
-            tcTextBox = new TextBox();
+            programToolStripMenuItem = new ToolStripMenuItem();
+            çıkışYapToolStripMenuItem = new ToolStripMenuItem();
+            otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
+            metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            metroLabel1 = new MetroFramework.Controls.MetroLabel();
             label2 = new Label();
             menuStrip1 = new MenuStrip();
-            adTextBox = new TextBox();
-            label1 = new Label();
-            eMailTextBox = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // soyadTextBox
+            // materialDivider4
             // 
-            soyadTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            soyadTextBox.Location = new Point(155, 234);
-            soyadTextBox.Name = "soyadTextBox";
-            soyadTextBox.Size = new Size(171, 24);
-            soyadTextBox.TabIndex = 141;
+            materialDivider4.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider4.Depth = 0;
+            materialDivider4.Location = new Point(711, 308);
+            materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider4.Name = "materialDivider4";
+            materialDivider4.Size = new Size(22, 105);
+            materialDivider4.TabIndex = 181;
+            materialDivider4.Text = "materialDivider4";
             // 
-            // otomasyonaGitToolStripMenuItem
+            // materialDivider3
             // 
-            otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
-            otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
-            otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
-            otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
+            materialDivider3.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider3.Depth = 0;
+            materialDivider3.Location = new Point(384, 308);
+            materialDivider3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider3.Name = "materialDivider3";
+            materialDivider3.Size = new Size(22, 105);
+            materialDivider3.TabIndex = 180;
+            materialDivider3.Text = "materialDivider3";
             // 
-            // çıkışYapToolStripMenuItem
+            // materialDivider2
             // 
-            çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
-            çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            materialDivider2.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider2.Depth = 0;
+            materialDivider2.Location = new Point(412, 393);
+            materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider2.Name = "materialDivider2";
+            materialDivider2.Size = new Size(293, 20);
+            materialDivider2.TabIndex = 179;
+            materialDivider2.Text = "materialDivider2";
+            // 
+            // materialDivider1
+            // 
+            materialDivider1.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider1.Depth = 0;
+            materialDivider1.Location = new Point(412, 308);
+            materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider1.Name = "materialDivider1";
+            materialDivider1.Size = new Size(293, 20);
+            materialDivider1.TabIndex = 178;
+            materialDivider1.Text = "materialDivider1";
+            // 
+            // telTBox
+            // 
+            telTBox.Depth = 0;
+            telTBox.Hint = "";
+            telTBox.Location = new Point(155, 346);
+            telTBox.MouseState = MaterialSkin.MouseState.HOVER;
+            telTBox.Name = "telTBox";
+            telTBox.PasswordChar = '\0';
+            telTBox.SelectedText = "";
+            telTBox.SelectionLength = 0;
+            telTBox.SelectionStart = 0;
+            telTBox.Size = new Size(149, 23);
+            telTBox.TabIndex = 177;
+            telTBox.UseSystemPasswordChar = false;
+            // 
+            // ePostATBox
+            // 
+            ePostATBox.Depth = 0;
+            ePostATBox.Hint = "";
+            ePostATBox.Location = new Point(155, 285);
+            ePostATBox.MouseState = MaterialSkin.MouseState.HOVER;
+            ePostATBox.Name = "ePostATBox";
+            ePostATBox.PasswordChar = '\0';
+            ePostATBox.SelectedText = "";
+            ePostATBox.SelectionLength = 0;
+            ePostATBox.SelectionStart = 0;
+            ePostATBox.Size = new Size(149, 23);
+            ePostATBox.TabIndex = 176;
+            ePostATBox.UseSystemPasswordChar = false;
+            // 
+            // tcTBox
+            // 
+            tcTBox.Depth = 0;
+            tcTBox.Hint = "";
+            tcTBox.Location = new Point(155, 219);
+            tcTBox.MouseState = MaterialSkin.MouseState.HOVER;
+            tcTBox.Name = "tcTBox";
+            tcTBox.PasswordChar = '\0';
+            tcTBox.SelectedText = "";
+            tcTBox.SelectionLength = 0;
+            tcTBox.SelectionStart = 0;
+            tcTBox.Size = new Size(149, 23);
+            tcTBox.TabIndex = 175;
+            tcTBox.UseSystemPasswordChar = false;
+            // 
+            // soyadTBox
+            // 
+            soyadTBox.Depth = 0;
+            soyadTBox.Hint = "";
+            soyadTBox.Location = new Point(155, 154);
+            soyadTBox.MouseState = MaterialSkin.MouseState.HOVER;
+            soyadTBox.Name = "soyadTBox";
+            soyadTBox.PasswordChar = '\0';
+            soyadTBox.SelectedText = "";
+            soyadTBox.SelectionLength = 0;
+            soyadTBox.SelectionStart = 0;
+            soyadTBox.Size = new Size(149, 23);
+            soyadTBox.TabIndex = 174;
+            soyadTBox.UseSystemPasswordChar = false;
+            // 
+            // ekleBTN
+            // 
+            ekleBTN.Depth = 0;
+            ekleBTN.Location = new Point(412, 334);
+            ekleBTN.MouseState = MaterialSkin.MouseState.HOVER;
+            ekleBTN.Name = "ekleBTN";
+            ekleBTN.Primary = true;
+            ekleBTN.Size = new Size(293, 53);
+            ekleBTN.TabIndex = 173;
+            ekleBTN.Text = "MÜŞTERİ EKLE";
+            ekleBTN.UseVisualStyleBackColor = true;
+            ekleBTN.Click += button1_Click;
+            // 
+            // metroLabel6
+            // 
+            metroLabel6.AutoSize = true;
+            metroLabel6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel6.Location = new Point(369, 167);
+            metroLabel6.Name = "metroLabel6";
+            metroLabel6.Size = new Size(52, 19);
+            metroLabel6.TabIndex = 172;
+            metroLabel6.Text = "ADRES:";
+            // 
+            // adTBox
+            // 
+            adTBox.Depth = 0;
+            adTBox.Hint = "";
+            adTBox.Location = new Point(155, 96);
+            adTBox.MouseState = MaterialSkin.MouseState.HOVER;
+            adTBox.Name = "adTBox";
+            adTBox.PasswordChar = '\0';
+            adTBox.SelectedText = "";
+            adTBox.SelectionLength = 0;
+            adTBox.SelectionStart = 0;
+            adTBox.Size = new Size(149, 23);
+            adTBox.TabIndex = 171;
+            adTBox.UseSystemPasswordChar = false;
+            // 
+            // metroLabel5
+            // 
+            metroLabel5.AutoSize = true;
+            metroLabel5.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel5.Location = new Point(30, 350);
+            metroLabel5.Name = "metroLabel5";
+            metroLabel5.Size = new Size(67, 19);
+            metroLabel5.TabIndex = 170;
+            metroLabel5.Text = "TELEFON:";
+            // 
+            // adresTextBox
+            // 
+            adresTextBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            adresTextBox.Location = new Point(472, 127);
+            adresTextBox.Name = "adresTextBox";
+            adresTextBox.Size = new Size(233, 140);
+            adresTextBox.TabIndex = 165;
+            adresTextBox.Text = "";
             // 
             // programToolStripMenuItem
             // 
@@ -76,112 +220,70 @@
             programToolStripMenuItem.Name = "programToolStripMenuItem";
             programToolStripMenuItem.Size = new Size(65, 20);
             programToolStripMenuItem.Text = "&Program";
+            programToolStripMenuItem.Click += programToolStripMenuItem_Click;
             // 
-            // adresTextBox
+            // çıkışYapToolStripMenuItem
             // 
-            adresTextBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            adresTextBox.Location = new Point(495, 107);
-            adresTextBox.Name = "adresTextBox";
-            adresTextBox.Size = new Size(233, 140);
-            adresTextBox.TabIndex = 139;
-            adresTextBox.Text = "";
+            çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
+            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
+            çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             // 
-            // button1
+            // otomasyonaGitToolStripMenuItem
             // 
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(456, 296);
-            button1.Name = "button1";
-            button1.Size = new Size(305, 58);
-            button1.TabIndex = 138;
-            button1.Text = "MÜŞTERİ KAYDET";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
+            otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
+            otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
             // 
-            // label10
+            // metroLabel4
             // 
-            label10.AutoSize = true;
-            label10.BorderStyle = BorderStyle.FixedSingle;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = SystemColors.ControlLightLight;
-            label10.Location = new Point(365, 173);
-            label10.Name = "label10";
-            label10.Size = new Size(67, 23);
-            label10.TabIndex = 137;
-            label10.Text = "ADRES:";
+            metroLabel4.AutoSize = true;
+            metroLabel4.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel4.Location = new Point(34, 285);
+            metroLabel4.Name = "metroLabel4";
+            metroLabel4.Size = new Size(63, 19);
+            metroLabel4.TabIndex = 169;
+            metroLabel4.Text = "E POSTA:";
             // 
-            // label11
+            // metroLabel3
             // 
-            label11.AutoSize = true;
-            label11.BorderStyle = BorderStyle.FixedSingle;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(23, 297);
-            label11.Name = "label11";
-            label11.Size = new Size(88, 23);
-            label11.TabIndex = 136;
-            label11.Text = "TELEFON :";
+            metroLabel3.AutoSize = true;
+            metroLabel3.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel3.Location = new Point(70, 223);
+            metroLabel3.Name = "metroLabel3";
+            metroLabel3.Size = new Size(27, 19);
+            metroLabel3.TabIndex = 168;
+            metroLabel3.Text = "TC:";
             // 
-            // telTextBox
+            // metroLabel2
             // 
-            telTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            telTextBox.Location = new Point(157, 296);
-            telTextBox.Name = "telTextBox";
-            telTextBox.Size = new Size(171, 24);
-            telTextBox.TabIndex = 135;
+            metroLabel2.AutoSize = true;
+            metroLabel2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel2.Location = new Point(43, 164);
+            metroLabel2.Name = "metroLabel2";
+            metroLabel2.Size = new Size(54, 19);
+            metroLabel2.TabIndex = 167;
+            metroLabel2.Text = "SOYAD:";
             // 
-            // label6
+            // metroLabel1
             // 
-            label6.AutoSize = true;
-            label6.BorderStyle = BorderStyle.FixedSingle;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(42, 232);
-            label6.Name = "label6";
-            label6.Size = new Size(69, 23);
-            label6.TabIndex = 134;
-            label6.Text = "SOYAD:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(72, 173);
-            label7.Name = "label7";
-            label7.Size = new Size(39, 23);
-            label7.TabIndex = 133;
-            label7.Text = "AD:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(28, 107);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 23);
-            label3.TabIndex = 127;
-            label3.Text = "MÜŞTERİ TC:";
-            // 
-            // tcTextBox
-            // 
-            tcTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            tcTextBox.Location = new Point(155, 107);
-            tcTextBox.Name = "tcTextBox";
-            tcTextBox.Size = new Size(171, 24);
-            tcTextBox.TabIndex = 126;
+            metroLabel1.AutoSize = true;
+            metroLabel1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel1.Location = new Point(67, 96);
+            metroLabel1.Name = "metroLabel1";
+            metroLabel1.Size = new Size(30, 19);
+            metroLabel1.TabIndex = 166;
+            metroLabel1.Text = "AD:";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(313, 40);
+            label2.ForeColor = Color.DarkCyan;
+            label2.Location = new Point(299, 51);
             label2.Name = "label2";
-            label2.Size = new Size(157, 30);
-            label2.TabIndex = 125;
+            label2.Size = new Size(159, 32);
+            label2.TabIndex = 163;
             label2.Text = "MÜŞTERİ EKLE";
             // 
             // menuStrip1
@@ -189,57 +291,33 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, otomasyonaGitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(796, 24);
-            menuStrip1.TabIndex = 128;
+            menuStrip1.Size = new Size(762, 24);
+            menuStrip1.TabIndex = 164;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // adTextBox
-            // 
-            adTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            adTextBox.Location = new Point(155, 175);
-            adTextBox.Name = "adTextBox";
-            adTextBox.Size = new Size(171, 24);
-            adTextBox.TabIndex = 142;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(42, 346);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 23);
-            label1.TabIndex = 144;
-            label1.Text = "E Mail:";
-            // 
-            // eMailTextBox
-            // 
-            eMailTextBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            eMailTextBox.Location = new Point(157, 345);
-            eMailTextBox.Name = "eMailTextBox";
-            eMailTextBox.Size = new Size(171, 24);
-            eMailTextBox.TabIndex = 143;
             // 
             // MusteriEkle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(796, 429);
-            Controls.Add(label1);
-            Controls.Add(eMailTextBox);
-            Controls.Add(adTextBox);
-            Controls.Add(soyadTextBox);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(762, 429);
+            Controls.Add(materialDivider4);
+            Controls.Add(materialDivider3);
+            Controls.Add(materialDivider2);
+            Controls.Add(materialDivider1);
+            Controls.Add(telTBox);
+            Controls.Add(ePostATBox);
+            Controls.Add(tcTBox);
+            Controls.Add(soyadTBox);
+            Controls.Add(ekleBTN);
+            Controls.Add(metroLabel6);
+            Controls.Add(adTBox);
+            Controls.Add(metroLabel5);
             Controls.Add(adresTextBox);
-            Controls.Add(button1);
-            Controls.Add(label10);
-            Controls.Add(label11);
-            Controls.Add(telTextBox);
-            Controls.Add(label6);
-            Controls.Add(label7);
-            Controls.Add(label3);
-            Controls.Add(tcTextBox);
+            Controls.Add(metroLabel4);
+            Controls.Add(metroLabel3);
+            Controls.Add(metroLabel2);
+            Controls.Add(metroLabel1);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Name = "MusteriEkle";
@@ -253,23 +331,27 @@
 
         #endregion
 
-        private TextBox soyadTextBox;
-        private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
-        private ToolStripMenuItem çıkışYapToolStripMenuItem;
-        private ToolStripMenuItem programToolStripMenuItem;
+        private MaterialSkin.Controls.MaterialDivider materialDivider4;
+        private MaterialSkin.Controls.MaterialDivider materialDivider3;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField telTBox;
+        private MaterialSkin.Controls.MaterialSingleLineTextField ePostATBox;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tcTBox;
+        private MaterialSkin.Controls.MaterialSingleLineTextField soyadTBox;
+        private MaterialSkin.Controls.MaterialRaisedButton ekleBTN;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MaterialSkin.Controls.MaterialSingleLineTextField adTBox;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
         private RichTextBox adresTextBox;
-        private Button button1;
-        private Label label10;
-        private Label label11;
-        private TextBox telTextBox;
-        private Label label6;
-        private Label label7;
-        private Label label3;
-        private TextBox tcTextBox;
+        private ToolStripMenuItem programToolStripMenuItem;
+        private ToolStripMenuItem çıkışYapToolStripMenuItem;
+        private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
         private Label label2;
         private MenuStrip menuStrip1;
-        private TextBox adTextBox;
-        private Label label1;
-        private TextBox eMailTextBox;
     }
 }

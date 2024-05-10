@@ -48,26 +48,26 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void MusteriGuncelle_Load(object sender, EventArgs e)
         {
-            cmbStatu.Items.Clear();
-            cmbStatu.Items.Add("Aktif");
-            cmbStatu.Items.Add("Pasif");
+            statuCBox.Items.Clear();
+            statuCBox.Items.Add("Aktif");
+            statuCBox.Items.Add("Pasif");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string sorgu = "UPDATE Musteriler SET Musteri_TC = @TC, Ad = @Ad, Soyad = @Soyad, Telefon = @Telefon, EMail = @EMail, Adres = @Adres, Statu = @Statu WHERE Musteri_TC = @TC";
 
-            musteriCMD.Parameters.AddWithValue("@TC", tcTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@Ad", adTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@Soyad", soyadTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@Telefon", telTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@EMail", eMailTextBox.Text);
+            musteriCMD.Parameters.AddWithValue("@TC", tcTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Ad", adTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Soyad", soyadTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Telefon", telTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@EMail", ePostATBox.Text);
             musteriCMD.Parameters.AddWithValue("@Adres", adresTextBox.Text);
-            if (cmbStatu.Text == "Aktif")
+            if (statuCBox.Text == "Aktif")
             {
                 musteriCMD.Parameters.AddWithValue("@Statu", 1);
             }
-            else if (cmbStatu.Text == "Pasif")
+            else if (statuCBox.Text == "Pasif")
             {
                 musteriCMD.Parameters.AddWithValue("@Statu", 0);
             }
@@ -77,7 +77,17 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Otomasyon otomasyon = new Otomasyon();
+            otomasyon.Show();
+            this.Close();
+        }
 
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

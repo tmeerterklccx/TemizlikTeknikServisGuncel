@@ -26,8 +26,8 @@ namespace TemizlikTeknikServisGuncel
 
         private void ýconButton8_Click(object sender, EventArgs e)
         {
-            string tc = textBox1.Text;
-            string sifre = textBox2.Text;
+            string tc = TCTBox.Text;
+            string sifre = SifreTBox.Text;
 
             try
             {
@@ -48,7 +48,7 @@ namespace TemizlikTeknikServisGuncel
                     {
                         Otomasyon otomasyon = new Otomasyon();
                         otomasyon.afrm = this;
-                        otomasyon.lblTC.Text = ad + " " +"("+ (tc)+")";
+                        otomasyon.lblTC.Text = ad + " " + "(" + (tc) + ")";
                         otomasyon.ýconButton4.Visible = true;
                         otomasyon.ýconButton5.Visible = true;
                         otomasyon.label22.Text = "(ADMÝN)";
@@ -86,6 +86,11 @@ namespace TemizlikTeknikServisGuncel
             {
                 SqlConnection.Close(); // Baðlantýyý kapat
             }
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

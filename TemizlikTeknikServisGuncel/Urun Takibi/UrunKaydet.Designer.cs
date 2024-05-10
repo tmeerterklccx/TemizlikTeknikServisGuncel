@@ -28,220 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            richTextBox1 = new RichTextBox();
-            button1 = new Button();
-            label10 = new Label();
-            label11 = new Label();
-            textBox10 = new TextBox();
-            label8 = new Label();
-            label9 = new Label();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            textBox3 = new TextBox();
+            turCBox = new MetroFramework.Controls.MetroComboBox();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
-            çıkışYapToolStripMenuItem = new ToolStripMenuItem();
-            programToolStripMenuItem = new ToolStripMenuItem();
-            textBox4 = new TextBox();
-            label3 = new Label();
-            textBox2 = new TextBox();
+            markaCBox = new MetroFramework.Controls.MetroComboBox();
+            materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            yilTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            EkleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
+            metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            urunAdiTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            bilgiTBox = new RichTextBox();
             label2 = new Label();
             menuStrip1 = new MenuStrip();
+            programToolStripMenuItem = new ToolStripMenuItem();
+            çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // comboBox2
+            // turCBox
             // 
-            comboBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(164, 241);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(147, 29);
-            comboBox2.TabIndex = 100;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(166, 182);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(145, 29);
-            comboBox1.TabIndex = 99;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(432, 341);
-            label1.Name = "label1";
-            label1.Size = new Size(104, 23);
-            label1.TabIndex = 98;
-            label1.Text = "ÜRETİM YILI";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(583, 340);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 24);
-            textBox1.TabIndex = 97;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            richTextBox1.Location = new Point(152, 362);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(264, 88);
-            richTextBox1.TabIndex = 96;
-            richTextBox1.Text = "";
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(448, 397);
-            button1.Name = "button1";
-            button1.Size = new Size(282, 53);
-            button1.TabIndex = 95;
-            button1.Text = "ÜRÜNÜ KAYDET";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BorderStyle = BorderStyle.FixedSingle;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = SystemColors.ControlLightLight;
-            label10.Location = new Point(14, 380);
-            label10.Name = "label10";
-            label10.Size = new Size(120, 23);
-            label10.TabIndex = 94;
-            label10.Text = "ÜRÜN BİLGİSİ:";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BorderStyle = BorderStyle.FixedSingle;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(77, 303);
-            label11.Name = "label11";
-            label11.Size = new Size(57, 23);
-            label11.TabIndex = 93;
-            label11.Text = "FİYAT:";
-            // 
-            // textBox10
-            // 
-            textBox10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox10.Location = new Point(168, 305);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(147, 24);
-            textBox10.TabIndex = 92;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BorderStyle = BorderStyle.FixedSingle;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.ControlLightLight;
-            label8.Location = new Point(481, 287);
-            label8.Name = "label8";
-            label8.Size = new Size(55, 23);
-            label8.TabIndex = 91;
-            label8.Text = "STOK:";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BorderStyle = BorderStyle.FixedSingle;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ControlLightLight;
-            label9.Location = new Point(432, 228);
-            label9.Name = "label9";
-            label9.Size = new Size(104, 23);
-            label9.TabIndex = 90;
-            label9.Text = "KDV ORANI:";
-            // 
-            // textBox7
-            // 
-            textBox7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox7.Location = new Point(583, 286);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(147, 24);
-            textBox7.TabIndex = 89;
-            // 
-            // textBox8
-            // 
-            textBox8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox8.Location = new Point(583, 227);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(147, 24);
-            textBox8.TabIndex = 88;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BorderStyle = BorderStyle.FixedSingle;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(36, 241);
-            label6.Name = "label6";
-            label6.Size = new Size(98, 23);
-            label6.TabIndex = 87;
-            label6.Text = "ÜRÜN TÜR:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(61, 182);
-            label7.Name = "label7";
-            label7.Size = new Size(73, 23);
-            label7.TabIndex = 86;
-            label7.Text = "MARKA:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BorderStyle = BorderStyle.FixedSingle;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(437, 166);
-            label4.Name = "label4";
-            label4.Size = new Size(99, 23);
-            label4.TabIndex = 85;
-            label4.Text = "ALIŞ FİYATI:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BorderStyle = BorderStyle.FixedSingle;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(345, 107);
-            label5.Name = "label5";
-            label5.Size = new Size(191, 23);
-            label5.TabIndex = 84;
-            label5.Text = "GARANTİ SÜRESİ (Gün):";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox3.Location = new Point(583, 165);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(147, 24);
-            textBox3.TabIndex = 83;
+            turCBox.FormattingEnabled = true;
+            turCBox.ItemHeight = 23;
+            turCBox.Location = new Point(156, 247);
+            turCBox.Name = "turCBox";
+            turCBox.Size = new Size(149, 29);
+            turCBox.TabIndex = 257;
+            turCBox.UseSelectable = true;
             // 
             // otomasyonaGitToolStripMenuItem
             // 
@@ -250,11 +68,182 @@
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
             otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
-            // çıkışYapToolStripMenuItem
+            // markaCBox
             // 
-            çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
-            çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            markaCBox.FormattingEnabled = true;
+            markaCBox.ItemHeight = 23;
+            markaCBox.Location = new Point(156, 174);
+            markaCBox.Name = "markaCBox";
+            markaCBox.Size = new Size(149, 29);
+            markaCBox.TabIndex = 256;
+            markaCBox.UseSelectable = true;
+            // 
+            // materialDivider4
+            // 
+            materialDivider4.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider4.Depth = 0;
+            materialDivider4.Location = new Point(712, 306);
+            materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider4.Name = "materialDivider4";
+            materialDivider4.Size = new Size(22, 105);
+            materialDivider4.TabIndex = 255;
+            materialDivider4.Text = "materialDivider4";
+            // 
+            // materialDivider3
+            // 
+            materialDivider3.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider3.Depth = 0;
+            materialDivider3.Location = new Point(385, 306);
+            materialDivider3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider3.Name = "materialDivider3";
+            materialDivider3.Size = new Size(22, 105);
+            materialDivider3.TabIndex = 254;
+            materialDivider3.Text = "materialDivider3";
+            // 
+            // materialDivider2
+            // 
+            materialDivider2.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider2.Depth = 0;
+            materialDivider2.Location = new Point(413, 391);
+            materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider2.Name = "materialDivider2";
+            materialDivider2.Size = new Size(293, 20);
+            materialDivider2.TabIndex = 253;
+            materialDivider2.Text = "materialDivider2";
+            // 
+            // materialDivider1
+            // 
+            materialDivider1.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider1.Depth = 0;
+            materialDivider1.Location = new Point(413, 306);
+            materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider1.Name = "materialDivider1";
+            materialDivider1.Size = new Size(293, 20);
+            materialDivider1.TabIndex = 252;
+            materialDivider1.Text = "materialDivider1";
+            // 
+            // yilTBox
+            // 
+            yilTBox.Depth = 0;
+            yilTBox.Hint = "";
+            yilTBox.Location = new Point(156, 321);
+            yilTBox.MouseState = MaterialSkin.MouseState.HOVER;
+            yilTBox.Name = "yilTBox";
+            yilTBox.PasswordChar = '\0';
+            yilTBox.SelectedText = "";
+            yilTBox.SelectionLength = 0;
+            yilTBox.SelectionStart = 0;
+            yilTBox.Size = new Size(149, 23);
+            yilTBox.TabIndex = 251;
+            yilTBox.UseSystemPasswordChar = false;
+            // 
+            // EkleBTN
+            // 
+            EkleBTN.Depth = 0;
+            EkleBTN.Location = new Point(413, 332);
+            EkleBTN.MouseState = MaterialSkin.MouseState.HOVER;
+            EkleBTN.Name = "EkleBTN";
+            EkleBTN.Primary = true;
+            EkleBTN.Size = new Size(293, 53);
+            EkleBTN.TabIndex = 249;
+            EkleBTN.Text = "ÜRÜN EKLE";
+            EkleBTN.UseVisualStyleBackColor = true;
+            EkleBTN.Click += button1_Click;
+            // 
+            // metroLabel6
+            // 
+            metroLabel6.AutoSize = true;
+            metroLabel6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel6.Location = new Point(382, 149);
+            metroLabel6.Name = "metroLabel6";
+            metroLabel6.Size = new Size(40, 19);
+            metroLabel6.TabIndex = 248;
+            metroLabel6.Text = "BİLGİ:";
+            // 
+            // urunAdiTBox
+            // 
+            urunAdiTBox.Depth = 0;
+            urunAdiTBox.Hint = "";
+            urunAdiTBox.Location = new Point(156, 101);
+            urunAdiTBox.MouseState = MaterialSkin.MouseState.HOVER;
+            urunAdiTBox.Name = "urunAdiTBox";
+            urunAdiTBox.PasswordChar = '\0';
+            urunAdiTBox.SelectedText = "";
+            urunAdiTBox.SelectionLength = 0;
+            urunAdiTBox.SelectionStart = 0;
+            urunAdiTBox.Size = new Size(149, 23);
+            urunAdiTBox.TabIndex = 247;
+            urunAdiTBox.UseSystemPasswordChar = false;
+            // 
+            // metroLabel5
+            // 
+            metroLabel5.AutoSize = true;
+            metroLabel5.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel5.Location = new Point(16, 325);
+            metroLabel5.Name = "metroLabel5";
+            metroLabel5.Size = new Size(82, 19);
+            metroLabel5.TabIndex = 246;
+            metroLabel5.Text = "ÜRETİM YILI:";
+            // 
+            // metroLabel3
+            // 
+            metroLabel3.AutoSize = true;
+            metroLabel3.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel3.Location = new Point(62, 257);
+            metroLabel3.Name = "metroLabel3";
+            metroLabel3.Size = new Size(36, 19);
+            metroLabel3.TabIndex = 244;
+            metroLabel3.Text = "TÜR:";
+            // 
+            // metroLabel2
+            // 
+            metroLabel2.AutoSize = true;
+            metroLabel2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel2.Location = new Point(41, 174);
+            metroLabel2.Name = "metroLabel2";
+            metroLabel2.Size = new Size(57, 19);
+            metroLabel2.TabIndex = 243;
+            metroLabel2.Text = "MARKA:";
+            // 
+            // metroLabel1
+            // 
+            metroLabel1.AutoSize = true;
+            metroLabel1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            metroLabel1.Location = new Point(25, 101);
+            metroLabel1.Name = "metroLabel1";
+            metroLabel1.Size = new Size(73, 19);
+            metroLabel1.TabIndex = 242;
+            metroLabel1.Text = "ÜRÜN ADI:";
+            // 
+            // bilgiTBox
+            // 
+            bilgiTBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            bilgiTBox.Location = new Point(473, 134);
+            bilgiTBox.Name = "bilgiTBox";
+            bilgiTBox.Size = new Size(233, 86);
+            bilgiTBox.TabIndex = 241;
+            bilgiTBox.Text = "";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BorderStyle = BorderStyle.FixedSingle;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkCyan;
+            label2.Location = new Point(293, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(129, 32);
+            label2.TabIndex = 239;
+            label2.Text = "ÜRÜN EKLE";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, otomasyonaGitToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(753, 24);
+            menuStrip1.TabIndex = 240;
+            menuStrip1.Text = "menuStrip1";
             // 
             // programToolStripMenuItem
             // 
@@ -263,81 +252,34 @@
             programToolStripMenuItem.Size = new Size(65, 20);
             programToolStripMenuItem.Text = "&Program";
             // 
-            // textBox4
+            // çıkışYapToolStripMenuItem
             // 
-            textBox4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox4.Location = new Point(583, 106);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(147, 24);
-            textBox4.TabIndex = 82;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(39, 116);
-            label3.Name = "label3";
-            label3.Size = new Size(95, 23);
-            label3.TabIndex = 80;
-            label3.Text = "ÜRÜN ADI:";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(166, 116);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(147, 24);
-            textBox2.TabIndex = 79;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(313, 34);
-            label2.Name = "label2";
-            label2.Size = new Size(127, 30);
-            label2.TabIndex = 78;
-            label2.Text = "ÜRÜN EKLE";
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, otomasyonaGitToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(760, 24);
-            menuStrip1.TabIndex = 81;
-            menuStrip1.Text = "menuStrip1";
+            çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
+            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
+            çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
             // UrunKaydet
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(760, 465);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(richTextBox1);
-            Controls.Add(button1);
-            Controls.Add(label10);
-            Controls.Add(label11);
-            Controls.Add(textBox10);
-            Controls.Add(label8);
-            Controls.Add(label9);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
-            Controls.Add(label6);
-            Controls.Add(label7);
-            Controls.Add(label4);
-            Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(753, 431);
+            Controls.Add(turCBox);
+            Controls.Add(markaCBox);
+            Controls.Add(materialDivider4);
+            Controls.Add(materialDivider3);
+            Controls.Add(materialDivider2);
+            Controls.Add(materialDivider1);
+            Controls.Add(yilTBox);
+            Controls.Add(EkleBTN);
+            Controls.Add(metroLabel6);
+            Controls.Add(urunAdiTBox);
+            Controls.Add(metroLabel5);
+            Controls.Add(metroLabel3);
+            Controls.Add(metroLabel2);
+            Controls.Add(metroLabel1);
+            Controls.Add(bilgiTBox);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Name = "UrunKaydet";
@@ -350,31 +292,25 @@
 
         #endregion
 
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private Label label1;
-        private TextBox textBox1;
-        private RichTextBox richTextBox1;
-        private Button button1;
-        private Label label10;
-        private Label label11;
-        private TextBox textBox10;
-        private Label label8;
-        private Label label9;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private Label label6;
-        private Label label7;
-        private Label label4;
-        private Label label5;
-        private TextBox textBox3;
+        private MetroFramework.Controls.MetroComboBox turCBox;
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
-        private ToolStripMenuItem çıkışYapToolStripMenuItem;
-        private ToolStripMenuItem programToolStripMenuItem;
-        private TextBox textBox4;
-        private Label label3;
-        private TextBox textBox2;
+        private MetroFramework.Controls.MetroComboBox markaCBox;
+        private MaterialSkin.Controls.MaterialDivider materialDivider4;
+        private MaterialSkin.Controls.MaterialDivider materialDivider3;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField yilTBox;
+        private MaterialSkin.Controls.MaterialRaisedButton EkleBTN;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MaterialSkin.Controls.MaterialSingleLineTextField urunAdiTBox;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private RichTextBox bilgiTBox;
         private Label label2;
         private MenuStrip menuStrip1;
+        private ToolStripMenuItem programToolStripMenuItem;
+        private ToolStripMenuItem çıkışYapToolStripMenuItem;
     }
 }

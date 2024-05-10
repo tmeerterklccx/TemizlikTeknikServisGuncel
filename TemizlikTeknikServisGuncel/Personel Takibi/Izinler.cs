@@ -51,22 +51,22 @@ namespace TemizlikTeknikServisGuncel
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ekle_Click(object sender, EventArgs e)
         {
             IzinEkle ızinEkle = new IzinEkle();
             ızinEkle.Show();
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void guncelle_Click(object sender, EventArgs e)
         {
             IzinGuncelle izinGuncelle = new IzinGuncelle();
             izinGuncelle.afrm = this;
-            izinGuncelle.tcPersonel.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            izinGuncelle.izinTur.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            izinGuncelle.baslangic.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            izinGuncelle.bitis.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            izinGuncelle.id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            izinGuncelle.tcBox.Text = dgvIzinler.CurrentRow.Cells[1].Value.ToString();
+            izinGuncelle.turTBox.Text = dgvIzinler.CurrentRow.Cells[4].Value.ToString();
+            izinGuncelle.BasTBox.Text = dgvIzinler.CurrentRow.Cells[2].Value.ToString();
+            izinGuncelle.bitisTBOx.Text = dgvIzinler.CurrentRow.Cells[3].Value.ToString();
+            izinGuncelle.IDTBox.Text = dgvIzinler.CurrentRow.Cells[0].Value.ToString();
             izinGuncelle.ShowDialog();
             this.Close();
         }
@@ -78,7 +78,7 @@ namespace TemizlikTeknikServisGuncel
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void listele_Click(object sender, EventArgs e)
         {
             VeriGetir();
         }
@@ -87,67 +87,63 @@ namespace TemizlikTeknikServisGuncel
         {
             string sorgu = "select * from Izinler WHERE Statu=1";
             Komutlar komutlar = new Komutlar();
-            dataGridView1.DataSource = VeriDoldur(sorgu);
+            dgvIzinler.DataSource = VeriDoldur(sorgu);
         }
 
         private void Izinler_Load(object sender, EventArgs e)
         {
+            guncelleBTN.Enabled = false;
             VeriGetir();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ara_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" || textBox2.Text != "")
+            if (TCTBox.Text != "" || IDTBox.Text != "")
             {
-                button1.Enabled = true;
+                araBTN.Enabled = true;
                 izinCMD.CommandText = "SELECT * FROM Izinler WHERE Izin_ID = @id OR Personel_TC = @tc";
                 izinCMD.Connection = SqlConnection;
                 izinCMD.Connection.Open();
                 izinCMD.Parameters.Clear();
-                izinCMD.Parameters.AddWithValue("@id", textBox1.Text);
-                izinCMD.Parameters.AddWithValue("@tc", textBox2.Text);
+                izinCMD.Parameters.AddWithValue("@id", IDTBox.Text);
+                izinCMD.Parameters.AddWithValue("@tc", TCTBox.Text);
                 SqlDataReader reader = izinCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
-                dataGridView1.DataSource = dataTable;
+                dgvIzinler.DataSource = dataTable;
                 izinCMD.Connection.Close();
             }
             else
             {
-                button1.Enabled = false;
+                araBTN.Enabled = false;
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBox1.Text) || !string.IsNullOrWhiteSpace(textBox2.Text))
+            if (!string.IsNullOrWhiteSpace(TCTBox.Text) || !string.IsNullOrWhiteSpace(IDTBox.Text))
             {
-                button1.Enabled = true;
+                araBTN.Enabled = true;
             }
             else
             {
-                button1.Enabled = false;
+                araBTN.Enabled = false;
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void sil_Click(object sender, EventArgs e)
         {
             string sorgu = "Update Izinler set Statu = @STATU WHERE Izin_ID = @id";
             izinCMD.Parameters.AddWithValue("@STATU", false);
-            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            izinCMD.Parameters.AddWithValue("@id", textBox1.Text);
-            if (MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            izinCMD.Parameters.AddWithValue("@id", IDTBox.Text);
+            if (MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 KomutCalistir(sorgu);
                 VeriGetir();
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -155,6 +151,17 @@ namespace TemizlikTeknikServisGuncel
             {
                 Application.Exit();
             }
+        }
+
+
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            IDTBox.Text = dgvIzinler.CurrentRow.Cells[0].Value.ToString();
+            TCTBox.Text = dgvIzinler.CurrentRow.Cells[1].Value.ToString();
+            guncelleBTN.Enabled = true;
+
         }
     }
 }

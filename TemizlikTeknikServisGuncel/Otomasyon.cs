@@ -38,8 +38,8 @@ namespace TemizlikTeknikServisGuncel
 
         private void ıconButton2_Click(object sender, EventArgs e)
         {
-            UrunTurleri urunTurleri = new UrunTurleri();
-            urunTurleri.Show();
+            //UrunTurleri urunTurleri = new UrunTurleri();
+            //urunTurleri.Show();
 
         }
 

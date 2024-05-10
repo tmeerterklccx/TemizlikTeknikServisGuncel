@@ -53,20 +53,35 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
         private void button1_Click(object sender, EventArgs e)
         {
             string sorgu = "INSERT INTO Musteriler (Musteri_TC, Ad, Soyad, Telefon, EMail, Adres, Statu) VALUES (@TC, @Ad, @Soyad, @Telefon, @EMail, @Adres, @Statu)";
-            musteriCMD.Parameters.AddWithValue("@TC", tcTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@Ad", adTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@Soyad", soyadTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@Telefon", telTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@EMail", eMailTextBox.Text);
+            musteriCMD.Parameters.AddWithValue("@TC", tcTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Ad", adTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Soyad", soyadTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@Telefon", telTBox.Text);
+            musteriCMD.Parameters.AddWithValue("@EMail", ePostATBox.Text);
             musteriCMD.Parameters.AddWithValue("@Adres", adresTextBox.Text);
-            musteriCMD.Parameters.AddWithValue("@Statu", false);
+            musteriCMD.Parameters.AddWithValue("@Statu", true);
             KomutCalistir(sorgu);
-            UrunTurleri urunTurleri = new UrunTurleri();
-            urunTurleri.Show();
+            Musteriler musteri = new Musteriler();
+            musteri.Show();
             this.Close();
         }
 
         private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Otomasyon otomasyon = new Otomasyon();
+            otomasyon.Show();
+            this.Close();
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void programToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

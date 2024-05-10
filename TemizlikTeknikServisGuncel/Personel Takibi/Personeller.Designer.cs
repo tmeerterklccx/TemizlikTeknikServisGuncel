@@ -28,139 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label3 = new Label();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            button5 = new Button();
-            button4 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            button3 = new Button();
-            label2 = new Label();
-            dataGridView1 = new DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            listeleBtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            adTBox = new TextBox();
+            tcTBox = new TextBox();
             menuStrip1 = new MenuStrip();
             programToolStripMenuItem = new ToolStripMenuItem();
             çıkışYapToolStripMenuItem = new ToolStripMenuItem();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
-            textBox2 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            araBtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            silBtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            guncelleBtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            ekleBtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            dgvPersoneller = new MetroFramework.Controls.MetroGrid();
+            label2 = new Label();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPersoneller).BeginInit();
             SuspendLayout();
             // 
-            // label3
+            // listeleBtn
             // 
-            label3.AutoSize = true;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(24, 439);
-            label3.Name = "label3";
-            label3.Size = new Size(128, 23);
-            label3.TabIndex = 29;
-            label3.Text = "PERSONEL ADI:";
+            listeleBtn.Depth = 0;
+            listeleBtn.Location = new Point(12, 442);
+            listeleBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            listeleBtn.Name = "listeleBtn";
+            listeleBtn.Primary = true;
+            listeleBtn.Size = new Size(502, 39);
+            listeleBtn.TabIndex = 84;
+            listeleBtn.Text = "LİSTEYİ GETİR";
+            listeleBtn.UseVisualStyleBackColor = true;
+            listeleBtn.Click += listele_Click;
             // 
-            // label1
+            // adTBox
             // 
-            label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(24, 380);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 23);
-            label1.TabIndex = 28;
-            label1.Text = "PERSONEL TC:";
+            adTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            adTBox.Location = new Point(110, 400);
+            adTBox.Name = "adTBox";
+            adTBox.Size = new Size(154, 24);
+            adTBox.TabIndex = 76;
+            adTBox.TextChanged += textBox1_TextChanged;
             // 
-            // textBox1
+            // tcTBox
             // 
-            textBox1.Font = new Font("Arial Narrow", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(176, 379);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 26);
-            textBox1.TabIndex = 26;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button5.Location = new Point(716, 361);
-            button5.Name = "button5";
-            button5.Size = new Size(135, 53);
-            button5.TabIndex = 25;
-            button5.Text = "PERSONEL SİL";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // button4
-            // 
-            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button4.Location = new Point(640, 420);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 53);
-            button4.TabIndex = 24;
-            button4.Text = "GÜNCELLE";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button2.Location = new Point(488, 420);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 53);
-            button2.TabIndex = 23;
-            button2.Text = "KAYDET";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(567, 361);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 53);
-            button1.TabIndex = 22;
-            button1.Text = "PERSONEL ARA";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button3.Location = new Point(414, 361);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 53);
-            button3.TabIndex = 21;
-            button3.Text = "LİSTEYİ GETİR";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(323, 34);
-            label2.Name = "label2";
-            label2.Size = new Size(226, 30);
-            label2.TabIndex = 20;
-            label2.Text = "PERSONEL YÖNETİMİ";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(15, 76);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(851, 268);
-            dataGridView1.TabIndex = 19;
+            tcTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            tcTBox.Location = new Point(109, 354);
+            tcTBox.Name = "tcTBox";
+            tcTBox.Size = new Size(154, 24);
+            tcTBox.TabIndex = 75;
+            tcTBox.TextChanged += textBox1_TextChanged;
             // 
             // menuStrip1
             // 
             menuStrip1.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, otomasyonaGitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(882, 24);
-            menuStrip1.TabIndex = 30;
+            menuStrip1.Size = new Size(841, 24);
+            menuStrip1.TabIndex = 77;
             menuStrip1.Text = "menuStrip1";
             // 
             // programToolStripMenuItem
@@ -173,69 +100,196 @@
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
+            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
-            çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
             // otomasyonaGitToolStripMenuItem
             // 
             otomasyonaGitToolStripMenuItem.Name = "otomasyonaGitToolStripMenuItem";
             otomasyonaGitToolStripMenuItem.Size = new Size(105, 20);
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
-            otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
-            // textBox2
+            // araBtn
             // 
-            textBox2.Font = new Font("Arial Narrow", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(176, 439);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(147, 26);
-            textBox2.TabIndex = 31;
+            araBtn.Depth = 0;
+            araBtn.Location = new Point(287, 347);
+            araBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            araBtn.Name = "araBtn";
+            araBtn.Primary = true;
+            araBtn.Size = new Size(227, 71);
+            araBtn.TabIndex = 85;
+            araBtn.Text = "PERSONEL ARA";
+            araBtn.UseVisualStyleBackColor = true;
+            araBtn.Click += ara_Click;
+            // 
+            // silBtn
+            // 
+            silBtn.Depth = 0;
+            silBtn.Location = new Point(531, 430);
+            silBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            silBtn.Name = "silBtn";
+            silBtn.Primary = true;
+            silBtn.Size = new Size(292, 39);
+            silBtn.TabIndex = 83;
+            silBtn.Text = "PERSONEL SİL";
+            silBtn.UseVisualStyleBackColor = true;
+            silBtn.Click += sil_Click;
+            // 
+            // guncelleBtn
+            // 
+            guncelleBtn.Depth = 0;
+            guncelleBtn.Location = new Point(531, 340);
+            guncelleBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            guncelleBtn.Name = "guncelleBtn";
+            guncelleBtn.Primary = true;
+            guncelleBtn.Size = new Size(290, 39);
+            guncelleBtn.TabIndex = 82;
+            guncelleBtn.Text = "PERSONEL GÜNCELLE";
+            guncelleBtn.UseVisualStyleBackColor = true;
+            guncelleBtn.Click += guncelle_Click;
+            // 
+            // ekleBtn
+            // 
+            ekleBtn.Depth = 0;
+            ekleBtn.Location = new Point(531, 385);
+            ekleBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            ekleBtn.Name = "ekleBtn";
+            ekleBtn.Primary = true;
+            ekleBtn.Size = new Size(290, 39);
+            ekleBtn.TabIndex = 81;
+            ekleBtn.Text = "PERSONEL EKLE";
+            ekleBtn.UseVisualStyleBackColor = true;
+            ekleBtn.Click += ekle_Click;
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            materialLabel2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialLabel2.Location = new Point(19, 406);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(33, 19);
+            materialLabel2.TabIndex = 80;
+            materialLabel2.Text = "AD:";
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Font = new Font("Roboto", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            materialLabel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialLabel1.Location = new Point(19, 360);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(32, 19);
+            materialLabel1.TabIndex = 79;
+            materialLabel1.Text = "TC:";
+            // 
+            // dgvPersoneller
+            // 
+            dgvPersoneller.AllowUserToAddRows = false;
+            dgvPersoneller.AllowUserToDeleteRows = false;
+            dgvPersoneller.AllowUserToResizeRows = false;
+            dgvPersoneller.BackgroundColor = Color.FromArgb(255, 255, 255);
+            dgvPersoneller.BorderStyle = BorderStyle.None;
+            dgvPersoneller.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvPersoneller.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvPersoneller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvPersoneller.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvPersoneller.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvPersoneller.EnableHeadersVisualStyles = false;
+            dgvPersoneller.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dgvPersoneller.GridColor = Color.FromArgb(255, 255, 255);
+            dgvPersoneller.Location = new Point(21, 100);
+            dgvPersoneller.Name = "dgvPersoneller";
+            dgvPersoneller.ReadOnly = true;
+            dgvPersoneller.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvPersoneller.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvPersoneller.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvPersoneller.RowTemplate.Height = 25;
+            dgvPersoneller.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPersoneller.Size = new Size(802, 234);
+            dgvPersoneller.TabIndex = 78;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.ButtonHighlight;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkCyan;
+            label2.Location = new Point(307, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(226, 30);
+            label2.TabIndex = 69;
+            label2.Text = "PERSONEL YÖNETİMİ";
             // 
             // Personeller
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(882, 485);
-            Controls.Add(textBox2);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(button3);
-            Controls.Add(label2);
-            Controls.Add(dataGridView1);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(841, 491);
+            Controls.Add(listeleBtn);
+            Controls.Add(adTBox);
+            Controls.Add(tcTBox);
             Controls.Add(menuStrip1);
+            Controls.Add(araBtn);
+            Controls.Add(silBtn);
+            Controls.Add(guncelleBtn);
+            Controls.Add(ekleBtn);
+            Controls.Add(materialLabel2);
+            Controls.Add(materialLabel1);
+            Controls.Add(dgvPersoneller);
+            Controls.Add(label2);
             Name = "Personeller";
             Text = "Personeller";
             Load += Personeller_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPersoneller).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label3;
-        private Label label1;
-        private TextBox textBox1;
-        private Button button5;
-        private Button button4;
-        private Button button2;
-        private Button button1;
-        private Button button3;
-        private Label label2;
-        private DataGridView dataGridView1;
+        private MaterialSkin.Controls.MaterialRaisedButton listeleBtn;
+        private TextBox adTBox;
+        private TextBox tcTBox;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem programToolStripMenuItem;
         private ToolStripMenuItem çıkışYapToolStripMenuItem;
         private ToolStripMenuItem otomasyonaGitToolStripMenuItem;
-        private TextBox textBox2;
+        private MaterialSkin.Controls.MaterialRaisedButton araBtn;
+        private MaterialSkin.Controls.MaterialRaisedButton silBtn;
+        private MaterialSkin.Controls.MaterialRaisedButton guncelleBtn;
+        private MaterialSkin.Controls.MaterialRaisedButton ekleBtn;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MetroFramework.Controls.MetroGrid dgvPersoneller;
+        private Label label2;
     }
 }
