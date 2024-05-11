@@ -14,7 +14,7 @@ namespace TemizlikTeknikServisGuncel
 {
     public partial class Bakimlar : Form
     {
-        public Bakimlar afrm;
+
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
         SqlCommand bakimCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
@@ -51,6 +51,8 @@ namespace TemizlikTeknikServisGuncel
         public Bakimlar()
         {
             InitializeComponent();
+            BakimGuncelle bakimGuncelle = new BakimGuncelle();
+            bakimGuncelle.afrm = this;
         }
 
         private void Bakimlar_Load(object sender, EventArgs e)
@@ -79,50 +81,39 @@ namespace TemizlikTeknikServisGuncel
         }
 
 
-
         private void guncelle_Click(object sender, EventArgs e)
         {
-            BakimGuncelle bakimGuncelle = new BakimGuncelle();
-            bakimGuncelle.afrm = this;
-            bakimGuncelle.IDTBox.Text = dgvBakimlar.CurrentRow.Cells[0].Value.ToString();
-            bakimGuncelle.musteriTCTBox.Text = dgvBakimlar.CurrentRow.Cells[1].Value.ToString();
             try
             {
-                string sorgu = "SELECT * FROM Urunler WHERE UrunID = @UrunID";
-                SqlConnection.Open();
-                bakimCMD.Parameters.Clear();
-                bakimCMD.Parameters.AddWithValue("@UrunID", dgvBakimlar.CurrentRow.Cells[2].Value.ToString());
-                SqlDataReader sqlDataReader = bakimCMD.ExecuteReader();
-                if (sqlDataReader.Read())
+                BakimGuncelle bakimGuncelle = new BakimGuncelle();
+                bakimGuncelle.afrm = this;
+                bakimGuncelle.IDTBox.Text = dgvBakimlar.CurrentRow.Cells[0].Value.ToString();
+                bakimGuncelle.bilgiTBox.Text = dgvBakimlar.CurrentRow.Cells[4].Value.ToString();
+                bakimGuncelle.tutarTBox.Text = dgvBakimlar.CurrentRow.Cells[5].Value.ToString();
+                bakimGuncelle.tarihTBox.Text = dgvBakimlar.CurrentRow.Cells[6].Value.ToString();
+                if (dgvBakimlar.CurrentRow.Cells[8].Value.ToString() == "True")
                 {
-                    string urunAdi = sqlDataReader["Urun_Ad"].ToString();
-                    bakimGuncelle.urunCBox.Text = urunAdi;
+                    bakimGuncelle.statuCMB.Text = "Aktif";
+                    bakimGuncelle.label1.Text = "Pasif";
                 }
-                else
+                else if (dgvBakimlar.CurrentRow.Cells[8].Value.ToString() == "False")
                 {
-                    bakimGuncelle.urunCBox.Text = "404";
+                    bakimGuncelle.statuCMB.Text = "Pasif";
+                    bakimGuncelle.label1.Text = "Pasif";
                 }
+                bakimGuncelle.urun.Text= dgvBakimlar.CurrentRow.Cells[2].Value.ToString();
+                bakimGuncelle.personeltc.Text = dgvBakimlar.CurrentRow.Cells[3].Value.ToString();
+                bakimGuncelle.musteritc.Text = dgvBakimlar.CurrentRow.Cells[1].Value.ToString();
+                bakimGuncelle.turr.Text = dgvBakimlar.CurrentRow.Cells[7].Value.ToString();
+                bakimGuncelle.ShowDialog();
+                this.Close();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            bakimGuncelle.personelTCTBox.Text = dgvBakimlar.CurrentRow.Cells[3].Value.ToString();
-            bakimGuncelle.bilgiTBox.Text = dgvBakimlar.CurrentRow.Cells[4].Value.ToString();
-            bakimGuncelle.tutarTBox.Text = dgvBakimlar.CurrentRow.Cells[5].Value.ToString();
-            bakimGuncelle.tarihTBox.Text = dgvBakimlar.CurrentRow.Cells[6].Value.ToString();
-            bakimGuncelle.turTBox.Text = dgvBakimlar.CurrentRow.Cells[7].Value.ToString();
-            if (dgvBakimlar.CurrentRow.Cells[8].Value.ToString() == "True")
-            {
-                bakimGuncelle.statuCMB.SelectedText = "Aktif";
-            }
-            else if (dgvBakimlar.CurrentRow.Cells[8].Value.ToString() == "False")
-            {
-                bakimGuncelle.statuCMB.SelectedText = "Pasif";
-            }
-            bakimGuncelle.ShowDialog();
-            this.Close();
 
         }
 

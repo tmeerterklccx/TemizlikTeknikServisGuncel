@@ -14,17 +14,17 @@ namespace TemizlikTeknikServisGuncel
     public partial class PersonelEkle : Form
     {
         SqlConnection SqlConnection = new SqlConnection(SQLBaglanti.BaglantiCumlesiGonder());
-        SqlCommand TurCMD = new SqlCommand();
+        SqlCommand personelCMD = new SqlCommand();
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
         public void KomutCalistir(string sorgu)
         {
             try
             {
                 SqlConnection.Open();
-                TurCMD.CommandText = sorgu;
-                TurCMD.Connection = SqlConnection;
-                TurCMD.ExecuteNonQuery();
-                MessageBox.Show("Başarıyla Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                personelCMD.CommandText = sorgu;
+                personelCMD.Connection = SqlConnection;
+                personelCMD.ExecuteNonQuery();
+                MessageBox.Show("Başarıyla Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -32,9 +32,9 @@ namespace TemizlikTeknikServisGuncel
             }
             finally
             {
-                if (TurCMD.Parameters.Count > 0)
+                if (personelCMD.Parameters.Count > 0)
                 {
-                    TurCMD.Parameters.Clear();
+                    personelCMD.Parameters.Clear();
                 }
                 SqlConnection.Close();
             }
@@ -53,7 +53,21 @@ namespace TemizlikTeknikServisGuncel
 
         private void ekle_Click(object sender, EventArgs e)
         {
-
+            string sorgu = "INSERT INTO Calisanlar VALUES (@TC, @Ad, @Soyad, @Telefon, @EMail, @Adres, @Pozisyon , @Sifre , @Statu , @Rol)";
+            personelCMD.Parameters.AddWithValue("@TC", tcTBox.Text);
+            personelCMD.Parameters.AddWithValue("@Ad", adTBox.Text);
+            personelCMD.Parameters.AddWithValue("@Soyad", soyadTBox.Text);
+            personelCMD.Parameters.AddWithValue("@Telefon", telTBox.Text);
+            personelCMD.Parameters.AddWithValue("@EMail", ePostATBox.Text);
+            personelCMD.Parameters.AddWithValue("@Adres", adresTextBox.Text);
+            personelCMD.Parameters.AddWithValue("@Pozisyon", pozTBox.Text);
+            personelCMD.Parameters.AddWithValue("@Sifre", sifreTBox.Text);
+            personelCMD.Parameters.AddWithValue("@Statu", true);
+            personelCMD.Parameters.AddWithValue("@Rol", 0);
+            KomutCalistir(sorgu);
+            Personeller personel = new Personeller();
+            personel.Show();
+            this.Close();
         }
 
         private void PersonelEkle_Load(object sender, EventArgs e)

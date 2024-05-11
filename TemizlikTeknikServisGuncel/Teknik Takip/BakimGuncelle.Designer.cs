@@ -32,7 +32,6 @@
             tutarTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             EkleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
             metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            musteriTCTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             metroLabel5 = new MetroFramework.Controls.MetroLabel();
             metroLabel3 = new MetroFramework.Controls.MetroLabel();
             metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -44,18 +43,24 @@
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
             metroLabel4 = new MetroFramework.Controls.MetroLabel();
             urunCBox = new MetroFramework.Controls.MetroComboBox();
-            turTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             metroLabel8 = new MetroFramework.Controls.MetroLabel();
             materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            personelTCTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             tarihTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             statuCMB = new MetroFramework.Controls.MetroComboBox();
             metroLabel1 = new MetroFramework.Controls.MetroLabel();
             metroLabel9 = new MetroFramework.Controls.MetroLabel();
             IDTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            personelCBox = new MetroFramework.Controls.MetroComboBox();
+            musteriCBox = new MetroFramework.Controls.MetroComboBox();
+            turCBox = new MetroFramework.Controls.MetroComboBox();
+            urun = new Label();
+            turr = new Label();
+            personeltc = new Label();
+            musteritc = new Label();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -80,7 +85,7 @@
             tutarTBox.SelectedText = "";
             tutarTBox.SelectionLength = 0;
             tutarTBox.SelectionStart = 0;
-            tutarTBox.Size = new Size(149, 23);
+            tutarTBox.Size = new Size(171, 23);
             tutarTBox.TabIndex = 251;
             tutarTBox.UseSystemPasswordChar = false;
             // 
@@ -106,21 +111,6 @@
             metroLabel6.Size = new Size(40, 19);
             metroLabel6.TabIndex = 249;
             metroLabel6.Text = "BİLGİ:";
-            // 
-            // musteriTCTBox
-            // 
-            musteriTCTBox.Depth = 0;
-            musteriTCTBox.Hint = "";
-            musteriTCTBox.Location = new Point(156, 110);
-            musteriTCTBox.MouseState = MaterialSkin.MouseState.HOVER;
-            musteriTCTBox.Name = "musteriTCTBox";
-            musteriTCTBox.PasswordChar = '\0';
-            musteriTCTBox.SelectedText = "";
-            musteriTCTBox.SelectionLength = 0;
-            musteriTCTBox.SelectionStart = 0;
-            musteriTCTBox.Size = new Size(149, 23);
-            musteriTCTBox.TabIndex = 248;
-            musteriTCTBox.UseSystemPasswordChar = false;
             // 
             // metroLabel5
             // 
@@ -219,24 +209,9 @@
             urunCBox.ItemHeight = 23;
             urunCBox.Location = new Point(156, 172);
             urunCBox.Name = "urunCBox";
-            urunCBox.Size = new Size(149, 29);
+            urunCBox.Size = new Size(171, 29);
             urunCBox.TabIndex = 260;
             urunCBox.UseSelectable = true;
-            // 
-            // turTBox
-            // 
-            turTBox.Depth = 0;
-            turTBox.Hint = "";
-            turTBox.Location = new Point(472, 113);
-            turTBox.MouseState = MaterialSkin.MouseState.HOVER;
-            turTBox.Name = "turTBox";
-            turTBox.PasswordChar = '\0';
-            turTBox.SelectedText = "";
-            turTBox.SelectionLength = 0;
-            turTBox.SelectionStart = 0;
-            turTBox.Size = new Size(149, 23);
-            turTBox.TabIndex = 259;
-            turTBox.UseSystemPasswordChar = false;
             // 
             // metroLabel8
             // 
@@ -292,21 +267,6 @@
             materialDivider1.TabIndex = 254;
             materialDivider1.Text = "materialDivider1";
             // 
-            // personelTCTBox
-            // 
-            personelTCTBox.Depth = 0;
-            personelTCTBox.Hint = "";
-            personelTCTBox.Location = new Point(156, 360);
-            personelTCTBox.MouseState = MaterialSkin.MouseState.HOVER;
-            personelTCTBox.Name = "personelTCTBox";
-            personelTCTBox.PasswordChar = '\0';
-            personelTCTBox.SelectedText = "";
-            personelTCTBox.SelectionLength = 0;
-            personelTCTBox.SelectionStart = 0;
-            personelTCTBox.Size = new Size(149, 23);
-            personelTCTBox.TabIndex = 253;
-            personelTCTBox.UseSystemPasswordChar = false;
-            // 
             // tarihTBox
             // 
             tarihTBox.Depth = 0;
@@ -318,7 +278,7 @@
             tarihTBox.SelectedText = "";
             tarihTBox.SelectionLength = 0;
             tarihTBox.SelectionStart = 0;
-            tarihTBox.Size = new Size(149, 23);
+            tarihTBox.Size = new Size(171, 23);
             tarihTBox.TabIndex = 252;
             tarihTBox.UseSystemPasswordChar = false;
             // 
@@ -347,7 +307,7 @@
             // 
             metroLabel9.AutoSize = true;
             metroLabel9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel9.Location = new Point(85, 430);
+            metroLabel9.Location = new Point(87, 422);
             metroLabel9.Name = "metroLabel9";
             metroLabel9.Size = new Size(24, 19);
             metroLabel9.TabIndex = 263;
@@ -365,9 +325,88 @@
             IDTBox.SelectedText = "";
             IDTBox.SelectionLength = 0;
             IDTBox.SelectionStart = 0;
-            IDTBox.Size = new Size(149, 23);
+            IDTBox.Size = new Size(171, 23);
             IDTBox.TabIndex = 264;
             IDTBox.UseSystemPasswordChar = false;
+            // 
+            // personelCBox
+            // 
+            personelCBox.FormattingEnabled = true;
+            personelCBox.ItemHeight = 23;
+            personelCBox.Location = new Point(156, 354);
+            personelCBox.Name = "personelCBox";
+            personelCBox.Size = new Size(171, 29);
+            personelCBox.TabIndex = 265;
+            personelCBox.UseSelectable = true;
+            // 
+            // musteriCBox
+            // 
+            musteriCBox.FormattingEnabled = true;
+            musteriCBox.ItemHeight = 23;
+            musteriCBox.Location = new Point(156, 100);
+            musteriCBox.Name = "musteriCBox";
+            musteriCBox.Size = new Size(171, 29);
+            musteriCBox.TabIndex = 266;
+            musteriCBox.UseSelectable = true;
+            // 
+            // turCBox
+            // 
+            turCBox.FormattingEnabled = true;
+            turCBox.ItemHeight = 23;
+            turCBox.Location = new Point(472, 107);
+            turCBox.Name = "turCBox";
+            turCBox.Size = new Size(174, 29);
+            turCBox.TabIndex = 267;
+            turCBox.UseSelectable = true;
+            // 
+            // urun
+            // 
+            urun.AutoSize = true;
+            urun.Location = new Point(16, 41);
+            urun.Name = "urun";
+            urun.Size = new Size(38, 15);
+            urun.TabIndex = 268;
+            urun.Text = "label1";
+            urun.Visible = false;
+            // 
+            // turr
+            // 
+            turr.AutoSize = true;
+            turr.Location = new Point(73, 41);
+            turr.Name = "turr";
+            turr.Size = new Size(38, 15);
+            turr.TabIndex = 270;
+            turr.Text = "label4";
+            turr.Visible = false;
+            // 
+            // personeltc
+            // 
+            personeltc.AutoSize = true;
+            personeltc.Location = new Point(141, 41);
+            personeltc.Name = "personeltc";
+            personeltc.Size = new Size(38, 15);
+            personeltc.TabIndex = 271;
+            personeltc.Text = "label5";
+            personeltc.Visible = false;
+            // 
+            // musteritc
+            // 
+            musteritc.AutoSize = true;
+            musteritc.Location = new Point(206, 41);
+            musteritc.Name = "musteritc";
+            musteritc.Size = new Size(38, 15);
+            musteritc.TabIndex = 272;
+            musteritc.Text = "label6";
+            musteritc.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(526, 41);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 273;
+            label1.Text = "label6";
             // 
             // BakimGuncelle
             // 
@@ -375,13 +414,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 463);
+            Controls.Add(label1);
+            Controls.Add(musteritc);
+            Controls.Add(personeltc);
+            Controls.Add(turr);
+            Controls.Add(urun);
+            Controls.Add(turCBox);
+            Controls.Add(musteriCBox);
+            Controls.Add(personelCBox);
             Controls.Add(metroLabel9);
             Controls.Add(IDTBox);
             Controls.Add(metroLabel7);
             Controls.Add(tutarTBox);
             Controls.Add(EkleBTN);
             Controls.Add(metroLabel6);
-            Controls.Add(musteriTCTBox);
             Controls.Add(metroLabel5);
             Controls.Add(metroLabel3);
             Controls.Add(metroLabel2);
@@ -390,13 +436,11 @@
             Controls.Add(menuStrip1);
             Controls.Add(metroLabel4);
             Controls.Add(urunCBox);
-            Controls.Add(turTBox);
             Controls.Add(metroLabel8);
             Controls.Add(materialDivider4);
             Controls.Add(materialDivider3);
             Controls.Add(materialDivider2);
             Controls.Add(materialDivider1);
-            Controls.Add(personelTCTBox);
             Controls.Add(tarihTBox);
             Controls.Add(statuCMB);
             Controls.Add(metroLabel1);
@@ -433,14 +477,19 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         public MaterialSkin.Controls.MaterialSingleLineTextField tutarTBox;
-        public MaterialSkin.Controls.MaterialSingleLineTextField musteriTCTBox;
         public RichTextBox bilgiTBox;
         public MetroFramework.Controls.MetroComboBox urunCBox;
-        public MaterialSkin.Controls.MaterialSingleLineTextField turTBox;
-        public MaterialSkin.Controls.MaterialSingleLineTextField personelTCTBox;
         public MaterialSkin.Controls.MaterialSingleLineTextField tarihTBox;
         public MetroFramework.Controls.MetroComboBox statuCMB;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         public MaterialSkin.Controls.MaterialSingleLineTextField IDTBox;
+        public MetroFramework.Controls.MetroComboBox personelCBox;
+        public MetroFramework.Controls.MetroComboBox musteriCBox;
+        public MetroFramework.Controls.MetroComboBox turCBox;
+        public Label urun;
+        public Label turr;
+        public Label personeltc;
+        public Label musteritc;
+        public Label label1;
     }
 }

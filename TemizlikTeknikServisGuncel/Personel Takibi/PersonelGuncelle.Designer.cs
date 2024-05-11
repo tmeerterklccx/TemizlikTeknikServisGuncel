@@ -262,6 +262,7 @@
             // tcTBox
             // 
             tcTBox.Depth = 0;
+            tcTBox.Enabled = false;
             tcTBox.Hint = "";
             tcTBox.Location = new Point(158, 289);
             tcTBox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -300,7 +301,7 @@
             guncelleBTN.TabIndex = 227;
             guncelleBTN.Text = "PERSONEL GÜNCELLE";
             guncelleBTN.UseVisualStyleBackColor = true;
-            guncelleBTN.Click += ekle_Click;
+            guncelleBTN.Click += guncelle_Click;
             // 
             // metroLabel6
             // 

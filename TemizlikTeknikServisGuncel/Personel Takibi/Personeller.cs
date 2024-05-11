@@ -71,6 +71,7 @@ namespace TemizlikTeknikServisGuncel
             personelGuncelle.adresTextBox.Text = dgvPersoneller.CurrentRow.Cells[6].Value.ToString();
             personelGuncelle.tcTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();
             personelGuncelle.rolTBox.Text = dgvPersoneller.CurrentRow.Cells[10].Value.ToString();
+            personelGuncelle.sifreTBox.Text = dgvPersoneller.CurrentRow.Cells[8].Value.ToString();
 
             if (dgvPersoneller.CurrentRow.Cells[9].Value.ToString() == "True")
             {
@@ -80,6 +81,8 @@ namespace TemizlikTeknikServisGuncel
             {
                 personelGuncelle.statuCBox.SelectedText = "Pasif";
             }
+            personelGuncelle.ShowDialog();
+            this.Close();
 
         }
 
@@ -135,9 +138,10 @@ namespace TemizlikTeknikServisGuncel
 
         private void sil_Click(object sender, EventArgs e)
         {
-            string sorgu = "Update Calisanlar set Statu = @STATU WHERE Personel_TC = @tc";
+            string sorgu = "Update Calisanlar set Statu = @STATU WHERE TC = @tc OR ID=@id";
             perCMD.Parameters.AddWithValue("@STATU", false);
             perCMD.Parameters.AddWithValue("@tc", tcTBox.Text);
+            perCMD.Parameters.AddWithValue("@id", dgvPersoneller.CurrentRow.Cells[0].Value.ToString());
             if (MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 KomutCalistir(sorgu);
@@ -158,10 +162,14 @@ namespace TemizlikTeknikServisGuncel
             if (!string.IsNullOrWhiteSpace(tcTBox.Text) || !string.IsNullOrWhiteSpace(adTBox.Text))
             {
                 araBtn.Enabled = true;
+                silBtn.Enabled = true;
+                guncelleBtn.Enabled = true;
             }
             else
             {
                 araBtn.Enabled = false;
+                silBtn.Enabled = false;
+                guncelleBtn.Enabled = false;
             }
         }
 
@@ -171,7 +179,6 @@ namespace TemizlikTeknikServisGuncel
         {
             tcTBox.Text = dgvPersoneller.CurrentRow.Cells[0].Value.ToString();
             adTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();
-            guncelleBtn.Enabled = true;
         }
     }
 }

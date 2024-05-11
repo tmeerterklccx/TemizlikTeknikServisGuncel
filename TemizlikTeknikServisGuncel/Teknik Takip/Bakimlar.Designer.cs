@@ -75,7 +75,7 @@
             // IDTBox
             // 
             IDTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            IDTBox.Location = new Point(92, 339);
+            IDTBox.Location = new Point(92, 347);
             IDTBox.Name = "IDTBox";
             IDTBox.Size = new Size(154, 24);
             IDTBox.TabIndex = 87;
@@ -180,7 +180,7 @@
             materialLabel1.Depth = 0;
             materialLabel1.Font = new Font("Roboto", 11F, FontStyle.Regular, GraphicsUnit.Point);
             materialLabel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialLabel1.Location = new Point(2, 345);
+            materialLabel1.Location = new Point(1, 352);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
             materialLabel1.Size = new Size(27, 19);
@@ -216,7 +216,7 @@
             dgvBakimlar.EnableHeadersVisualStyles = false;
             dgvBakimlar.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvBakimlar.GridColor = Color.FromArgb(255, 255, 255);
-            dgvBakimlar.Location = new Point(12, 98);
+            dgvBakimlar.Location = new Point(12, 67);
             dgvBakimlar.Name = "dgvBakimlar";
             dgvBakimlar.ReadOnly = true;
             dgvBakimlar.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -231,8 +231,9 @@
             dgvBakimlar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvBakimlar.RowTemplate.Height = 25;
             dgvBakimlar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvBakimlar.Size = new Size(802, 241);
+            dgvBakimlar.Size = new Size(802, 247);
             dgvBakimlar.TabIndex = 90;
+            dgvBakimlar.CellClick += dgvBakimlar_CellClick;
             // 
             // label2
             // 
@@ -240,7 +241,7 @@
             label2.BackColor = SystemColors.ButtonHighlight;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.DarkCyan;
-            label2.Location = new Point(321, 39);
+            label2.Location = new Point(320, 34);
             label2.Name = "label2";
             label2.Size = new Size(190, 30);
             label2.TabIndex = 86;

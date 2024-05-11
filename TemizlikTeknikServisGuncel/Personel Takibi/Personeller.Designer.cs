@@ -233,6 +233,7 @@
             dgvPersoneller.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPersoneller.Size = new Size(802, 234);
             dgvPersoneller.TabIndex = 78;
+            dgvPersoneller.CellClick += dataGridView1_CellClick;
             // 
             // label2
             // 
