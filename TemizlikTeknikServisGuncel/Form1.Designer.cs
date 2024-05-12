@@ -92,14 +92,14 @@
             TCTBox.Depth = 0;
             TCTBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             TCTBox.Hint = "";
-            TCTBox.Location = new Point(204, 104);
+            TCTBox.Location = new Point(172, 104);
             TCTBox.MouseState = MaterialSkin.MouseState.HOVER;
             TCTBox.Name = "TCTBox";
             TCTBox.PasswordChar = '\0';
             TCTBox.SelectedText = "";
             TCTBox.SelectionLength = 0;
             TCTBox.SelectionStart = 0;
-            TCTBox.Size = new Size(149, 23);
+            TCTBox.Size = new Size(213, 23);
             TCTBox.TabIndex = 245;
             TCTBox.UseSystemPasswordChar = false;
             // 
@@ -118,14 +118,14 @@
             SifreTBox.Depth = 0;
             SifreTBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             SifreTBox.Hint = "";
-            SifreTBox.Location = new Point(204, 156);
+            SifreTBox.Location = new Point(172, 156);
             SifreTBox.MouseState = MaterialSkin.MouseState.HOVER;
             SifreTBox.Name = "SifreTBox";
             SifreTBox.PasswordChar = '\0';
             SifreTBox.SelectedText = "";
             SifreTBox.SelectionLength = 0;
             SifreTBox.SelectionStart = 0;
-            SifreTBox.Size = new Size(149, 23);
+            SifreTBox.Size = new Size(213, 23);
             SifreTBox.TabIndex = 247;
             SifreTBox.UseSystemPasswordChar = true;
             // 
@@ -154,6 +154,7 @@
             Controls.Add(label2);
             Name = "Form1";
             Text = "Temizlik Teknik Servis Otomasyonu";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

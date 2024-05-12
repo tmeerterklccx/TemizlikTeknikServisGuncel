@@ -218,7 +218,7 @@
             dgvIzinler.EnableHeadersVisualStyles = false;
             dgvIzinler.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvIzinler.GridColor = Color.FromArgb(255, 255, 255);
-            dgvIzinler.Location = new Point(21, 94);
+            dgvIzinler.Location = new Point(20, 78);
             dgvIzinler.Name = "dgvIzinler";
             dgvIzinler.ReadOnly = true;
             dgvIzinler.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -236,6 +236,7 @@
             dgvIzinler.Size = new Size(802, 241);
             dgvIzinler.TabIndex = 78;
             dgvIzinler.CellClick += dataGridView1_CellClick;
+            dgvIzinler.SelectionChanged += dgvIzinler_SelectionChanged;
             // 
             // label2
             // 

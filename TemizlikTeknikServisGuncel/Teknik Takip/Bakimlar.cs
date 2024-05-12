@@ -94,14 +94,13 @@ namespace TemizlikTeknikServisGuncel
                 if (dgvBakimlar.CurrentRow.Cells[8].Value.ToString() == "True")
                 {
                     bakimGuncelle.statuCMB.Text = "Aktif";
-                    bakimGuncelle.label1.Text = "Pasif";
+
                 }
                 else if (dgvBakimlar.CurrentRow.Cells[8].Value.ToString() == "False")
                 {
                     bakimGuncelle.statuCMB.Text = "Pasif";
-                    bakimGuncelle.label1.Text = "Pasif";
                 }
-                bakimGuncelle.urun.Text= dgvBakimlar.CurrentRow.Cells[2].Value.ToString();
+                bakimGuncelle.urun.Text = dgvBakimlar.CurrentRow.Cells[2].Value.ToString();
                 bakimGuncelle.personeltc.Text = dgvBakimlar.CurrentRow.Cells[3].Value.ToString();
                 bakimGuncelle.musteritc.Text = dgvBakimlar.CurrentRow.Cells[1].Value.ToString();
                 bakimGuncelle.turr.Text = dgvBakimlar.CurrentRow.Cells[7].Value.ToString();
@@ -197,6 +196,17 @@ namespace TemizlikTeknikServisGuncel
             IDTBox.Text = dgvBakimlar.CurrentRow.Cells[0].Value.ToString();
             TCTBox.Text = dgvBakimlar.CurrentRow.Cells[1].Value.ToString();
             guncelleBTN.Enabled = true;
+        }
+
+        private void dgvBakimlar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvBakimlar_SelectionChanged(object sender, EventArgs e)
+        {
+            IDTBox.Text = dgvBakimlar.CurrentRow.Cells[0].Value.ToString();
+            TCTBox.Text = dgvBakimlar.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

@@ -92,6 +92,8 @@ namespace TemizlikTeknikServisGuncel
 
         private void Izinler_Load(object sender, EventArgs e)
         {
+            araBTN.Enabled = false;
+            silBTN.Enabled = false;
             guncelleBTN.Enabled = false;
             VeriGetir();
         }
@@ -162,6 +164,12 @@ namespace TemizlikTeknikServisGuncel
             TCTBox.Text = dgvIzinler.CurrentRow.Cells[1].Value.ToString();
             guncelleBTN.Enabled = true;
 
+        }
+
+        private void dgvIzinler_SelectionChanged(object sender, EventArgs e)
+        {
+            IDTBox.Text = dgvIzinler.CurrentRow.Cells[0].Value.ToString();
+            TCTBox.Text = dgvIzinler.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

@@ -140,7 +140,7 @@
             dgvUrunler.EnableHeadersVisualStyles = false;
             dgvUrunler.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvUrunler.GridColor = Color.FromArgb(255, 255, 255);
-            dgvUrunler.Location = new Point(19, 95);
+            dgvUrunler.Location = new Point(19, 87);
             dgvUrunler.Name = "dgvUrunler";
             dgvUrunler.ReadOnly = true;
             dgvUrunler.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -157,6 +157,8 @@
             dgvUrunler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUrunler.Size = new Size(802, 248);
             dgvUrunler.TabIndex = 102;
+            dgvUrunler.CellContentClick += dgvUrunler_CellContentClick;
+            dgvUrunler.SelectionChanged += dgvUrunler_SelectionChanged;
             // 
             // araBTN
             // 
@@ -243,7 +245,7 @@
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.DarkCyan;
-            label2.Location = new Point(330, 37);
+            label2.Location = new Point(330, 34);
             label2.Name = "label2";
             label2.Size = new Size(184, 32);
             label2.TabIndex = 98;

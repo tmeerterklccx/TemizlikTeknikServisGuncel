@@ -60,7 +60,6 @@
             turr = new Label();
             personeltc = new Label();
             musteritc = new Label();
-            label1 = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -399,22 +398,12 @@
             musteritc.Text = "label6";
             musteritc.Visible = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(526, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 273;
-            label1.Text = "label6";
-            // 
             // BakimGuncelle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 463);
-            Controls.Add(label1);
             Controls.Add(musteritc);
             Controls.Add(personeltc);
             Controls.Add(turr);
@@ -490,6 +479,5 @@
         public Label turr;
         public Label personeltc;
         public Label musteritc;
-        public Label label1;
     }
 }

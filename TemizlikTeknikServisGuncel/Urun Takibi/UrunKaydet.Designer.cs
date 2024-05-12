@@ -255,7 +255,7 @@
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
+            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
@@ -284,6 +284,7 @@
             Controls.Add(menuStrip1);
             Name = "UrunKaydet";
             Text = "UrunKaydet";
+            Load += UrunKaydet_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

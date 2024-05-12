@@ -52,6 +52,8 @@
             label2 = new Label();
             menuStrip1 = new MenuStrip();
             metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            process1 = new System.Diagnostics.Process();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -317,12 +319,34 @@
             metroLabel4.TabIndex = 192;
             metroLabel4.Text = "E POSTA:";
             // 
+            // process1
+            // 
+            process1.StartInfo.Domain = "";
+            process1.StartInfo.LoadUserProfile = false;
+            process1.StartInfo.Password = null;
+            process1.StartInfo.StandardErrorEncoding = null;
+            process1.StartInfo.StandardInputEncoding = null;
+            process1.StartInfo.StandardOutputEncoding = null;
+            process1.StartInfo.UserName = "";
+            process1.SynchronizingObject = this;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(43, 429);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 207;
+            label1.Text = "label1";
+            label1.Visible = false;
+            // 
             // MusteriGuncelle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(800, 460);
+            Controls.Add(label1);
             Controls.Add(statuCBox);
             Controls.Add(metroLabel7);
             Controls.Add(materialDivider4);
@@ -378,5 +402,7 @@
         public MaterialSkin.Controls.MaterialSingleLineTextField soyadTBox;
         public MaterialSkin.Controls.MaterialSingleLineTextField adTBox;
         public RichTextBox adresTextBox;
+        private System.Diagnostics.Process process1;
+        public Label label1;
     }
 }

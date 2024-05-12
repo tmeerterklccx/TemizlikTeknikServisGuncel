@@ -90,7 +90,6 @@ namespace TemizlikTeknikServisGuncel
 
         private void PersonelGuncelle_Load(object sender, EventArgs e)
         {
-
         }
 
         private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)

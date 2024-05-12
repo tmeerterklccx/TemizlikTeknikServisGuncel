@@ -234,6 +234,8 @@
             dgvBakimlar.Size = new Size(802, 247);
             dgvBakimlar.TabIndex = 90;
             dgvBakimlar.CellClick += dgvBakimlar_CellClick;
+            dgvBakimlar.CellContentClick += dgvBakimlar_CellContentClick;
+            dgvBakimlar.SelectionChanged += dgvBakimlar_SelectionChanged;
             // 
             // label2
             // 

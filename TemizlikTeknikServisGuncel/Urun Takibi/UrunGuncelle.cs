@@ -21,7 +21,10 @@ namespace TemizlikTeknikServisGuncel
         {
             try
             {
-                SqlConnection.Open();
+                if(SqlConnection.State != ConnectionState.Open)
+                {
+                    SqlConnection.Open();
+                }
                 UrunCMD.CommandText = sorgu;
                 UrunCMD.Connection = SqlConnection;
                 UrunCMD.ExecuteNonQuery();
@@ -53,16 +56,101 @@ namespace TemizlikTeknikServisGuncel
             this.Close();
         }
 
+        private void ComboboxaTurGotur()
+        {
+            UrunGuncelle urunGuncelle = new UrunGuncelle();
+            string sorgu5 = "SELECT Tur_Adi FROM Urun_Turleri WHERE Tur_ID = @turid";
+            if (SqlConnection.State != ConnectionState.Open)
+            {
+                SqlConnection.Open();
+            }
+            UrunCMD.Parameters.Clear();
+            UrunCMD.Connection = SqlConnection;
+            UrunCMD.CommandText = sorgu5;
+            UrunCMD.Parameters.AddWithValue("@turid", turid.Text);
+            SqlDataReader sqlDataReader = UrunCMD.ExecuteReader();
+            if (sqlDataReader.Read())
+            {
+                string turAdi = sqlDataReader["Tur_Adi"].ToString();
+                if (turAdi.Trim() != "")
+                {
+                    turCBox.SelectedItem = turAdi;
+                }
+                else
+                {
+                    MessageBox.Show("Veri boş.");
+                }
+
+            }
+            else
+            {
+                urunGuncelle.turCBox.Text = "404";
+            }
+            SqlConnection.Close();
+        }
+        private void ComboboxaMarkaGotur()
+        {
+            UrunGuncelle urunGuncelle = new UrunGuncelle();
+            string sorgu5 = "SELECT Marka_Ad FROM Markalar WHERE Marka_ID = @Marka_ID";
+            if (SqlConnection.State != ConnectionState.Open)
+            {
+                SqlConnection.Open();
+            }
+            UrunCMD.Parameters.Clear();
+            UrunCMD.Connection = SqlConnection;
+            UrunCMD.CommandText = sorgu5;
+            UrunCMD.Parameters.AddWithValue("@Marka_ID", markaidd.Text);
+            SqlDataReader sqlDataReader = UrunCMD.ExecuteReader();
+            if (sqlDataReader.Read())
+            {
+                string turAdi = sqlDataReader["Marka_Ad"].ToString();
+                if (turAdi.Trim() != "")
+                {
+                    markaCBox.SelectedItem = turAdi;
+                }
+                else
+                {
+                    MessageBox.Show("Veri boş.");
+                }
+
+            }
+            else
+            {
+                urunGuncelle.turCBox.Text = "404";
+            }
+            SqlConnection.Close();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            SqlConnection.Open();
+            string secilenTurAdi = turCBox.SelectedItem.ToString();
+            string urunIDSorgusu = "SELECT Tur_ID FROM Urun_Turleri WHERE Tur_Adi = @turAdi";
+            UrunCMD.Parameters.Clear();
+            UrunCMD.CommandText = urunIDSorgusu;
+            UrunCMD.Connection = SqlConnection;
+            UrunCMD.Parameters.AddWithValue("@turAdi", secilenTurAdi);
+            int turID = (int)UrunCMD.ExecuteScalar();
+            UrunCMD.Parameters.Clear();
+
+
+            string secilenMarkaAdi = markaCBox.SelectedItem.ToString();
+            string markaIDSorgusu = "SELECT Marka_ID FROM Markalar WHERE Marka_Ad = @markaAd";
+            UrunCMD.Parameters.Clear();
+            UrunCMD.Connection = SqlConnection;
+            UrunCMD.CommandText = markaIDSorgusu;
+            UrunCMD.Parameters.AddWithValue("@markaAd", secilenMarkaAdi);
+            int markaID = (int)UrunCMD.ExecuteScalar();
+            UrunCMD.Parameters.Clear();
+
             string sorgu = "Update Urunler set Urun_Ad,Urun_Bilgi,Marka_ID,Urun_Tur_ID,Uretim_Yili,Urun_Satis_Fiyati,Garanti_Suresi_Day,Urun_Alis_Fiyati,Urun_KDV_Orani,Urun_Stok = @UrunAd,@UrunBilgi,@MarkaID,@UrunTurID,@UretimYili,@UrunSatisFiyati,@GarantiSuresi,@UrunAlisFiyati,@UrunKDVOrani,@UrunStok WHERE Urun_ID = @UrunID";
             UrunCMD.Parameters.AddWithValue("@UrunID", IDTBox.Text);
             UrunCMD.Parameters.AddWithValue("@UrunAd", urunAdiTBox.Text);
             UrunCMD.Parameters.AddWithValue("@UrunBilgi", bilgiTBox.Text);
-            UrunCMD.Parameters.AddWithValue("@Marka_ID", markaCBox.SelectedIndex);
-            UrunCMD.Parameters.AddWithValue("@Urun_Tur_ID", turCBox.SelectedIndex);
+            UrunCMD.Parameters.AddWithValue("@Marka_ID", markaID);
+            UrunCMD.Parameters.AddWithValue("@Urun_Tur_ID", turID);
             UrunCMD.Parameters.AddWithValue("@Uretim_Yili", yilTBox.Text);
             KomutCalistir(sorgu);
+            SqlConnection.Close();
             Urunler urunler = new Urunler();
             urunler.Show();
             this.Close();
@@ -72,6 +160,8 @@ namespace TemizlikTeknikServisGuncel
         {
             MarkalariGetir();
             TurleriGetir();
+            ComboboxaMarkaGotur();
+            ComboboxaTurGotur();
         }
         private void MarkalariGetir()
         {

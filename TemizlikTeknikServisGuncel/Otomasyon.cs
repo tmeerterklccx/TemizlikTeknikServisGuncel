@@ -234,5 +234,9 @@ namespace TemizlikTeknikServisGuncel
             form1.Show();
             this.Close();
         }
+
+        private void ıconButton2_Click_1(object sender, EventArgs e)
+        {
+        }
     }
 }

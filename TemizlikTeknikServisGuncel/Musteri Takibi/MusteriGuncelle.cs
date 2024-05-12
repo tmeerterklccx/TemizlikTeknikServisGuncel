@@ -48,9 +48,7 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void MusteriGuncelle_Load(object sender, EventArgs e)
         {
-            statuCBox.Items.Clear();
-            statuCBox.Items.Add("Aktif");
-            statuCBox.Items.Add("Pasif");
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +68,10 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             else if (statuCBox.Text == "Pasif")
             {
                 musteriCMD.Parameters.AddWithValue("@Statu", 0);
+            }
+            else
+            {
+                musteriCMD.Parameters.AddWithValue("@Statu", 1);
             }
             KomutCalistir(sorgu);
 

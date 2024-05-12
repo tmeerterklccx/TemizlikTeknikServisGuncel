@@ -95,9 +95,9 @@ namespace TemizlikTeknikServisGuncel
 
         private void Markalar_Load(object sender, EventArgs e)
         {
-            guncelleBTN.Enabled = false;
-            silBTN.Enabled = false;
             araBTN.Enabled = false;
+            silBTN.Enabled = false;
+            guncelleBTN.Enabled = false;
             VeriGetir();
             BaslikGoster();
         }
@@ -174,6 +174,10 @@ namespace TemizlikTeknikServisGuncel
             TCTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
         }
 
-
+        private void dgvMarkalar_SelectionChanged(object sender, EventArgs e)
+        {
+            IDTBox.Text = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
+            TCTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
+        }
     }
 }

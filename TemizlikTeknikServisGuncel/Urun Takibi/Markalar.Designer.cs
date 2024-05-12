@@ -155,9 +155,10 @@
             dgvMarkalar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvMarkalar.RowTemplate.Height = 25;
             dgvMarkalar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMarkalar.Size = new Size(802, 241);
+            dgvMarkalar.Size = new Size(802, 246);
             dgvMarkalar.TabIndex = 114;
             dgvMarkalar.CellClick += dgvMarkalar_CellClick;
+            dgvMarkalar.SelectionChanged += dgvMarkalar_SelectionChanged;
             // 
             // araBTN
             // 
@@ -244,7 +245,7 @@
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.DarkCyan;
-            label2.Location = new Point(325, 34);
+            label2.Location = new Point(322, 33);
             label2.Name = "label2";
             label2.Size = new Size(201, 32);
             label2.TabIndex = 110;
@@ -255,7 +256,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(852, 490);
+            ClientSize = new Size(852, 496);
             Controls.Add(listeleBTN);
             Controls.Add(TCTBox);
             Controls.Add(IDTBox);

@@ -264,7 +264,7 @@ namespace TemizlikTeknikServisGuncel
             }
             SqlConnection.Close();
         }
-        private string PersonelTCBul()
+        private int PersonelTCBul()
         {
             BakimGuncelle bakimGuncelle = new BakimGuncelle();
             string sorgu4 = "SELECT TC FROM Calisanlar WHERE Ad = @Ad";
@@ -279,13 +279,13 @@ namespace TemizlikTeknikServisGuncel
             SqlDataReader sqlDataReader = bakimCMD.ExecuteReader();
             if (sqlDataReader.Read())
             {
-                string calisanAdi = sqlDataReader["TC"].ToString();
+                int calisanAdi = (int)sqlDataReader["TC"];
                 SqlConnection.Close();
                 return calisanAdi;
             }
             else
             {
-                return "404";
+                return 404;
             }
 
         }
@@ -323,7 +323,7 @@ namespace TemizlikTeknikServisGuncel
             finally
 
             {
-                
+
                 SqlConnection.Close();
             }
 

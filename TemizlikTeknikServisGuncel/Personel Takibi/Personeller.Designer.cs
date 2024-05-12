@@ -234,6 +234,7 @@
             dgvPersoneller.Size = new Size(802, 234);
             dgvPersoneller.TabIndex = 78;
             dgvPersoneller.CellClick += dataGridView1_CellClick;
+            dgvPersoneller.SelectionChanged += dgvPersoneller_SelectionChanged;
             // 
             // label2
             // 

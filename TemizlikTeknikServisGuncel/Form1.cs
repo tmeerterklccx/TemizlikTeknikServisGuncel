@@ -51,7 +51,7 @@ namespace TemizlikTeknikServisGuncel
                         otomasyon.lblTC.Text = ad + " " + "(" + (tc) + ")";
                         otomasyon.ýconButton4.Visible = true;
                         otomasyon.ýconButton5.Visible = true;
-                        otomasyon.label22.Text = "(ADMÝN)";
+                        otomasyon.yetkiBTN.Text = "ADMÝN";
                         otomasyon.ShowDialog();
                         this.Close();
                     }
@@ -68,7 +68,7 @@ namespace TemizlikTeknikServisGuncel
                         otomasyon.label3.Visible = false;
                         otomasyon.label4.Visible = false;
                         otomasyon.lblTC.Text = ad + " " + "(" + (tc) + ")";
-                        otomasyon.label22.Text = "(PERSONEL)";
+                        otomasyon.yetkiBTN.Text = "(PERSONEL)";
                         otomasyon.ShowDialog();
                         this.Close();
                     }
@@ -89,6 +89,11 @@ namespace TemizlikTeknikServisGuncel
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

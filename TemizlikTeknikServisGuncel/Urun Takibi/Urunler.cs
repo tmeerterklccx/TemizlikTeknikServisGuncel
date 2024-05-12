@@ -24,7 +24,7 @@ namespace TemizlikTeknikServisGuncel
                 UrunCMD.CommandText = sorgu;
                 UrunCMD.Connection = SqlConnection;
                 UrunCMD.ExecuteNonQuery();
-                MessageBox.Show("Başarıyla Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Başarıyla Silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -68,10 +68,11 @@ namespace TemizlikTeknikServisGuncel
             urunGuncelle.IDTBox.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
             urunGuncelle.urunAdiTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
             urunGuncelle.bilgiTBox.Text = dgvUrunler.CurrentRow.Cells[2].Value.ToString();
-            urunGuncelle.markaCBox.SelectedText = dgvUrunler.CurrentRow.Cells[3].Value.ToString();
-            urunGuncelle.turCBox.SelectedText = dgvUrunler.CurrentRow.Cells[4].Value.ToString();
+            urunGuncelle.markaidd.Text = dgvUrunler.CurrentRow.Cells[3].Value.ToString();
+            urunGuncelle.turid.Text = dgvUrunler.CurrentRow.Cells[4].Value.ToString();
             urunGuncelle.yilTBox.Text = dgvUrunler.CurrentRow.Cells[5].Value.ToString();
             urunGuncelle.ShowDialog();
+            this.Close();
 
         }
         private void VeriGetir()
@@ -160,6 +161,22 @@ namespace TemizlikTeknikServisGuncel
             IDTBox.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
             TCTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
             silBTN.Enabled = true;
+        }
+
+        private void dgvUrunler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvUrunler_SelectionChanged(object sender, EventArgs e)
+        {
+
+            araBTN.Enabled = false;
+            silBTN.Enabled = false;
+            guncellBTN.Enabled = false;
+            IDTBox.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
+            TCTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
+
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TemizlikTeknikServisGuncel
 {
@@ -75,11 +76,12 @@ namespace TemizlikTeknikServisGuncel
 
             if (dgvPersoneller.CurrentRow.Cells[9].Value.ToString() == "True")
             {
-                personelGuncelle.statuCBox.SelectedText = "Aktif";
+                personelGuncelle.statuCBox.Text = "Aktif";
+
             }
-            else
+            else if (dgvPersoneller.CurrentRow.Cells[9].Value.ToString() == "False")
             {
-                personelGuncelle.statuCBox.SelectedText = "Pasif";
+                personelGuncelle.statuCBox.Text = "Pasif";
             }
             personelGuncelle.ShowDialog();
             this.Close();
@@ -176,6 +178,12 @@ namespace TemizlikTeknikServisGuncel
 
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tcTBox.Text = dgvPersoneller.CurrentRow.Cells[0].Value.ToString();
+            adTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void dgvPersoneller_SelectionChanged(object sender, EventArgs e)
         {
             tcTBox.Text = dgvPersoneller.CurrentRow.Cells[0].Value.ToString();
             adTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();

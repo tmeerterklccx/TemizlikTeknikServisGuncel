@@ -50,6 +50,8 @@
             bilgiTBox = new RichTextBox();
             label2 = new Label();
             menuStrip1 = new MenuStrip();
+            turid = new Label();
+            markaidd = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -287,12 +289,34 @@
             menuStrip1.TabIndex = 261;
             menuStrip1.Text = "menuStrip1";
             // 
+            // turid
+            // 
+            turid.AutoSize = true;
+            turid.Location = new Point(107, 424);
+            turid.Name = "turid";
+            turid.Size = new Size(38, 15);
+            turid.TabIndex = 281;
+            turid.Text = "label1";
+            turid.Visible = false;
+            // 
+            // markaidd
+            // 
+            markaidd.AutoSize = true;
+            markaidd.Location = new Point(167, 424);
+            markaidd.Name = "markaidd";
+            markaidd.Size = new Size(38, 15);
+            markaidd.TabIndex = 282;
+            markaidd.Text = "label3";
+            markaidd.Visible = false;
+            // 
             // UrunGuncelle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(763, 472);
+            Controls.Add(markaidd);
+            Controls.Add(turid);
             Controls.Add(metroLabel7);
             Controls.Add(markaCBox);
             Controls.Add(materialDivider4);
@@ -345,5 +369,7 @@
         public MetroFramework.Controls.MetroComboBox turCBox;
         public MaterialSkin.Controls.MaterialSingleLineTextField urunAdiTBox;
         public RichTextBox bilgiTBox;
+        public Label turid;
+        public Label markaidd;
     }
 }

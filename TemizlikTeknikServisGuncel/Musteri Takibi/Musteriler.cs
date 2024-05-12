@@ -46,7 +46,9 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
 
         private void Musteriler_Load(object sender, EventArgs e)
         {
-            button4.Enabled = false;
+            araBTN.Enabled = false;
+            silBTN.Enabled = false;
+            guncelleBTN.Enabled = false;
             VeriGetir();
         }
 
@@ -67,13 +69,14 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             musteriGuncelle.telTBox.Text = dgvMusteriler.CurrentRow.Cells[3].Value.ToString();
             musteriGuncelle.ePostATBox.Text = dgvMusteriler.CurrentRow.Cells[4].Value.ToString();
             musteriGuncelle.adresTextBox.Text = dgvMusteriler.CurrentRow.Cells[5].Value.ToString();
+
             if (dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "True")
             {
-                musteriGuncelle.statuCBox.Text = "Aktif";
+                musteriGuncelle.statuCBox.SelectedIndex = 0;
             }
             else if (dgvMusteriler.CurrentRow.Cells[6].Value.ToString() == "False")
             {
-                musteriGuncelle.statuCBox.Text = "Pasif";
+                musteriGuncelle.statuCBox.SelectedIndex = 1;
             }
             musteriGuncelle.ShowDialog();
             this.Close();
@@ -132,11 +135,15 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
         {
             if (!string.IsNullOrWhiteSpace(tcTBox.Text) || !string.IsNullOrWhiteSpace(adTBox.Text))
             {
-                button1.Enabled = true;
+                araBTN.Enabled = true;
+                guncelleBTN.Enabled = true;
+                silBTN.Enabled = true;
             }
             else
             {
-                button1.Enabled = false;
+                araBTN.Enabled = false;
+                guncelleBTN.Enabled = false;
+                silBTN.Enabled = false;
             }
         }
 
@@ -172,6 +179,12 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             tcTBox.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
             adTBox.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
             button4.Enabled = true;
+        }
+
+        private void dgvMusteriler_SelectionChanged(object sender, EventArgs e)
+        {
+            tcTBox.Text = dgvMusteriler.CurrentRow.Cells[0].Value.ToString();
+            adTBox.Text = dgvMusteriler.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }
