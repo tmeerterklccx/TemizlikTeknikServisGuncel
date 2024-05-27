@@ -336,7 +336,9 @@
             Controls.Add(bilgiTBox);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "UrunGuncelle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UrunGuncelle";
             Load += UrunGuncelle_Load;
             menuStrip1.ResumeLayout(false);

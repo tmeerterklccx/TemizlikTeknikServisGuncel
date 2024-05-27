@@ -282,7 +282,9 @@
             Controls.Add(bilgiTBox);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "UrunKaydet";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UrunKaydet";
             Load += UrunKaydet_Load;
             menuStrip1.ResumeLayout(false);

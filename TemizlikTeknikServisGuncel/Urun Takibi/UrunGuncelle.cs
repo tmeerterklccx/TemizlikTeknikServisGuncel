@@ -21,7 +21,7 @@ namespace TemizlikTeknikServisGuncel
         {
             try
             {
-                if(SqlConnection.State != ConnectionState.Open)
+                if (SqlConnection.State != ConnectionState.Open)
                 {
                     SqlConnection.Open();
                 }

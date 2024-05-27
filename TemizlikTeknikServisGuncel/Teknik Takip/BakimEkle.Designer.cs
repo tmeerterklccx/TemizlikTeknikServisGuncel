@@ -330,7 +330,9 @@
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Controls.Add(metroLabel4);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "BakimEkle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BakimEkle";
             Load += BakimEkle_Load;
             menuStrip1.ResumeLayout(false);

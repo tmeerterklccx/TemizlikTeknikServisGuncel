@@ -39,7 +39,6 @@
             materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
-            tcBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             guncelleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
             turTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -48,6 +47,8 @@
             label2 = new Label();
             menuStrip1 = new MenuStrip();
             BasTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            personelCBox = new MetroFramework.Controls.MetroComboBox();
+            personelTCBox = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,13 +62,14 @@
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
+            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
             // IDTBox
             // 
             IDTBox.Depth = 0;
+            IDTBox.Enabled = false;
             IDTBox.Hint = "";
             IDTBox.Location = new Point(322, 90);
             IDTBox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -166,21 +168,6 @@
             otomasyonaGitToolStripMenuItem.Text = "Otomasyona Git";
             otomasyonaGitToolStripMenuItem.Click += otomasyonaGitToolStripMenuItem_Click;
             // 
-            // tcBox
-            // 
-            tcBox.Depth = 0;
-            tcBox.Hint = "";
-            tcBox.Location = new Point(176, 133);
-            tcBox.MouseState = MaterialSkin.MouseState.HOVER;
-            tcBox.Name = "tcBox";
-            tcBox.PasswordChar = '\0';
-            tcBox.SelectedText = "";
-            tcBox.SelectionLength = 0;
-            tcBox.SelectionStart = 0;
-            tcBox.Size = new Size(149, 23);
-            tcBox.TabIndex = 208;
-            tcBox.UseSystemPasswordChar = false;
-            // 
             // guncelleBTN
             // 
             guncelleBTN.Depth = 0;
@@ -223,11 +210,11 @@
             // 
             metroLabel2.AutoSize = true;
             metroLabel2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel2.Location = new Point(129, 133);
+            metroLabel2.Location = new Point(83, 133);
             metroLabel2.Name = "metroLabel2";
-            metroLabel2.Size = new Size(27, 19);
+            metroLabel2.Size = new Size(76, 19);
             metroLabel2.TabIndex = 204;
-            metroLabel2.Text = "TC:";
+            metroLabel2.Text = "PERSONEL:";
             // 
             // metroLabel1
             // 
@@ -275,12 +262,34 @@
             BasTBox.TabIndex = 209;
             BasTBox.UseSystemPasswordChar = false;
             // 
+            // personelCBox
+            // 
+            personelCBox.FormattingEnabled = true;
+            personelCBox.ItemHeight = 23;
+            personelCBox.Location = new Point(172, 127);
+            personelCBox.Name = "personelCBox";
+            personelCBox.Size = new Size(153, 29);
+            personelCBox.TabIndex = 218;
+            personelCBox.UseSelectable = true;
+            // 
+            // personelTCBox
+            // 
+            personelTCBox.AutoSize = true;
+            personelTCBox.Location = new Point(28, 290);
+            personelTCBox.Name = "personelTCBox";
+            personelTCBox.Size = new Size(38, 15);
+            personelTCBox.TabIndex = 219;
+            personelTCBox.Text = "label1";
+            personelTCBox.Visible = false;
+            // 
             // IzinGuncelle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(706, 397);
+            Controls.Add(personelTCBox);
+            Controls.Add(personelCBox);
             Controls.Add(IDTBox);
             Controls.Add(metroLabel5);
             Controls.Add(metroLabel4);
@@ -289,7 +298,6 @@
             Controls.Add(materialDivider3);
             Controls.Add(materialDivider2);
             Controls.Add(materialDivider1);
-            Controls.Add(tcBox);
             Controls.Add(guncelleBTN);
             Controls.Add(turTBox);
             Controls.Add(metroLabel3);
@@ -298,7 +306,9 @@
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Controls.Add(BasTBox);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "IzinGuncelle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IzinGuncelle";
             Load += IzinGuncelle_Load;
             menuStrip1.ResumeLayout(false);
@@ -327,7 +337,8 @@
         public MaterialSkin.Controls.MaterialSingleLineTextField IDTBox;
         public MaterialSkin.Controls.MaterialSingleLineTextField turTBox;
         public MaterialSkin.Controls.MaterialSingleLineTextField bitisTBOx;
-        public MaterialSkin.Controls.MaterialSingleLineTextField tcBox;
         public MaterialSkin.Controls.MaterialSingleLineTextField BasTBox;
+        public MetroFramework.Controls.MetroComboBox personelCBox;
+        public Label personelTCBox;
     }
 }

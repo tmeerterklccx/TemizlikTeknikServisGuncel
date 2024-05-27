@@ -38,7 +38,6 @@
             materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             BaslangicTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            tcBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             TurTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -46,6 +45,7 @@
             metroLabel1 = new MetroFramework.Controls.MetroLabel();
             label2 = new Label();
             menuStrip1 = new MenuStrip();
+            personelCBox = new MetroFramework.Controls.MetroComboBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
+            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             çıkışYapToolStripMenuItem.Click += çıkışYapToolStripMenuItem_Click;
             // 
@@ -154,21 +154,6 @@
             BaslangicTBox.TabIndex = 192;
             BaslangicTBox.UseSystemPasswordChar = false;
             // 
-            // tcBox
-            // 
-            tcBox.Depth = 0;
-            tcBox.Hint = "";
-            tcBox.Location = new Point(155, 130);
-            tcBox.MouseState = MaterialSkin.MouseState.HOVER;
-            tcBox.Name = "tcBox";
-            tcBox.PasswordChar = '\0';
-            tcBox.SelectedText = "";
-            tcBox.SelectionLength = 0;
-            tcBox.SelectionStart = 0;
-            tcBox.Size = new Size(149, 23);
-            tcBox.TabIndex = 191;
-            tcBox.UseSystemPasswordChar = false;
-            // 
             // materialRaisedButton1
             // 
             materialRaisedButton1.Depth = 0;
@@ -211,11 +196,11 @@
             // 
             metroLabel2.AutoSize = true;
             metroLabel2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel2.Location = new Point(108, 130);
+            metroLabel2.Location = new Point(62, 130);
             metroLabel2.Name = "metroLabel2";
-            metroLabel2.Size = new Size(27, 19);
+            metroLabel2.Size = new Size(76, 19);
             metroLabel2.TabIndex = 187;
-            metroLabel2.Text = "TC:";
+            metroLabel2.Text = "PERSONEL:";
             // 
             // metroLabel1
             // 
@@ -249,12 +234,23 @@
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
+            // personelCBox
+            // 
+            personelCBox.FormattingEnabled = true;
+            personelCBox.ItemHeight = 23;
+            personelCBox.Location = new Point(155, 124);
+            personelCBox.Name = "personelCBox";
+            personelCBox.Size = new Size(149, 29);
+            personelCBox.TabIndex = 199;
+            personelCBox.UseSelectable = true;
+            // 
             // IzinEkle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(677, 402);
+            Controls.Add(personelCBox);
             Controls.Add(metroLabel4);
             Controls.Add(BitisTBox);
             Controls.Add(materialDivider4);
@@ -262,7 +258,6 @@
             Controls.Add(materialDivider2);
             Controls.Add(materialDivider1);
             Controls.Add(BaslangicTBox);
-            Controls.Add(tcBox);
             Controls.Add(materialRaisedButton1);
             Controls.Add(TurTBox);
             Controls.Add(metroLabel3);
@@ -270,7 +265,9 @@
             Controls.Add(metroLabel1);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "IzinEkle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IzinEkle";
             Load += IzinEkle_Load;
             menuStrip1.ResumeLayout(false);
@@ -291,7 +288,6 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialSingleLineTextField BaslangicTBox;
-        private MaterialSkin.Controls.MaterialSingleLineTextField tcBox;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialSingleLineTextField TurTBox;
         private MetroFramework.Controls.MetroLabel metroLabel3;
@@ -299,5 +295,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private Label label2;
         private MenuStrip menuStrip1;
+        private MetroFramework.Controls.MetroComboBox personelCBox;
     }
 }

@@ -70,7 +70,7 @@ namespace TemizlikTeknikServisGuncel
             {
                 urunCBox.Items.Add(item);
             }
-            SqlConnection.Close( );
+            SqlConnection.Close();
         }
         private void MusteriDoldur()
         {
@@ -97,7 +97,7 @@ namespace TemizlikTeknikServisGuncel
                     musteriCBox.Items.Add(item);
                 }
             }
-            
+
             SqlConnection.Close();
         }
 

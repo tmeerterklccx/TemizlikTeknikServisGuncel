@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             listeleBTN = new MaterialSkin.Controls.MaterialRaisedButton();
-            TCTBox = new TextBox();
+            ADTBox = new TextBox();
             IDTBox = new TextBox();
             menuStrip1 = new MenuStrip();
             programToolStripMenuItem = new ToolStripMenuItem();
@@ -63,14 +63,14 @@
             listeleBTN.UseVisualStyleBackColor = true;
             listeleBTN.Click += listele_Click;
             // 
-            // TCTBox
+            // ADTBox
             // 
-            TCTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            TCTBox.Location = new Point(110, 402);
-            TCTBox.Name = "TCTBox";
-            TCTBox.Size = new Size(154, 24);
-            TCTBox.TabIndex = 112;
-            TCTBox.TextChanged += textBox1_TextChanged;
+            ADTBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ADTBox.Location = new Point(110, 402);
+            ADTBox.Name = "ADTBox";
+            ADTBox.Size = new Size(154, 24);
+            ADTBox.TabIndex = 112;
+            ADTBox.TextChanged += textBox1_TextChanged;
             // 
             // IDTBox
             // 
@@ -120,42 +120,42 @@
             dgvMarkalar.BorderStyle = BorderStyle.None;
             dgvMarkalar.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvMarkalar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvMarkalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvMarkalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvMarkalar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvMarkalar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvMarkalar.DefaultCellStyle = dataGridViewCellStyle5;
             dgvMarkalar.EnableHeadersVisualStyles = false;
             dgvMarkalar.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvMarkalar.GridColor = Color.FromArgb(255, 255, 255);
-            dgvMarkalar.Location = new Point(19, 80);
+            dgvMarkalar.Location = new Point(84, 78);
             dgvMarkalar.Name = "dgvMarkalar";
             dgvMarkalar.ReadOnly = true;
             dgvMarkalar.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvMarkalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvMarkalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvMarkalar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvMarkalar.RowTemplate.Height = 25;
             dgvMarkalar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMarkalar.Size = new Size(802, 246);
+            dgvMarkalar.Size = new Size(703, 246);
             dgvMarkalar.TabIndex = 114;
             dgvMarkalar.CellClick += dgvMarkalar_CellClick;
             dgvMarkalar.SelectionChanged += dgvMarkalar_SelectionChanged;
@@ -221,9 +221,9 @@
             materialLabel2.Location = new Point(19, 408);
             materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(32, 19);
+            materialLabel2.Size = new Size(33, 19);
             materialLabel2.TabIndex = 116;
-            materialLabel2.Text = "TC:";
+            materialLabel2.Text = "AD:";
             // 
             // materialLabel1
             // 
@@ -258,7 +258,7 @@
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(852, 496);
             Controls.Add(listeleBTN);
-            Controls.Add(TCTBox);
+            Controls.Add(ADTBox);
             Controls.Add(IDTBox);
             Controls.Add(menuStrip1);
             Controls.Add(dgvMarkalar);
@@ -269,7 +269,9 @@
             Controls.Add(materialLabel2);
             Controls.Add(materialLabel1);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Markalar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Markalar";
             Load += Markalar_Load;
             menuStrip1.ResumeLayout(false);
@@ -282,7 +284,7 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialRaisedButton listeleBTN;
-        private TextBox TCTBox;
+        private TextBox ADTBox;
         private TextBox IDTBox;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem programToolStripMenuItem;

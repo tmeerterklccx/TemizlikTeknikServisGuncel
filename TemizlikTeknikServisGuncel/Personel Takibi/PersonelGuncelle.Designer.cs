@@ -39,10 +39,6 @@
             metroLabel8 = new MetroFramework.Controls.MetroLabel();
             metroLabel7 = new MetroFramework.Controls.MetroLabel();
             metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
-            materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
-            materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             telTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             ePostATBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             tcTBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -58,6 +54,10 @@
             otomasyonaGitToolStripMenuItem = new ToolStripMenuItem();
             metroLabel4 = new MetroFramework.Controls.MetroLabel();
             metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
+            materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -185,50 +185,6 @@
             metroLabel9.TabIndex = 239;
             metroLabel9.Text = "ŞİFRESİ:";
             // 
-            // materialDivider4
-            // 
-            materialDivider4.BackColor = Color.FromArgb(31, 0, 0, 0);
-            materialDivider4.Depth = 0;
-            materialDivider4.Location = new Point(714, 350);
-            materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialDivider4.Name = "materialDivider4";
-            materialDivider4.Size = new Size(22, 105);
-            materialDivider4.TabIndex = 235;
-            materialDivider4.Text = "materialDivider4";
-            // 
-            // materialDivider3
-            // 
-            materialDivider3.BackColor = Color.FromArgb(31, 0, 0, 0);
-            materialDivider3.Depth = 0;
-            materialDivider3.Location = new Point(387, 350);
-            materialDivider3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialDivider3.Name = "materialDivider3";
-            materialDivider3.Size = new Size(22, 105);
-            materialDivider3.TabIndex = 234;
-            materialDivider3.Text = "materialDivider3";
-            // 
-            // materialDivider2
-            // 
-            materialDivider2.BackColor = Color.FromArgb(31, 0, 0, 0);
-            materialDivider2.Depth = 0;
-            materialDivider2.Location = new Point(415, 435);
-            materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialDivider2.Name = "materialDivider2";
-            materialDivider2.Size = new Size(293, 20);
-            materialDivider2.TabIndex = 233;
-            materialDivider2.Text = "materialDivider2";
-            // 
-            // materialDivider1
-            // 
-            materialDivider1.BackColor = Color.FromArgb(31, 0, 0, 0);
-            materialDivider1.Depth = 0;
-            materialDivider1.Location = new Point(415, 350);
-            materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialDivider1.Name = "materialDivider1";
-            materialDivider1.Size = new Size(293, 20);
-            materialDivider1.TabIndex = 232;
-            materialDivider1.Text = "materialDivider1";
-            // 
             // telTBox
             // 
             telTBox.Depth = 0;
@@ -243,6 +199,7 @@
             telTBox.Size = new Size(149, 23);
             telTBox.TabIndex = 231;
             telTBox.UseSystemPasswordChar = false;
+            telTBox.TextChanged += telTBox_TextChanged;
             // 
             // ePostATBox
             // 
@@ -274,6 +231,8 @@
             tcTBox.Size = new Size(149, 23);
             tcTBox.TabIndex = 229;
             tcTBox.UseSystemPasswordChar = false;
+            tcTBox.TextAlignChanged += tcTBox_TextAlignChanged;
+            tcTBox.TextChanged += tcTBox_TextChanged;
             // 
             // soyadTBox
             // 
@@ -399,6 +358,50 @@
             metroLabel3.TabIndex = 223;
             metroLabel3.Text = "TC:";
             // 
+            // materialDivider4
+            // 
+            materialDivider4.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider4.Depth = 0;
+            materialDivider4.Location = new Point(714, 350);
+            materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider4.Name = "materialDivider4";
+            materialDivider4.Size = new Size(22, 105);
+            materialDivider4.TabIndex = 235;
+            materialDivider4.Text = "materialDivider4";
+            // 
+            // materialDivider2
+            // 
+            materialDivider2.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider2.Depth = 0;
+            materialDivider2.Location = new Point(415, 435);
+            materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider2.Name = "materialDivider2";
+            materialDivider2.Size = new Size(293, 20);
+            materialDivider2.TabIndex = 233;
+            materialDivider2.Text = "materialDivider2";
+            // 
+            // materialDivider3
+            // 
+            materialDivider3.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider3.Depth = 0;
+            materialDivider3.Location = new Point(387, 350);
+            materialDivider3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider3.Name = "materialDivider3";
+            materialDivider3.Size = new Size(22, 105);
+            materialDivider3.TabIndex = 234;
+            materialDivider3.Text = "materialDivider3";
+            // 
+            // materialDivider1
+            // 
+            materialDivider1.BackColor = Color.FromArgb(31, 0, 0, 0);
+            materialDivider1.Depth = 0;
+            materialDivider1.Location = new Point(415, 350);
+            materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialDivider1.Name = "materialDivider1";
+            materialDivider1.Size = new Size(293, 20);
+            materialDivider1.TabIndex = 232;
+            materialDivider1.Text = "materialDivider1";
+            // 
             // PersonelGuncelle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -432,7 +435,9 @@
             Controls.Add(menuStrip1);
             Controls.Add(metroLabel4);
             Controls.Add(metroLabel3);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "PersonelGuncelle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonelGuncelle";
             Load += PersonelGuncelle_Load;
             menuStrip1.ResumeLayout(false);
@@ -450,10 +455,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MaterialSkin.Controls.MaterialDivider materialDivider4;
-        private MaterialSkin.Controls.MaterialDivider materialDivider3;
-        private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialRaisedButton guncelleBTN;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
@@ -474,5 +475,9 @@
         public MaterialSkin.Controls.MaterialSingleLineTextField tcTBox;
         public MaterialSkin.Controls.MaterialSingleLineTextField soyadTBox;
         public RichTextBox adresTextBox;
+        private MaterialSkin.Controls.MaterialDivider materialDivider4;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private MaterialSkin.Controls.MaterialDivider materialDivider3;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
     }
 }

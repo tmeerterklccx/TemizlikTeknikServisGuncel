@@ -108,7 +108,7 @@ namespace TemizlikTeknikServisGuncel
 
         private void ara_Click(object sender, EventArgs e)
         {
-            if (IDTBox.Text != "" || TCTBox.Text != "")
+            if (IDTBox.Text != "" || ADTBox.Text != "")
             {
                 araBTN.Enabled = true;
                 UrunCMD.CommandText = "SELECT * FROM Urunler WHERE Urun_ID = @urunID OR Urun_Ad = @urunAd";
@@ -116,7 +116,7 @@ namespace TemizlikTeknikServisGuncel
                 UrunCMD.Connection.Open();
                 UrunCMD.Parameters.Clear();
                 UrunCMD.Parameters.AddWithValue("@urunID", IDTBox.Text);
-                UrunCMD.Parameters.AddWithValue("@urunAd", TCTBox.Text);
+                UrunCMD.Parameters.AddWithValue("@urunAd", ADTBox.Text);
                 SqlDataReader reader = UrunCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
@@ -132,7 +132,7 @@ namespace TemizlikTeknikServisGuncel
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(IDTBox.Text) || !string.IsNullOrWhiteSpace(TCTBox.Text))
+            if (!string.IsNullOrWhiteSpace(IDTBox.Text) || !string.IsNullOrWhiteSpace(ADTBox.Text))
             {
                 araBTN.Enabled = true;
                 silBTN.Enabled = true;
@@ -159,7 +159,7 @@ namespace TemizlikTeknikServisGuncel
         private void dgvUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             IDTBox.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
-            TCTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
+            ADTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
             silBTN.Enabled = true;
         }
 
@@ -175,7 +175,7 @@ namespace TemizlikTeknikServisGuncel
             silBTN.Enabled = false;
             guncellBTN.Enabled = false;
             IDTBox.Text = dgvUrunler.CurrentRow.Cells[0].Value.ToString();
-            TCTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
+            ADTBox.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
 
         }
     }

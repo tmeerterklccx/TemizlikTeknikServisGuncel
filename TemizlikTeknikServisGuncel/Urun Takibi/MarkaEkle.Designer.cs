@@ -182,7 +182,9 @@
             Controls.Add(metroLabel1);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MarkaEkle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MarkaEkle";
             Load += MarkaEkle_Load;
             menuStrip1.ResumeLayout(false);

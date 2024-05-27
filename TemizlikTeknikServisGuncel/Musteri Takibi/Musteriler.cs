@@ -145,6 +145,11 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
                 guncelleBTN.Enabled = false;
                 silBTN.Enabled = false;
             }
+            if (tcTBox.Text.Length > 11)
+            {
+                tcTBox.Text = tcTBox.Text.Substring(0, 11);
+                tcTBox.SelectionStart = tcTBox.Text.Length;
+            }
         }
 
         private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)

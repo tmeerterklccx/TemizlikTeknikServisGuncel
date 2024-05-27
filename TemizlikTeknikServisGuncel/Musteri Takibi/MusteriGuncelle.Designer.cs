@@ -155,6 +155,8 @@
             telTBox.Size = new Size(149, 23);
             telTBox.TabIndex = 200;
             telTBox.UseSystemPasswordChar = false;
+            telTBox.Click += telTBox_Click;
+            telTBox.TextChanged += telTBox_TextChanged;
             // 
             // ePostATBox
             // 
@@ -185,6 +187,8 @@
             tcTBox.Size = new Size(149, 23);
             tcTBox.TabIndex = 198;
             tcTBox.UseSystemPasswordChar = false;
+            tcTBox.Click += tcTBox_Click;
+            tcTBox.TextChanged += tcTBox_TextChanged;
             // 
             // soyadTBox
             // 
@@ -368,7 +372,9 @@
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Controls.Add(metroLabel4);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MusteriGuncelle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MusteriGuncelle";
             Load += MusteriGuncelle_Load;
             menuStrip1.ResumeLayout(false);

@@ -61,8 +61,7 @@ namespace TemizlikTeknikServisGuncel
                         otomasyon.afrm = this;
                         otomasyon.ýconButton4.Visible = false;
                         otomasyon.ýconButton5.Visible = false;
-                        otomasyon.label20.Visible = false;
-                        otomasyon.label19.Visible = false;
+                       // otomasyon.label20.Visible = false;
                         otomasyon.maxizin.Visible = false;
                         otomasyon.toplammarka.Visible = false;
                         otomasyon.label3.Visible = false;

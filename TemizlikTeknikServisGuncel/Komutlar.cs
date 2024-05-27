@@ -43,5 +43,16 @@ namespace TemizlikTeknikServisGuncel
             sqlDataAdapter.Fill(tablo);
             return tablo;
         }
+
+        public static bool ValidateTCNumber(string tcNumber)
+        {
+            if (tcNumber.Length != 11 || !tcNumber.All(char.IsDigit)) return false;
+
+            int[] digits = tcNumber.Select(c => c - '0').ToArray();
+            int evenSum = digits.Where((x, i) => i % 2 == 0 && i < 9).Sum();
+            int oddSum = digits.Where((x, i) => i % 2 == 1 && i < 9).Sum();
+
+            return (evenSum * 7 - oddSum) % 10 == digits[9] && digits.Take(10).Sum() % 10 == digits[10];
+        }
     }
 }

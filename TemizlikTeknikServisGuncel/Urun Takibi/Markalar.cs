@@ -120,7 +120,7 @@ namespace TemizlikTeknikServisGuncel
 
         private void ara_Click(object sender, EventArgs e)
         {
-            if (IDTBox.Text != "" || TCTBox.Text != "")
+            if (IDTBox.Text != "" || ADTBox.Text != "")
             {
                 araBTN.Enabled = true;
                 MarkaCMD.CommandText = "SELECT * FROM Markalar WHERE Marka_ID = @markaID OR Marka_Ad = @markaAD";
@@ -128,7 +128,7 @@ namespace TemizlikTeknikServisGuncel
                 MarkaCMD.Connection.Open();
                 MarkaCMD.Parameters.Clear();
                 MarkaCMD.Parameters.AddWithValue("@markaID", IDTBox.Text);
-                MarkaCMD.Parameters.AddWithValue("@markaAD", TCTBox.Text);
+                MarkaCMD.Parameters.AddWithValue("@markaAD", ADTBox.Text);
                 SqlDataReader reader = MarkaCMD.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
@@ -144,7 +144,7 @@ namespace TemizlikTeknikServisGuncel
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(IDTBox.Text) || !string.IsNullOrWhiteSpace(TCTBox.Text))
+            if (!string.IsNullOrWhiteSpace(IDTBox.Text) || !string.IsNullOrWhiteSpace(ADTBox.Text))
             {
                 guncelleBTN.Enabled = true;
                 silBTN.Enabled = true;
@@ -171,13 +171,13 @@ namespace TemizlikTeknikServisGuncel
         private void dgvMarkalar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             IDTBox.Text = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
-            TCTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
+            ADTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void dgvMarkalar_SelectionChanged(object sender, EventArgs e)
         {
             IDTBox.Text = dgvMarkalar.CurrentRow.Cells[0].Value.ToString();
-            TCTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
+            ADTBox.Text = dgvMarkalar.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

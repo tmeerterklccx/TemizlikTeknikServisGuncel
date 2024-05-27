@@ -433,7 +433,9 @@
             Controls.Add(tarihTBox);
             Controls.Add(statuCMB);
             Controls.Add(metroLabel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "BakimGuncelle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BakimGuncelle";
             Load += BakimGuncelle_Load;
             menuStrip1.ResumeLayout(false);

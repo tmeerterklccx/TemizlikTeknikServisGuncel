@@ -63,7 +63,7 @@
             // 
             pozTBox.Depth = 0;
             pozTBox.Hint = "";
-            pozTBox.Location = new Point(472, 119);
+            pozTBox.Location = new Point(472, 113);
             pozTBox.MouseState = MaterialSkin.MouseState.HOVER;
             pozTBox.Name = "pozTBox";
             pozTBox.PasswordChar = '\0';
@@ -78,7 +78,7 @@
             // 
             metroLabel9.AutoSize = true;
             metroLabel9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel9.Location = new Point(360, 221);
+            metroLabel9.Location = new Point(360, 215);
             metroLabel9.Name = "metroLabel9";
             metroLabel9.Size = new Size(54, 19);
             metroLabel9.TabIndex = 212;
@@ -88,7 +88,7 @@
             // 
             rolTBox.Depth = 0;
             rolTBox.Hint = "";
-            rolTBox.Location = new Point(472, 164);
+            rolTBox.Location = new Point(472, 158);
             rolTBox.MouseState = MaterialSkin.MouseState.HOVER;
             rolTBox.Name = "rolTBox";
             rolTBox.PasswordChar = '\0';
@@ -103,7 +103,7 @@
             // 
             metroLabel8.AutoSize = true;
             metroLabel8.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel8.Location = new Point(368, 168);
+            metroLabel8.Location = new Point(368, 162);
             metroLabel8.Name = "metroLabel8";
             metroLabel8.Size = new Size(46, 19);
             metroLabel8.TabIndex = 210;
@@ -113,7 +113,7 @@
             // 
             metroLabel7.AutoSize = true;
             metroLabel7.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel7.Location = new Point(337, 123);
+            metroLabel7.Location = new Point(337, 117);
             metroLabel7.Name = "metroLabel7";
             metroLabel7.Size = new Size(77, 19);
             metroLabel7.TabIndex = 209;
@@ -144,7 +144,7 @@
             // 
             sifreTBox.Depth = 0;
             sifreTBox.Hint = "";
-            sifreTBox.Location = new Point(472, 217);
+            sifreTBox.Location = new Point(472, 211);
             sifreTBox.MouseState = MaterialSkin.MouseState.HOVER;
             sifreTBox.Name = "sifreTBox";
             sifreTBox.PasswordChar = '\0';
@@ -203,7 +203,7 @@
             // 
             telTBox.Depth = 0;
             telTBox.Hint = "";
-            telTBox.Location = new Point(155, 385);
+            telTBox.Location = new Point(156, 359);
             telTBox.MouseState = MaterialSkin.MouseState.HOVER;
             telTBox.Name = "telTBox";
             telTBox.PasswordChar = '\0';
@@ -213,12 +213,13 @@
             telTBox.Size = new Size(149, 23);
             telTBox.TabIndex = 204;
             telTBox.UseSystemPasswordChar = false;
+            telTBox.TextChanged += telTBox_TextChanged;
             // 
             // ePostATBox
             // 
             ePostATBox.Depth = 0;
             ePostATBox.Hint = "";
-            ePostATBox.Location = new Point(155, 324);
+            ePostATBox.Location = new Point(156, 298);
             ePostATBox.MouseState = MaterialSkin.MouseState.HOVER;
             ePostATBox.Name = "ePostATBox";
             ePostATBox.PasswordChar = '\0';
@@ -233,7 +234,7 @@
             // 
             tcTBox.Depth = 0;
             tcTBox.Hint = "";
-            tcTBox.Location = new Point(155, 258);
+            tcTBox.Location = new Point(156, 232);
             tcTBox.MouseState = MaterialSkin.MouseState.HOVER;
             tcTBox.Name = "tcTBox";
             tcTBox.PasswordChar = '\0';
@@ -243,12 +244,13 @@
             tcTBox.Size = new Size(149, 23);
             tcTBox.TabIndex = 202;
             tcTBox.UseSystemPasswordChar = false;
+            tcTBox.TextChanged += tcTBox_TextChanged;
             // 
             // soyadTBox
             // 
             soyadTBox.Depth = 0;
             soyadTBox.Hint = "";
-            soyadTBox.Location = new Point(155, 193);
+            soyadTBox.Location = new Point(156, 167);
             soyadTBox.MouseState = MaterialSkin.MouseState.HOVER;
             soyadTBox.Name = "soyadTBox";
             soyadTBox.PasswordChar = '\0';
@@ -286,7 +288,7 @@
             // 
             adTBox.Depth = 0;
             adTBox.Hint = "";
-            adTBox.Location = new Point(155, 135);
+            adTBox.Location = new Point(156, 109);
             adTBox.MouseState = MaterialSkin.MouseState.HOVER;
             adTBox.Name = "adTBox";
             adTBox.PasswordChar = '\0';
@@ -301,7 +303,7 @@
             // 
             metroLabel5.AutoSize = true;
             metroLabel5.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel5.Location = new Point(30, 389);
+            metroLabel5.Location = new Point(31, 363);
             metroLabel5.Name = "metroLabel5";
             metroLabel5.Size = new Size(67, 19);
             metroLabel5.TabIndex = 197;
@@ -311,7 +313,7 @@
             // 
             metroLabel3.AutoSize = true;
             metroLabel3.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel3.Location = new Point(70, 262);
+            metroLabel3.Location = new Point(71, 236);
             metroLabel3.Name = "metroLabel3";
             metroLabel3.Size = new Size(27, 19);
             metroLabel3.TabIndex = 195;
@@ -321,7 +323,7 @@
             // 
             metroLabel2.AutoSize = true;
             metroLabel2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel2.Location = new Point(43, 203);
+            metroLabel2.Location = new Point(44, 177);
             metroLabel2.Name = "metroLabel2";
             metroLabel2.Size = new Size(54, 19);
             metroLabel2.TabIndex = 194;
@@ -331,7 +333,7 @@
             // 
             metroLabel1.AutoSize = true;
             metroLabel1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel1.Location = new Point(67, 135);
+            metroLabel1.Location = new Point(68, 109);
             metroLabel1.Name = "metroLabel1";
             metroLabel1.Size = new Size(30, 19);
             metroLabel1.TabIndex = 193;
@@ -371,7 +373,7 @@
             // 
             metroLabel4.AutoSize = true;
             metroLabel4.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            metroLabel4.Location = new Point(34, 324);
+            metroLabel4.Location = new Point(35, 298);
             metroLabel4.Name = "metroLabel4";
             metroLabel4.Size = new Size(63, 19);
             metroLabel4.TabIndex = 196;
@@ -408,7 +410,9 @@
             Controls.Add(label2);
             Controls.Add(menuStrip1);
             Controls.Add(metroLabel4);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "PersonelEkle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonelEkle";
             Load += PersonelEkle_Load;
             menuStrip1.ResumeLayout(false);

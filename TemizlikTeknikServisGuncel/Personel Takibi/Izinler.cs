@@ -62,7 +62,7 @@ namespace TemizlikTeknikServisGuncel
         {
             IzinGuncelle izinGuncelle = new IzinGuncelle();
             izinGuncelle.afrm = this;
-            izinGuncelle.tcBox.Text = dgvIzinler.CurrentRow.Cells[1].Value.ToString();
+            izinGuncelle.personelTCBox.Text = dgvIzinler.CurrentRow.Cells[1].Value.ToString();
             izinGuncelle.turTBox.Text = dgvIzinler.CurrentRow.Cells[4].Value.ToString();
             izinGuncelle.BasTBox.Text = dgvIzinler.CurrentRow.Cells[2].Value.ToString();
             izinGuncelle.bitisTBOx.Text = dgvIzinler.CurrentRow.Cells[3].Value.ToString();
@@ -126,10 +126,19 @@ namespace TemizlikTeknikServisGuncel
             if (!string.IsNullOrWhiteSpace(TCTBox.Text) || !string.IsNullOrWhiteSpace(IDTBox.Text))
             {
                 araBTN.Enabled = true;
+                silBTN.Enabled = true;
+                guncelleBTN.Enabled = true;
             }
             else
             {
                 araBTN.Enabled = false;
+                silBTN.Enabled = false;
+                guncelleBTN.Enabled = false;
+            }
+            if (TCTBox.Text.Length > 11)
+            {
+                TCTBox.Text = TCTBox.Text.Substring(0, 11);
+                TCTBox.SelectionStart = TCTBox.Text.Length;
             }
         }
 

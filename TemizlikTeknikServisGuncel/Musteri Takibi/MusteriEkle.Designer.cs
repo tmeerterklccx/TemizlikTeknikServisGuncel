@@ -111,6 +111,8 @@
             telTBox.Size = new Size(149, 23);
             telTBox.TabIndex = 177;
             telTBox.UseSystemPasswordChar = false;
+            telTBox.Click += telTBox_Click;
+            telTBox.TextChanged += telTBox_TextChanged;
             // 
             // ePostATBox
             // 
@@ -141,6 +143,8 @@
             tcTBox.Size = new Size(149, 23);
             tcTBox.TabIndex = 175;
             tcTBox.UseSystemPasswordChar = false;
+            tcTBox.Click += tcTBox_Click;
+            tcTBox.TextChanged += tcTBox_TextChanged;
             // 
             // soyadTBox
             // 
@@ -225,7 +229,7 @@
             // çıkışYapToolStripMenuItem
             // 
             çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            çıkışYapToolStripMenuItem.Size = new Size(180, 22);
+            çıkışYapToolStripMenuItem.Size = new Size(121, 22);
             çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             // 
             // otomasyonaGitToolStripMenuItem
@@ -320,7 +324,9 @@
             Controls.Add(metroLabel1);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MusteriEkle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MusteriEkle";
             Load += MusteriEkle_Load;
             menuStrip1.ResumeLayout(false);

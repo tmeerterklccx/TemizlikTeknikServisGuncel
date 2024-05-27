@@ -20,7 +20,11 @@ namespace TemizlikTeknikServisGuncel
         {
             try
             {
-                SqlConnection.Open();
+                if(SqlConnection.State != System.Data.ConnectionState.Open)
+                {
+                    SqlConnection.Open();
+                }
+               
                 izinCMD.CommandText = sorgu;
                 izinCMD.Connection = SqlConnection;
                 izinCMD.ExecuteNonQuery();
@@ -50,11 +54,50 @@ namespace TemizlikTeknikServisGuncel
             otomasyon.Show();
             this.Close();
         }
+        private void PersonelDoldur()
+        {
+            string sorgu = "SELECT Ad FROM Calisanlar";
+            if (SqlConnection.State != ConnectionState.Open)
+            {
+                SqlConnection.Open();
+            }
+
+            izinCMD.Connection = SqlConnection;
+            izinCMD.Parameters.Clear();
+            izinCMD.CommandText = sorgu;
+            SqlDataReader sqlDataReader = izinCMD.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                List<string> personelAdListesi = new List<string>();
+                string personelAdi = sqlDataReader["Ad"].ToString();
+                if (personelAdi != null)
+                {
+                    personelAdListesi.Add(personelAdi);
+                }
+
+                foreach (var item in personelAdListesi)
+                {
+                    personelCBox.Items.Add(item);
+                }
+            }
+            SqlConnection.Close();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(SqlConnection.State != ConnectionState.Open)
+            {
+                SqlConnection.Open();
+            }
+            string secilenPersonelAdi = personelCBox.SelectedItem.ToString();
+            string personelTCSorgusu = "SELECT TC FROM Calisanlar WHERE Ad = @PersonelAd";
+            izinCMD.Parameters.Clear();
+            izinCMD.CommandText = personelTCSorgusu;
+            izinCMD.Parameters.AddWithValue("@PersonelAd", secilenPersonelAdi);
+            string personelTC = izinCMD.ExecuteScalar().ToString();
+
             string sorgu = "Insert Into Izinler values (@PersonelTC,@Baslangic,@Bitis,@Tur,@Statu)";
-            izinCMD.Parameters.AddWithValue("@PersonelTC", tcBox.Text);
+            izinCMD.Parameters.AddWithValue("@PersonelTC", personelTC);
             izinCMD.Parameters.AddWithValue("@Baslangic", BaslangicTBox.Text);
             izinCMD.Parameters.AddWithValue("@Bitis", BitisTBox.Text);
             izinCMD.Parameters.AddWithValue("@Tur", TurTBox.Text);
@@ -67,7 +110,7 @@ namespace TemizlikTeknikServisGuncel
 
         private void IzinEkle_Load(object sender, EventArgs e)
         {
-
+            PersonelDoldur();
         }
 
         private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,6 +124,15 @@ namespace TemizlikTeknikServisGuncel
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void tcBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tcBox_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

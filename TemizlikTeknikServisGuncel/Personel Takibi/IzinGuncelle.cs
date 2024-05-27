@@ -64,10 +64,64 @@ namespace TemizlikTeknikServisGuncel
             izinler.Show();
             this.Close();
         }
+        private void PersonelDoldur()
+        {
+            string sorgu = "SELECT Ad FROM Calisanlar";
+            if (SqlConnection.State != ConnectionState.Open)
+            {
+                SqlConnection.Open();
+            }
 
+            TurCMD.Connection = SqlConnection;
+            TurCMD.Parameters.Clear();
+            TurCMD.CommandText = sorgu;
+            SqlDataReader sqlDataReader = TurCMD.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                List<string> personelAdListesi = new List<string>();
+                string personelAdi = sqlDataReader["Ad"].ToString();
+                if (personelAdi != null)
+                {
+                    personelAdListesi.Add(personelAdi);
+                }
+
+                foreach (var item in personelAdListesi)
+                {
+                    personelCBox.Items.Add(item);
+                }
+            }
+            SqlConnection.Close();
+        }
+        private void ComboboxaPersonelGotur()
+        {
+            BakimGuncelle bakimGuncelle = new BakimGuncelle();
+            string sorgu4 = "SELECT Ad FROM Calisanlar WHERE TC = @Tc";
+            if (SqlConnection.State != ConnectionState.Open)
+            {
+                SqlConnection.Open();
+            }
+            TurCMD.Parameters.Clear();
+            TurCMD.Connection = SqlConnection;
+            TurCMD.CommandText = sorgu4;
+            TurCMD.Parameters.AddWithValue("@Tc", personelTCBox.Text);
+            SqlDataReader sqlDataReader = TurCMD.ExecuteReader();
+            if (sqlDataReader.Read())
+            {
+                string calisanAdi = sqlDataReader["Ad"].ToString();
+                personelCBox.SelectedItem = calisanAdi;
+
+            }
+            else
+            {
+                bakimGuncelle.personelCBox.Text = "404";
+            }
+            SqlConnection.Close();
+
+        }
         private void IzinGuncelle_Load(object sender, EventArgs e)
         {
-
+            PersonelDoldur();
+            ComboboxaPersonelGotur();
         }
 
         private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +130,10 @@ namespace TemizlikTeknikServisGuncel
             {
                 Application.Exit();
             }
+        }
+
+        private void tcBox_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

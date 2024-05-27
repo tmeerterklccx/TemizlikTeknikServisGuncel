@@ -120,7 +120,7 @@ namespace TemizlikTeknikServisGuncel
             {
                 araBtn.Enabled = true;
                 silBtn.Enabled = true;
-                perCMD.CommandText = "SELECT * FROM Calisanlar WHERE Ad = @ad OR Personel_TC = @tc";
+                perCMD.CommandText = "SELECT * FROM Calisanlar WHERE Ad = @ad OR TC = @tc";
                 perCMD.Connection = SqlConnection;
                 perCMD.Connection.Open();
                 perCMD.Parameters.Clear();
@@ -173,20 +173,25 @@ namespace TemizlikTeknikServisGuncel
                 silBtn.Enabled = false;
                 guncelleBtn.Enabled = false;
             }
+            if (tcTBox.Text.Length > 11)
+            {
+                tcTBox.Text = tcTBox.Text.Substring(0, 11);
+                tcTBox.SelectionStart = tcTBox.Text.Length;
+            }
         }
 
 
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tcTBox.Text = dgvPersoneller.CurrentRow.Cells[0].Value.ToString();
-            adTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();
+            tcTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();
+            adTBox.Text = dgvPersoneller.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void dgvPersoneller_SelectionChanged(object sender, EventArgs e)
         {
-            tcTBox.Text = dgvPersoneller.CurrentRow.Cells[0].Value.ToString();
-            adTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();
+            tcTBox.Text = dgvPersoneller.CurrentRow.Cells[1].Value.ToString();
+            adTBox.Text = dgvPersoneller.CurrentRow.Cells[2].Value.ToString();
         }
     }
 }

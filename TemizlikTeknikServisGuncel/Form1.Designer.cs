@@ -152,7 +152,9 @@
             Controls.Add(menuStrip1);
             Controls.Add(materialRaisedButton1);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Temizlik Teknik Servis Otomasyonu";
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);

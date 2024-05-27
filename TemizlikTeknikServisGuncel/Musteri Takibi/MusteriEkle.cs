@@ -60,10 +60,18 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
             musteriCMD.Parameters.AddWithValue("@EMail", ePostATBox.Text);
             musteriCMD.Parameters.AddWithValue("@Adres", adresTextBox.Text);
             musteriCMD.Parameters.AddWithValue("@Statu", true);
-            KomutCalistir(sorgu);
-            Musteriler musteri = new Musteriler();
-            musteri.Show();
-            this.Close();
+            bool tcStatus = Komutlar.ValidateTCNumber(tcTBox.Text);
+            if (tcStatus)
+            {
+                KomutCalistir(sorgu);
+                Musteriler musteri = new Musteriler();
+                musteri.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Girdiğiniz TC Kimlik Numarası Geçersiz , Lütfen Kontrol Ediniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void otomasyonaGitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,6 +90,48 @@ namespace TemizlikTeknikServisGuncel.Musteri_Takibi
         }
 
         private void programToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tcTBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tcTBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tcTBox.Text.Length > 11)
+                {
+                    tcTBox.Text = tcTBox.Text.Substring(0, 11);
+                    tcTBox.SelectionStart = tcTBox.Text.Length;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen 11 Karakterden Fazla Veri Girmeyiniz.","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        }
+
+        private void telTBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (telTBox.Text.Length > 10)
+                {
+                    telTBox.Text = telTBox.Text.Substring(0, 10);
+                    telTBox.SelectionStart = telTBox.Text.Length;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen 11 Karakterden Fazla Veri Girmeyiniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+        private void telTBox_Click(object sender, EventArgs e)
         {
 
         }

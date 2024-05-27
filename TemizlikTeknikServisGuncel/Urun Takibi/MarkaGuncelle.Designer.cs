@@ -213,7 +213,9 @@
             Controls.Add(metroLabel1);
             Controls.Add(label2);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MarkaGuncelle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MarkaGuncelle";
             Load += MarkaGuncelle_Load;
             menuStrip1.ResumeLayout(false);
